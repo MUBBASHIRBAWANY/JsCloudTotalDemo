@@ -1,0 +1,216 @@
+{
+  "_id": {
+    "$oid": "698978c0bc6631b7722c3564"
+  },
+  "TransferCode": "000014",
+  "TransferOutDate": "2026-02-06",
+  "LocationFrom": "6854ed69f31562c896094367",
+  "LocationTo": "6854ed69f31562c896094367",
+  "StoreFrom": "6854edcbf31562c89609438c",
+  "StoreTo": "6854ed7af31562c89609436d",
+  "PostStatus": "TransferOut",
+  "TransferData": [
+    {
+      "id": 1770617016102.1218,
+      "product": "685b98dcb6de055fd6711acc",
+      "box": 252,
+      "unit": 3024,
+      "totalBox": 252,
+      "Rate": "171.22931",
+      "GrossAmount": 43149.78612
+    },
+    {
+      "id": 1770617016207.8452,
+      "product": "685b98ddb6de055fd6711c25",
+      "box": 36,
+      "unit": 216,
+      "totalBox": 36,
+      "Rate": "207.26944",
+      "GrossAmount": 7461.69984
+    },
+    {
+      "id": 1770617016306.9668,
+      "product": "685b98ddb6de055fd6711c70",
+      "box": 54,
+      "unit": 324,
+      "totalBox": 54,
+      "Rate": "212.85704",
+      "GrossAmount": 11494.28016
+    },
+    {
+      "id": 1770617016466.1006,
+      "product": "685b98ddb6de055fd6711c8e",
+      "box": 90,
+      "unit": 1350,
+      "totalBox": 90,
+      "Rate": "220.49167",
+      "GrossAmount": 19844.2503
+    },
+    {
+      "id": 1770617016568.427,
+      "product": "685b98ddb6de055fd6711c91",
+      "box": 18,
+      "unit": 270,
+      "totalBox": 18,
+      "Rate": "220.49167",
+      "GrossAmount": 3968.8500599999998
+    },
+    {
+      "id": 1770617016725.0808,
+      "product": "685b98deb6de055fd6711d8d",
+      "box": 18,
+      "unit": 360,
+      "totalBox": 18,
+      "Rate": "214.03667",
+      "GrossAmount": 3852.6600599999997
+    },
+    {
+      "id": 1770617016835.026,
+      "product": "685b98deb6de055fd6711e41",
+      "box": 846,
+      "unit": 12690,
+      "totalBox": 846,
+      "Rate": "357.20090",
+      "GrossAmount": 302191.9614
+    },
+    {
+      "id": 1770617016946.7866,
+      "product": "685b98dfb6de055fd671206f",
+      "box": 984,
+      "unit": 5904,
+      "totalBox": 984,
+      "Rate": "209.94889",
+      "GrossAmount": 206589.70776000002
+    },
+    {
+      "id": 1770617017065.82,
+      "product": "685b98dfb6de055fd6712078",
+      "box": 90,
+      "unit": 1080,
+      "totalBox": 90,
+      "Rate": "167.78244",
+      "GrossAmount": 15100.419600000001
+    },
+    {
+      "id": 1770617017236.7314,
+      "product": "685b98dfb6de055fd671209c",
+      "box": 180,
+      "unit": 4320,
+      "totalBox": 180,
+      "Rate": "167.43011",
+      "GrossAmount": 30137.419800000003
+    },
+    {
+      "id": 1770617017353.3513,
+      "product": "685b98dfb6de055fd671209c",
+      "box": 36,
+      "unit": 576,
+      "totalBox": 36,
+      "Rate": "223.10028",
+      "GrossAmount": 8031.61008
+    },
+    {
+      "id": 1770617017532.186,
+      "product": "685b98dfb6de055fd671212f",
+      "box": 96,
+      "unit": 768,
+      "totalBox": 96,
+      "Rate": "169.78281",
+      "GrossAmount": 16299.14976
+    },
+    {
+      "id": 1770617017658.9314,
+      "product": "685b98dfb6de055fd6712159",
+      "box": 468,
+      "unit": 5616,
+      "totalBox": 468,
+      "Rate": "167.43011",
+      "GrossAmount": 78357.29148
+    },
+    {
+      "id": 1770617017788.345,
+      "product": "685b98dfb6de055fd6712162",
+      "box": 252,
+      "unit": 2520,
+      "totalBox": 252,
+      "Rate": "222.31158",
+      "GrossAmount": 56022.51816
+    },
+    {
+      "id": 1770617017981.816,
+      "product": "685b98dfb6de055fd6712168",
+      "box": 480,
+      "unit": 480,
+      "totalBox": 480,
+      "Rate": "14.68692",
+      "GrossAmount": 7049.721600000001
+    },
+    {
+      "id": 1770617018114.3337,
+      "product": "685b98dfb6de055fd6712189",
+      "box": 180,
+      "unit": 2700,
+      "totalBox": 180,
+      "Rate": "0.00000",
+      "GrossAmount": 0
+    },
+    {
+      "id": 1770617018375.0623,
+      "product": "685b98dfb6de055fd671218c",
+      "box": 558,
+      "unit": 16740,
+      "totalBox": 558,
+      "Rate": "220.49172",
+      "GrossAmount": 123034.37976
+    },
+    {
+      "id": 1770617018547.508,
+      "product": "685b98dfb6de055fd671219e",
+      "box": 468,
+      "unit": 3744,
+      "totalBox": 468,
+      "Rate": "230.18500",
+      "GrossAmount": 107726.58
+    },
+    {
+      "id": 1770617018676.428,
+      "product": "685b98dfb6de055fd67121a1",
+      "box": 288,
+      "unit": 2304,
+      "totalBox": 288,
+      "Rate": "225.09371",
+      "GrossAmount": 64826.98848
+    },
+    {
+      "id": 1770617018879.294,
+      "product": "68d632c8c18f27620c9d3647",
+      "box": 90,
+      "unit": 720,
+      "totalBox": 90,
+      "Rate": "223.39244",
+      "GrossAmount": 20105.3196
+    },
+    {
+      "id": 1770617019014.8518,
+      "product": "68d632c8c18f27620c9d362f",
+      "box": 19,
+      "unit": 19,
+      "totalBox": 19,
+      "Rate": "541.30895",
+      "GrossAmount": 10284.87005
+    },
+    {
+      "id": 1770617019243.611,
+      "box": 18,
+      "product": "69182ffa5bbbdbfc3276e920",
+      "unit": null,
+      "totalBox": 18,
+      "Rate": "0.00000",
+      "GrossAmount": 0
+    }
+  ],
+  "SalesFlowRef": "D0002-D0565-TR0007850",
+  "TransferType": "Internale",
+  "Account": "",
+  "__v": 0
+}

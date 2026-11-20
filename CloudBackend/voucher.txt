@@ -1,0 +1,1826 @@
+import e from "express";
+import CustomerChqRecivedModal from "../modal/CustomerChqRecivedModal.js";
+import InvoiceOpeningModal from "../modal/OpeningInvoicesModal.js";
+import SalesInvoiceModal from "../modal/SalesInvoiceModal.js";
+import VoucherModal from "../modal/VoucherModal.js";
+import VoucherLogModel from "../modal/VoucherLogModel.js"; // YE ADD KARO
+import CutomerModal from "../modal/CutomerModal.js";
+import mongoose from "mongoose";
+import ChartofAccountsModel from "../modal/ChartofAccountsModal.js";
+import DistrbutorInvoiceModal from "../modal/DistrbutorInvoiceModal.js";
+import { Check } from "../Check.js";
+import { voucher } from "../Vouchers.js";
+import jwt from "jsonwebtoken"; //YE ADD KARO
+import TransporterModal from "../modal/TransporterModal.js";
+import VendorModel from "../modal/VendorModal.js";
+import StoreModal from "../modal/StoreModal.js";
+//import { number } from "../JafferSons.voucher NUmber.js";
+import logModal from "../modal/Log.js"
+
+//CHANGES IN THIS FILE CREATE VOUCHER CREATE SYSTEM VOUCHER UPDATE VOUCHER AND CREATEREALIZEVOUCHER
+
+const voucherTypeMap = {
+    CP: "Cash Payment",
+    CR: "Cash Receipt",
+    BR: "Bank Receipt",
+    BP: "Bank Payment",
+    PR: "Payment Reciept",
+};
+
+export const createVoucher = async (req, res) => {
+
+
+    try {
+        const token = req.headers.authorization?.split(" ")[1];
+        const decoded = jwt.verify(token, "peral-Dynamic");
+        const createdByUser = decoded?.val?.firstname || "unknown";
+        const userId = req.user?._id || req.user?.id; // Adjust based on your auth setup
+
+
+        const {
+            VoucherNumber,
+            ChequeNumber,
+            VoucherType,
+            Type,
+            VoucharData
+        } = req.body;
+
+        // 🔒 Voucher uniqueness
+        const existingVoucher = await VoucherModal.findOne({ VoucherNumber });
+        if (existingVoucher) {
+
+            return res.status(400).json({ message: "Voucher number already exists" });
+        }
+
+        // 🔒 Cheque uniqueness
+        if (ChequeNumber) {
+
+            if (ChequeNumber !== "Online" && VoucherType == "BP") {
+                // console.log(ChequeNumber)
+                const existingChq = await VoucherModal.findOne({ ChequeNumber });
+                if (existingChq) {
+
+                    return res
+                        .status(400)
+                        .json({ message: `Cheque already used in ${existingChq.VoucherNumber}` });
+                }
+                else {
+                    res.status(201).json({
+                        message: "Voucher created successfully",
+
+                    });
+                }
+            }
+
+        }
+
+        // 🟡 STEP 1: VALIDATE invoices ONLY
+        if (VoucherType === "CR") {
+
+            for (const item of VoucharData.filter(v => v.Client)) {
+
+                const invoiceRef = item.ClientRef2 || "";
+                const amount = Number(item.Credit);
+                if (invoiceRef !== "") {
+                    const invoice = await SalesInvoiceModal
+                        .findOne({ SalesInvoice: invoiceRef })
+                        ;
+
+                    if (invoice) {
+                        if (Number(invoice.RemainingAmount) < amount) {
+                            throw new Error(
+                                `Insufficient balance in invoice ${invoiceRef}`
+                            );
+                        }
+                        else {
+                            await SalesInvoiceModal.findByIdAndUpdate(invoice._id, {
+                                RemainingAmount: Number(invoice.RemainingAmount) - amount,
+                                RecivedAmount: Number(invoice.RecivedAmount) + amount,
+                            })
+                        }
+
+                    } else {
+                        const opening = await InvoiceOpeningModal.findOne();
+                        const inv = opening?.InvoiceData.find(i => i.Invoice === invoiceRef);
+
+                        if (!inv) {
+                            throw new Error(`Invoice not found: ${invoiceRef}`);
+                        }
+
+                        if (Number(inv.RemaingAmount) < amount) {
+                            throw new Error(
+                                `Insufficient opening balance in invoice ${invoiceRef}`
+                            );
+                        }
+
+
+                    }
+                }
+
+            }
+            const newVoucher = await VoucherModal.create(req.body);
+            await logModal.create({
+                userId: userId,
+                action: "create",
+                Page : "Voucher",
+                payload: req.body,
+                responseStatus: 200,
+                RefNumber: VoucherNumber,
+            });
+            res.status(201).json({
+                message: "Voucher created successfully",
+                voucher: newVoucher
+            });
+        }
+
+
+        // 🟢 STEP 2: CREATE voucher FIRST
+        else if ((Type !== "Online" || Type !== "Cash")) {
+            const newVoucher = await VoucherModal.create(req.body);
+            await logModal.create({
+                userId: userId,
+                action: "create",
+                Page : "Voucher",
+                payload: req.body,
+                responseStatus: 200,
+                RefNumber: VoucherNumber,
+            });
+            res.status(201).json({
+                message: "Voucher created successfully",
+                voucher: newVoucher
+            });
+        }
+        else {
+            for (const item of VoucharData.filter(v => v.Client)) {
+
+                const invoiceRef = item.ClientRef2;
+                const amount = Number(item.Credit);
+
+                const invoice = await SalesInvoiceModal
+                    .findOne({ SalesInvoice: invoiceRef })
+
+
+                if (invoice) {
+                    invoice.RecivedAmount += amount;
+                    invoice.RemainingAmount -= amount;
+                    await invoice.save();
+                } else {
+                    const opening = await InvoiceOpeningModal.findOne();
+                    const inv = opening.InvoiceData.find(i => i.Invoice === invoiceRef);
+
+                    inv.RecivedAmount = (Number(inv.RecivedAmount) + amount).toString();
+                    inv.RemaingAmount = (Number(inv.RemaingAmount) - amount).toString();
+
+                    await InvoiceOpeningModal.findByIdAndUpdate(opening._id, opening)
+                }
+            }
+
+            // ✅ COMMIT
+
+            const newVoucher = await VoucherModal.create(req.body);
+            await logModal.create({
+                userId: userId,
+                action: "create",
+                Page : "Voucher",
+                payload: req.body,
+                responseStatus: 200,
+                RefNumber: VoucherNumber,
+            });
+
+            res.status(201).json({
+                message: "Voucher created successfully",
+                voucher: newVoucher
+            });
+        }
+        // 🟢 STEP 3: UPDATE invoices AFTER voucher success
+
+
+    } catch (error) {
+
+        console.log(error)
+        res.status(400).json({
+            message: error.message
+        });
+    }
+};
+
+
+export const createSystemVoucher = async (req, res) => {
+    try {
+        const token = req.headers.authorization?.split(" ")[1];
+        const decoded = jwt.verify(token, "peral-Dynamic");
+        const createdByUser = decoded?.val?.firstname || "unknown";
+
+
+        const { VoucherType, VoucherDate, VoucharData, status, VoucherNumber, Allow } = req.body
+
+
+        const voucherNumber = await VoucherModal.find({ VoucherType: VoucherType }).sort({ _id: -1 }).limit(1)
+        let nextNumber;
+
+        if (voucherNumber.length === 0) {
+            nextNumber = `${VoucherType}000001`
+        } else {
+            let nextVoucherNumber = (parseInt(voucherNumber[0].VoucherNumber.slice('2', "9"))) + 1
+            console.log(nextVoucherNumber)
+            nextNumber = `${VoucherType}${nextVoucherNumber.toString().padStart(7, '0')}`;
+        }
+        console.log(nextNumber)
+        const data = {
+            VoucherType,
+            VoucherDate,
+            VoucherNumber: VoucherNumber || nextNumber,
+            VoucharData,
+            status,
+        }
+
+        const newVoucher = await VoucherModal.create(data)
+        await VoucherLogModel.create({
+            VoucherNumber: newVoucher.VoucherNumber || nextNumber,
+            createdBy: createdByUser,
+            createdAt: new Date().toLocaleString("en-US", {
+                hour: "2-digit", minute: "2-digit", hour12: true,
+                day: "2-digit", month: "short", year: "numeric"
+            }),
+            // type: voucherTypeMap[req.body.VoucherType] || req.body.VoucherType,
+        });
+
+
+        // console.log(newVoucher)
+        res.status(201).json({ message: "Voucher created successfully", voucher: newVoucher });
+    } catch (error) {
+        console.log(error)
+        res.status(500).json({ message: "Error creating voucher", error: error.message });
+    }
+}
+
+export const getVoucherById = async (req, res) => {
+    const { id } = req.params
+    try {
+        const data = await VoucherModal.findById(id)
+        res.status(200).json({ status: true, data: data });
+    } catch (err) {
+        res.status(500).json({ message: "Error fetching vouchers", error: error.message });
+
+    }
+}
+
+export const getVouchers = async (req, res) => {
+    try {
+        const { VoucherType } = req.query;
+        console.log(VoucherType)
+        const vouchers = await VoucherModal.find({ VoucherType })
+            .sort({ VoucherNumber: -1 }).limit(300)
+
+        console.log(vouchers.length)
+        res.status(200).json({ status: true, data: vouchers });
+    } catch (error) {
+        res.status(500).json({ message: "Error fetching vouchers", error: error.message });
+    }
+}
+export const getVoucherByCode = async (req, res) => {
+    try {
+        const { VoucherType } = req.params;
+        const voucher = await VoucherModal.find({ VoucherType: VoucherType }).sort({ _id: -1 }).limit(1)
+        if (!voucher) {
+            return res.status(404).json({ message: "Voucher not found" });
+        }
+        res.status(200).json(voucher);
+    } catch (error) {
+        res.status(500).json({ message: "Error fetching voucher", error: error.message });
+    }
+}
+export const updateVoucher = async (req, res) => {
+    try {
+        const token = req.headers.authorization?.split(" ")[1];
+        const decoded = jwt.verify(token, "peral-Dynamic");
+        const updatedByUser = decoded?.val?.firstname || "unknown";
+        const userId = req.user?._id || req.user?.id; // Adjust based on your auth setup
+
+        const { id } = req.params;
+        const voucherData = req.body;
+        const updatedVoucher = await VoucherModal.findByIdAndUpdate(id, voucherData, { new: true });
+        if (!updatedVoucher) {
+            return res.status(404).json({ message: "Voucher not found" });
+        }
+        await logModal.create({
+            userId: userId,
+            action: "update",
+            Page : "Voucher",
+            payload: req.body,
+            responseStatus: 200,
+            RefNumber: updatedVoucher.VoucherNumber,
+        });
+        res.status(200).json({ message: "Voucher updated successfully", voucher: updatedVoucher });
+    } catch (error) {
+        res.status(500).json({ message: "Error updating voucher", error: error.message });
+    }
+}
+export const deleteVoucher = async (req, res) => {
+    try {
+
+        const { id } = req.params;
+        const userId = req.user?._id || req.user?.id; // Adjust based on your auth setup
+
+        const deletedVoucher = await VoucherModal.findByIdAndDelete(id);
+        // console.log(deletedVoucher)
+        
+        await logModal.create({
+            userId: userId,
+            action: "delete",
+            Page : "Voucher",
+            payload: deletedVoucher,
+            responseStatus: 200,
+            RefNumber: deletedVoucher.VoucherNumber
+        });
+        if (!deletedVoucher) {
+            return res.status(404).json({ message: "Voucher not found" });
+        }
+        res.status(200).json({ message: "Voucher deleted successfully" });
+    } catch (error) {
+        res.status(500).json({ message: "Error deleting voucher", error: error.message });
+    }
+}
+
+export const PushVoucherBulkData = async (req, res) => {
+    try {
+        const insertedIds = [];
+        for (const item of req.body) {
+
+            const voucher = await VoucherModal.find({ VoucherType: item.VoucherType }).sort({ _id: -1 }).limit(1)
+            // console.log(voucher);
+            if (voucher.length > 0) {
+                let nextVoucherNumber = (parseInt(voucher[0].VoucherNumber.slice('2', "9"))) + 1;
+                item.VoucherNumber = item.VoucherType + nextVoucherNumber.toString().padStart(7, '0');
+            }
+            else {
+                item.VoucherNumber = `${item.VoucherType}0000001`; // Start with 1 if no vouchers exist
+            }
+            const newVoucher = new VoucherModal({
+                VoucherType: item.VoucherType,
+                VoucherNumber: item.VoucherNumber,
+                VoucherDate: item.VoucherDate,
+                VoucherMainAccount: item.VoucherMainAccount,
+                VoucharData: item.VoucharData,
+            });
+            const savedItem = await newVoucher.save();
+            insertedIds.push(savedItem._id);
+            console.log(`Inserted: ${item.VoucherType}`);
+        }
+        res.status(200).send({
+            status: true,
+            data: "Data Added"
+        });
+        console.log('All vouchers inserted successfully!');
+        return insertedIds;
+    } catch (error) {
+        console.error('Error inserting vouchers:', error.message);
+        throw error;
+    }
+}
+
+export const changeStatus = async (req, res) => {
+    try {
+        const { id } = req.params;
+        const { status } = req.body;
+        const Voucher = await VoucherModal.findById(id);
+        if (!Voucher) {
+            return res.status(404).json({ message: "Voucher not found" });
+        }
+        else if (Voucher.status === status) {
+            return res.status(400).json({ message: "Voucher status is already set to this value" });
+        }
+        else {
+            Voucher.status = status;
+            await Voucher.save();
+            res.status(200).json({ message: "Voucher status updated successfully", voucher: Voucher });
+        }
+    } catch (error) {
+
+        res.status(500).json({ message: "Error updating voucher status", error: error.message });
+    }
+}
+
+
+export const getVoucherByNumber = async (req, res) => {
+    const { VoucherNumber } = req.params
+    try {
+
+        const data = await VoucherModal.findOne({ VoucherNumber: VoucherNumber })
+
+        const TotalClient = data?.VoucharData?.map((item) => item?.Client)
+        const ClientIds = TotalClient?.map(id => new mongoose.Types.ObjectId(id));
+        const totalClient = await CutomerModal.find({ _id: { $in: ClientIds } });
+        const TotalAccounts = data?.VoucharData?.map((item) => item?.Account)
+        const AccountsIds = TotalAccounts?.map(id => new mongoose.Types.ObjectId(id));
+        const totalAccounts = await ChartofAccountsModel.find({ _id: { $in: AccountsIds } });
+        res.status(200).send({ status: true, data: data, Client: totalClient, Accounts: totalAccounts })
+    }
+    catch (err) {
+        console.log(err)
+        res.status(500).json({ message: "Error voucher", error: err.message });
+
+    }
+}
+
+export const getOnlyVoucherByNumber = async (req, res) => {
+    const { VoucherNumber } = req.params
+    try {
+        if (VoucherNumber.length == 0) {
+            const vouchers = await VoucherModal.find({ VoucherType })
+                .sort({ VoucherNumber: -1 }).limit(300)
+
+            res.status(200).send({ status: true, data: vouchers })
+        }
+        const data = await VoucherModal.findOne({ VoucherNumber: VoucherNumber })
+        res.status(200).send({ status: true, data: data })
+    }
+    catch (err) {
+        console.log(err)
+        res.status(500).json({ message: "Error voucher", error: err.message });
+
+    }
+}
+
+
+
+
+
+export const deleteVoucherByNumber = async (req, res) => {
+    try {
+        const { VoucherNumber } = req.params;
+        const deletedVoucher = await VoucherModal.deleteOne({ VoucherNumber: VoucherNumber });
+        if (!deletedVoucher) {
+            return res.status(404).json({ message: "Voucher not found" });
+        }
+        res.status(200).json({ message: "Voucher deleted successfully" });
+    } catch (error) {
+        res.status(500).json({ message: "Error deleting voucher", error: error.message });
+    }
+}
+
+export const PostUnPostVoucher = async (req, res) => {
+    try {
+        const { VoucharData, status, Type, VoucherType, VoucherDate, PaidTo } = req.body;
+        const { id } = req.params
+        // console.log(req.body)
+
+
+        const OnlyClient = VoucharData.filter((item) => item.hasOwnProperty("Client"))
+        const onlyCHq = OnlyClient.map((item) => ({
+            id: item.value,
+            Chq: item.Chq,
+            ChqRef: item.ChqRef,
+            VoucherDate: VoucherDate,
+            rowid: item.id,
+            ref: item.Ref || item.ClientRef2,
+            Credit: item.Credit,
+        }))
+        console.log(onlyCHq)
+
+        if (status !== "Post") {
+            if (Type !== "Online") {
+                for (const item of onlyCHq) {
+
+                    // --- Update Invoice ---
+                    if (item.ChqRef !== undefined) {
+
+                        for (const value of item.ChqRef) {
+                            if (Type != "Online") {
+
+                                const customerChq = await CustomerChqRecivedModal.findById(value.value);
+                                if (!customerChq) {
+                                    return res.status(404).json({ message: "Record not found" });
+                                }
+
+                                // --- Update table ---
+                                const findTable = customerChq.table.filter((ta) => ta.chq == value.Chq);
+                                if (findTable) {
+                                    for (const tabe of findTable) {
+
+                                        tabe.staus = "Realize";   // use staus (same as DB field)
+                                        tabe.status = "Realize";   // use staus (same as DB field)
+                                        tabe.RealizationDate = item.VoucharDate
+                                    }
+                                }
+
+                                // --- Update grouped -> items ---
+                                const findGroup = customerChq.grouped.filter((g) =>
+                                    g.chq == item.Chq
+                                );
+
+                                if (findGroup) {
+
+                                    for (const gr of findGroup) {
+                                        const groupitem = gr.items.filter(gi => gi.chq === item.Chq);
+                                        if (groupitem) {
+                                            for (const group of groupitem) {
+
+
+                                                group.staus = "Realize";   // use staus (same as DB field)
+                                                group.status = "Realize";   // use staus (same as DB field)
+                                                group.RealizationDate = item.VoucharDate
+                                            }
+                                        }
+
+                                    }
+
+
+                                }
+                                await CustomerChqRecivedModal.findByIdAndUpdate(customerChq._id, customerChq);
+                                await CustomerChqRecivedModal.findByIdAndUpdate(customerChq._id, { status: "Pending" });
+                                await customerChq.save();
+
+                            }
+
+                            const customerInvoice = await SalesInvoiceModal.findOne({ SalesInvoice: value.ref })
+                            console.log(value.ref)
+                            if (value.ref == "UnRealized") {
+                                continue;
+                            }
+                            if (customerInvoice == null) {
+                                const AllOpeningInvoice = await InvoiceOpeningModal.findOne();
+                                const Inv = AllOpeningInvoice.InvoiceData.find((In) => In.Invoice == value.ref);
+                                console.log(Inv)
+                                const amountToApplyNum = Number(value.Am || 0);
+                                const RecivedAmount = Number(Inv.RecivedAmount || 0);
+                                Inv.RecivedAmount = ((RecivedAmount || 0) + amountToApplyNum).toString();
+                                await InvoiceOpeningModal.findByIdAndUpdate(AllOpeningInvoice._id, { InvoiceData: AllOpeningInvoice.InvoiceData })
+                            }
+                            else {
+
+                                if (!customerInvoice) {
+                                    return res.status(404).json({ message: `Invoice not found for ref: ${item.ref}` });
+                                }
+
+                                customerInvoice.RecivedAmount =
+                                    (Number(customerInvoice.RecivedAmount || 0) + Number(value.Am));
+
+                                await customerInvoice.save();
+
+                                await SalesInvoiceModal.findByIdAndUpdate(customerInvoice._id, customerInvoice);
+                            }
+
+                        }
+                    }
+                    else {
+                        const updatedVoucher = await VoucherModal.findByIdAndUpdate(id, { status: "Post" })
+                        res.status(200).send("voucher post successfully")
+                    }
+
+
+                }
+            }
+            else {
+                for (const item of onlyCHq) {
+                    console.log("ye hai")
+                    // --- Update Invoice ---
+                    if (item.Type == "Opening") {
+                        console.log("Opening")
+                        const AllOpeningInvoice = await InvoiceOpeningModal.findOne();
+                        const Inv = AllOpeningInvoice.InvoiceData.find((In) => In.Invoice == item.ref);
+                        const remainingAmountNum = Number(Inv.RemaingAmount);
+                        const amountToApplyNum = Number(item.Credit);
+                        const RecivedAmount = Number(Inv.RecivedAmount);
+                        Inv.RemaingAmount = Number(remainingAmountNum - amountToApplyNum);
+                        Inv.RecivedAmount = Number(RecivedAmount + amountToApplyNum);
+                        console.log(AllOpeningInvoice.InvoiceData.find((In) => In.Invoice == item.ref))
+                        await InvoiceOpeningModal.findByIdAndUpdate(AllOpeningInvoice._id, { InvoiceData: AllOpeningInvoice.InvoiceData })
+
+                    }
+                    else {
+                        const customerInvoice = await SalesInvoiceModal.findOne({ SalesInvoice: item.ref });
+                        if (!customerInvoice) {
+                            return res.status(404).json({ message: `Invoice not found for ref: ${item.ref}` });
+                        }
+
+
+                        customerInvoice.RecivedAmount =
+                            (Number(customerInvoice.RecivedAmount || 0) + Number(item.Credit));
+                        customerInvoice.RemainingAmount =
+                            (Number(customerInvoice.RemainingAmount || 0) - Number(item.Credit))
+                        await customerInvoice.save();
+
+                        // update status field at root if you want
+                        await SalesInvoiceModal.findByIdAndUpdate(customerInvoice._id, customerInvoice);
+                    }
+
+
+                }
+
+                const updatedVoucher = await VoucherModal.findByIdAndUpdate(id, { status: "Post" })
+                res.status(200).send("voucher post successfully")
+
+            }
+
+
+            const updatedVoucher = await VoucherModal.findByIdAndUpdate(id, { status: "Post" })
+            res.status(200).send("voucher post successfully")
+
+        }
+
+        else {
+
+
+
+            for (const item of onlyCHq) {
+                // --- Update Invoice ---
+                for (const value of item.ChqRef) {
+                    if (Type != "Online") {
+
+
+                        const customerChq = await CustomerChqRecivedModal.findById(value.value);
+                        if (!customerChq) {
+                            return res.status(404).json({ message: "Record not found" });
+                        }
+
+                        // --- Update table ---
+                        const findTable = customerChq.table.filter((ta) => ta.chq == value.Chq);
+                        if (findTable) {
+                            for (const item of findTable) {
+
+
+
+
+                                item.staus = "Pending";   // use staus (same as DB field)
+                                item.status = "Pending";   // use staus (same as DB field)
+                                item.RealizationDate = ""
+                            }
+                        }
+
+                        // --- Update grouped -> items ---
+                        const findGroup = customerChq.grouped.filter((g) =>
+                            g.chq == item.Chq
+                        );
+
+                        if (findGroup) {
+
+                            for (const gr of findGroup) {
+                                const groupitem = gr.items.filter(gi => gi.chq === item.Chq);
+                                if (groupitem) {
+                                    for (const group of groupitem) {
+
+
+                                        group.staus = "Pending";   // use staus (same as DB field)
+                                        group.status = "Pending";   // use staus (same as DB field)
+                                        group.RealizationDate = ""
+                                    }
+                                }
+
+                            }
+
+
+                        }
+                        await CustomerChqRecivedModal.findByIdAndUpdate(customerChq._id, customerChq);
+                        await CustomerChqRecivedModal.findByIdAndUpdate(customerChq._id, { status: "Pending" });
+                        await customerChq.save();
+
+                    }
+                    const customerInvoice = await SalesInvoiceModal.findOne({ SalesInvoice: value.ref })
+                    if (!customerInvoice) {
+                        const AllOpeningInvoice = await InvoiceOpeningModal.findOne();
+                        const Inv = AllOpeningInvoice.InvoiceData.find((In) => In.Invoice == item.ref);
+                        const remainingAmountNum = parseFloat(Inv.RemaingAmount);
+                        const amountToApplyNum = parseFloat(item.Credit);
+                        const RecivedAmount = parseFloat(Inv.RecivedAmount);
+                        Inv.RecivedAmount = (RecivedAmount + amountToApplyNum).toString();
+                        await InvoiceOpeningModal.findByIdAndUpdate(AllOpeningInvoice._id, { InvoiceData: AllOpeningInvoice.InvoiceData })
+                    }
+                    else {
+                        if (!customerInvoice) {
+                            return res.status(404).json({ message: `Invoice not found for ref: ${item.ref}` });
+                        }
+
+                        customerInvoice.RecivedAmount =
+                            (Number(customerInvoice.RecivedAmount || 0) - Number(value.Am));
+
+                        await customerInvoice.save();
+
+                        await SalesInvoiceModal.findByIdAndUpdate(customerInvoice._id, customerInvoice);
+                    }
+
+                }
+
+
+
+            }
+            const updatedVoucher = await VoucherModal.findByIdAndUpdate(id, { status: "UnPost" })
+            res.status(200).send("voucher post successfully")
+
+        }
+
+
+    } catch (err) {
+        console.log(err)
+        res.status(400).send(err)
+
+    }
+}
+
+
+export const PostUnPostCashReciptVoucher = async (req, res) => {
+    try {
+        const { VoucharData, status } = req.body
+        const { id } = req.params
+
+        console.log(req.body)
+        const OnlyClient = VoucharData.filter((item) => item.hasOwnProperty("Client"))
+        const onlyCHq = OnlyClient.map((item) => ({
+            rowid: item.id,
+            ref: item.Ref || item.ClientRef2,
+            Credit: item.Credit,
+            Type: item.Type
+        }))
+        console.log(onlyCHq)
+        if (status !== "Post") {
+            console.log(onlyCHq, "onlyCHq")
+            for (const item of onlyCHq) {
+                // --- Update Invoice ---
+                if (item.Type == "Opening") {
+                    console.log("Opening")
+                    const AllOpeningInvoice = await InvoiceOpeningModal.findOne();
+                    const Inv = AllOpeningInvoice.InvoiceData.find((In) => In.Invoice == item.ref);
+                    const remainingAmountNum = Number(Inv.RemaingAmount);
+                    const amountToApplyNum = Number(item.Credit);
+                    const RecivedAmount = Number(Inv.RecivedAmount);
+                    Inv.RemaingAmount = Number(remainingAmountNum - amountToApplyNum);
+                    Inv.RecivedAmount = Number(RecivedAmount + amountToApplyNum);
+                    console.log(AllOpeningInvoice.InvoiceData.find((In) => In.Invoice == item.ref))
+                    await InvoiceOpeningModal.findByIdAndUpdate(AllOpeningInvoice._id, { InvoiceData: AllOpeningInvoice.InvoiceData })
+
+                }
+                else {
+                    const customerInvoice = await SalesInvoiceModal.findOne({ SalesInvoice: item.ref });
+                    if (!customerInvoice) {
+                        return res.status(404).json({ message: `Invoice not found for ref: ${item.ref}` });
+                    }
+
+
+                    customerInvoice.RecivedAmount =
+                        (Number(customerInvoice.RecivedAmount || 0) + Number(item.Credit));
+                    customerInvoice.RemainingAmount =
+                        (Number(customerInvoice.RemainingAmount || 0) - Number(item.Credit))
+                    await customerInvoice.save();
+
+                    // update status field at root if you want
+                    await SalesInvoiceModal.findByIdAndUpdate(customerInvoice._id, customerInvoice);
+                }
+
+
+            }
+            const updatedVoucher = await VoucherModal.findByIdAndUpdate(id, { status: "Post" })
+            const findVoucher = await VoucherModal.findById(id)
+            res.status(200).send(findVoucher)
+        }
+        else {
+            for (const item of onlyCHq) {
+                // --- Update Invoice ---
+                if (item.Type == "Opening") {
+                    console.log("Opening")
+                    const AllOpeningInvoice = await InvoiceOpeningModal.findOne();
+                    const Inv = AllOpeningInvoice.InvoiceData.find((In) => In.Invoice == item.ref);
+                    console.log(item.ref)
+                    const remainingAmountNum = Inv.RemaingAmount;
+                    const amountToApplyNum = item.Credit;
+                    const RecivedAmount = parseFloat(Inv.RecivedAmount);
+                    Inv.RemaingAmount = Number(remainingAmountNum) + Number(amountToApplyNum);
+                    Inv.RecivedAmount = Number(RecivedAmount) - Number(amountToApplyNum);
+                    await InvoiceOpeningModal.findByIdAndUpdate(AllOpeningInvoice._id, { InvoiceData: AllOpeningInvoice.InvoiceData })
+
+                }
+                else {
+                    const customerInvoice = await SalesInvoiceModal.findOne({ SalesInvoice: item.ref });
+                    if (!customerInvoice) {
+                        return res.status(404).json({ message: `Invoice not found for ref: ${item.ref}` });
+                    }
+
+
+                    customerInvoice.RecivedAmount =
+                        (Number(customerInvoice.RecivedAmount || 0) - Number(item.Credit));
+                    customerInvoice.RemainingAmount =
+                        (Number(customerInvoice.RemainingAmount || 0) + Number(item.Credit))
+                    await customerInvoice.save();
+
+                    // update status field at root if you want
+                    await SalesInvoiceModal.findByIdAndUpdate(customerInvoice._id, customerInvoice);
+                }
+
+
+            }
+            const updatedVoucher = await VoucherModal.findByIdAndUpdate(id, { status: "UnPost" })
+            console.log(updatedVoucher)
+            res.status(200).send("voucher post successfully")
+        }
+    } catch (err) {
+        console.log(err)
+        res.status(400).send("err")
+
+    }
+}
+
+export const createRealizeVoucher = async (req, res) => {
+    try {
+        const token = req.headers.authorization?.split(" ")[1];
+        const decoded = jwt.verify(token, "peral-Dynamic");
+        const createdByUser = decoded?.val?.firstname || "unknown";
+        const { VoucharData } = req.body;
+
+        // Step 1: Extract client items
+        const OnlyClient = VoucharData.filter((item) => item.hasOwnProperty("Client"));
+        const onlyCHq = await Promise.all(
+            OnlyClient.map(async (item) => {
+                const invoice = await SalesInvoiceModal.findOne({ SalesFlowRef: item.ClientRef2 })
+                const ref =
+                    item.Ref ||
+                    invoice?.SalesInvoice;
+                const client = await CutomerModal.findOne({ SalesFlowRef: item.Client })
+                return {
+                    rowid: item.id,
+                    ClientRef2: invoice?.SalesInvoice || item.ClientRef2,
+                    Store: invoice?.Store,
+                    ref: ref,
+                    Client: client?._id.toString(),
+                    Credit: Number(item.Credit) || 0,
+                    Type: item.Type, // "Current" or "Opening",
+                    Narration: invoice?.SalesInvoice
+                        ? `Cash received against invoice ${invoice?.SalesInvoice} from ${(client?.CutomerName || "Unknown Client")}`
+                        : item.Narration || ""
+                };
+            })
+        );
+
+        const errors = [];
+
+        // Step 2: Validate before save
+        for (const item of onlyCHq) {
+            let customerInvoice;
+            let openingDoc;
+
+            if (item.Type === "Current") {
+                customerInvoice = await SalesInvoiceModal.findOne({ SalesInvoice: item.ref });
+            } else if (item.Type === "Opening") {
+                openingDoc = await InvoiceOpeningModal.findOne({
+                    "InvoiceData.Invoice": item.ref,
+                });
+                customerInvoice = openingDoc?.InvoiceData?.find(
+                    (inv) => inv.Invoice === item.ref
+                );
+            }
+
+            if (!customerInvoice) {
+                errors.push(`Invoice not found for ref: ${item.ref} (${item.Type})`);
+                continue;
+            }
+
+            const remaining = Number(customerInvoice.RemaingAmount || customerInvoice.RemainingAmount) || 0;
+            const credit = Number(item.Credit) || 0;
+
+            if (credit > remaining) {
+                errors.push(
+                    `Credit amount (${credit}) exceeds remaining balance (${remaining}) for invoice ${item.ref} (${item.Type})`
+                );
+            }
+
+            if (remaining <= 0) {
+                errors.push(`Invoice ${item.ref} (${item.Type}) is already fully paid.`);
+            }
+        }
+
+        if (errors.length > 0) {
+            return res.status(400).json({
+                success: false,
+                message: "Validation failed before posting voucher.",
+                errors,
+            });
+        }
+
+        // Step 3: Generate new voucher number
+        const lastVoucher = await VoucherModal.find({ VoucherType: "CR" })
+            .sort({ _id: -1 })
+            .limit(1);
+
+        let VoucherNumber;
+        if (lastVoucher.length === 0) {
+            VoucherNumber = `CR0000001`;
+        } else {
+            const nextVoucherNumber =
+                parseInt(lastVoucher[0].VoucherNumber.slice(2)) + 1;
+            VoucherNumber = `CR${nextVoucherNumber.toString().padStart(7, "0")}`;
+        }
+        onlyCHq.push({
+            Debit: onlyCHq.reduce((a, b) => a + (b.Credit || 0), 0),
+            Account: req.body.VoucherMainAccount,
+            store: onlyCHq[0].Store,
+            show: true,
+            id: Date.now(),
+            Narration: "Petty Cash Account",
+        });
+        // Step 4: Save voucher
+        const Voucher = {
+            ...req.body,
+            VoucharData: onlyCHq,
+            VoucherNumber,
+
+        };
+
+        const newVoucher = new VoucherModal(Voucher);
+
+        await VoucherLogModel.create({
+            VoucherNumber: newVoucher.VoucherNumber,
+            createdBy: createdByUser,
+            createdAt: new Date().toLocaleString("en-US", {
+                hour: "2-digit",
+                minute: "2-digit",
+                hour12: true,
+                day: "2-digit",
+                month: "short",
+                year: "numeric",
+            }),
+        });
+        await newVoucher.save();
+
+        // Step 5: Update related invoices
+        for (const item of onlyCHq) {
+            if (item.Type === "Current") {
+                const customerInvoice = await SalesInvoiceModal.findOne({ SalesInvoice: item.ref });
+
+                const remaining = Number(customerInvoice.RemainingAmount) || 0;
+                const received = Number(customerInvoice.RecivedAmount) || 0;
+                const credit = Number(item.Credit) || 0;
+
+                const newRemaining = remaining - credit;
+                const newReceived = received + credit;
+
+                if (!Array.isArray(customerInvoice.PaymentDetail)) {
+                    customerInvoice.PaymentDetail = [];
+                }
+
+                customerInvoice.PaymentDetail.push({
+                    type: "Cash",
+                    Amount: credit,
+                });
+
+                await SalesInvoiceModal.findByIdAndUpdate(
+                    customerInvoice._id,
+                    {
+                        RemainingAmount: newRemaining,
+                        RecivedAmount: newReceived,
+                        PaymentDetail: customerInvoice.PaymentDetail,
+                    },
+                    { new: true }
+                );
+            }
+
+            // 🔹 Handle Opening type
+            if (item.Type === "Opening") {
+                const openingDoc = await InvoiceOpeningModal.findOne({
+                    "InvoiceData.Invoice": item.ref,
+                });
+
+                if (!openingDoc) continue;
+
+                const invoiceIndex = openingDoc.InvoiceData.findIndex(
+                    (inv) => inv.Invoice === item.ref
+                );
+
+                if (invoiceIndex === -1) continue;
+
+                const current = openingDoc.InvoiceData[invoiceIndex];
+                const remaining = Number(current.RemaingAmount) || 0;
+                const received = Number(current.RecivedAmount) || 0;
+                const credit = Number(item.Credit) || 0;
+
+                const newRemaining = remaining - credit;
+                const newReceived = received + credit;
+
+                openingDoc.InvoiceData[invoiceIndex].RemaingAmount = newRemaining;
+                openingDoc.InvoiceData[invoiceIndex].RecivedAmount = newReceived;
+
+                if (!Array.isArray(openingDoc.InvoiceData[invoiceIndex].PaymentDetail)) {
+                    openingDoc.InvoiceData[invoiceIndex].PaymentDetail = [];
+                }
+
+                openingDoc.InvoiceData[invoiceIndex].PaymentDetail.push({
+                    type: "Cash",
+                    Amount: credit,
+                });
+
+                await openingDoc.save();
+            }
+        }
+
+        // Step 6: Mark voucher as posted
+        const updatedVoucher = await VoucherModal.findByIdAndUpdate(
+            newVoucher._id,
+            { status: "Post" },
+            { new: true }
+        );
+
+        res.status(200).json({
+            success: true,
+            message: "Voucher successfully created and posted.",
+            newVoucher,
+            updatedVoucher,
+        });
+    } catch (err) {
+        console.error(err);
+        res.status(400).json({
+            success: false,
+            error: err.message,
+        });
+    }
+};
+
+
+
+export const createPreviouseVoucher = async (req, res) => {
+    try {
+
+        const { VoucharData, VoucherMainAccount } = req.body;
+
+        // ===============================
+        // STEP 1 — PREPARE CLIENT ENTRIES
+        // ===============================
+
+        const OnlyClient = VoucharData.filter(v => v.Client);
+
+        const preparedRows = await Promise.all(
+            OnlyClient.map(async (item) => {
+
+                // try sales invoice first
+                const invoice = await SalesInvoiceModal.findOne({
+                    SalesFlowRef: item.ClientRef2
+                });
+
+                const client = await CutomerModal.findOne({
+                    SalesFlowRef: item.Client
+                });
+
+                const ref = invoice?.SalesInvoice || item.ClientRef2;
+
+                return {
+                    rowid: item.id,
+                    Client: client?._id,
+                    ClientRef2: ref,
+                    ref: ref,
+                    Store: invoice?.Store || null,
+                    Credit: Number(item.Credit) || 0,
+                    Type: item.Type, // Current / Opening
+                    Narration: invoice
+                        ? `Cash received against invoice ${ref} from ${client?.CutomerName || "Unknown Client"}`
+                        : item.Narration || ""
+                };
+            })
+        );
+
+        // ===============================
+        // STEP 2 — VALIDATION (IMPORTANT)
+        // ===============================
+
+        const errors = [];
+
+        for (const item of preparedRows) {
+
+            // ---- CURRENT INVOICE ----
+
+
+            const invoice = await SalesInvoiceModal.findOne({
+                SalesInvoice: item.ref
+            });
+
+            if (!invoice) {
+                const opening = await InvoiceOpeningModal.findOne();
+                const inv = opening?.InvoiceData.find(i => i.Invoice == item.ref);
+                console.log(opening, "opening")
+                if (!inv) {
+                    errors.push(`Opening invoice not found: ${item.ref}`);
+                    continue;
+                }
+
+                if (Number(inv.RemaingAmount) < Number(item.Credit)) {
+                    errors.push(`Insufficient opening balance in invoice ${item.ref}`);
+                }
+            }
+
+            if (invoice) {
+                if (Number(invoice?.RemainingAmount || 0) < Number(item.Credit)) {
+                    console.log(invoice)
+
+                    errors.push(`Insufficient remaining balance in invoice ${item.ref}`);
+                }
+            }
+
+        }    // ---- OPENING INVOICE ----
+
+
+
+
+        if (errors.length > 0) {
+            return res.status(400).json({
+                success: false,
+                message: "Validation failed",
+                errors
+            });
+        }
+
+        // ===============================
+        // STEP 3 — GENERATE VOUCHER NUMBER
+        // ===============================
+
+        const lastVoucher = await VoucherModal.find({ VoucherType: "CR" })
+            .sort({ _id: -1 })
+            .limit(1);
+
+        let VoucherNumber;
+
+        if (!lastVoucher.length) {
+            VoucherNumber = "CR0000001";
+        } else {
+            const next = parseInt(lastVoucher[0].VoucherNumber.slice(2)) + 1;
+            VoucherNumber = `CR${next.toString().padStart(7, "0")}`;
+        }
+
+        // ===============================
+        // STEP 4 — ADD CASH/BANK ROW
+        // ===============================
+
+        const totalCredit = preparedRows.reduce((a, b) => a + b.Credit, 0);
+
+        preparedRows.push({
+            Debit: totalCredit,
+            Account: VoucherMainAccount,
+            store: preparedRows[0]?.Store || null,
+            show: true,
+            id: Date.now(),
+            Narration: "Branch Cash Account"
+        });
+
+        // ===============================
+        // STEP 5 — SAVE VOUCHER FIRST
+        // ===============================
+
+        const Voucher = new VoucherModal({
+            ...req.body,
+            VoucherNumber,
+            VoucharData: preparedRows,
+            status: "UnPost"
+        });
+
+        await Voucher.save();
+
+        // ===============================
+        // STEP 6 — POSTING (VERY IMPORTANT)
+        // ===============================
+
+        for (const item of preparedRows) {
+
+            if (!item.Client) continue;
+
+            // ---------- CURRENT SALES INVOICE ----------
+
+
+            const invoice = await SalesInvoiceModal.findOne({
+                SalesInvoice: item.ref
+            });
+            if (!invoice) {
+                const opening = await InvoiceOpeningModal.findOne();
+                const inv = opening.InvoiceData.find(i => i.Invoice === item.ref);
+
+                inv.RecivedAmount =
+                    Number(inv.RecivedAmount || 0) + Number(item.Credit);
+
+                inv.RemaingAmount =
+                    Number(inv.RemaingAmount || 0) - Number(item.Credit);
+
+                await InvoiceOpeningModal.findByIdAndUpdate(opening._id, {
+                    InvoiceData: opening.InvoiceData
+                })
+            }
+
+
+            else {
+
+                invoice.RecivedAmount =
+                    Number(invoice.RecivedAmount || 0) + Number(item.Credit);
+
+                invoice.RemainingAmount =
+                    Number(invoice.RemainingAmount || 0) - Number(item.Credit);
+
+
+                await invoice.save();
+            }
+        }
+
+        // ---------- OPENING INVOICE ----------
+
+
+
+
+        // ===============================
+        // STEP 7 — FINAL POST STATUS
+        // ===============================
+
+        Voucher.status = "Post";
+        await Voucher.save();
+
+        // ===============================
+        // RESPONSE
+        // ===============================
+
+        res.status(200).json({
+            success: true,
+            message: "Previous voucher created & posted successfully",
+            voucher: Voucher
+        });
+
+    } catch (err) {
+
+        console.error("PREVIOUS VOUCHER ERROR:", err);
+
+        res.status(500).json({
+            success: false,
+            message: err.message
+        });
+    }
+};
+
+
+export const getOnlyCredit = async (req, res) => {
+    try {
+        const { distributor } = req.params;
+
+        const data = await VoucherModal.aggregate([
+            {
+                $addFields: {
+                    VoucharData: {
+                        $filter: {
+                            input: "$VoucharData",
+                            as: "vd",
+                            cond: {
+                                $and: [
+                                    { $eq: ["$$vd.Client", distributor] },
+
+                                    {
+                                        $or: [
+                                            {
+                                                $regexMatch: {
+                                                    input: {
+                                                        $toString: {
+                                                            $ifNull: ["$$vd.ClientRef2", ""]
+                                                        }
+                                                    },
+                                                    regex: "^Advance",
+                                                    options: "i"
+                                                }
+                                            },
+                                            {
+                                                $eq: [{ $type: "$$vd.ClientRef2" }, "missing"]
+                                            }
+                                        ]
+                                    },
+
+                                    { $ne: ["$$vd.Credit", "$$vd.Remain"] }
+                                ]
+                            }
+                        }
+                    }
+                }
+            },
+            {
+                $match: {
+                    "VoucharData.0": { $exists: true }
+                }
+            }
+        ]);
+
+        res.status(200).json(data);
+    } catch (err) {
+        console.log(err);
+        res.status(500).json({ error: err.message });
+    }
+};
+
+
+export const getAllCredit = async (req, res) => {
+    try {
+        const data = await VoucherModal.aggregate([
+            {
+                $addFields: {
+                    VoucharData: {
+                        $filter: {
+                            input: "$VoucharData",
+                            as: "vd",
+                            cond: {
+                                $and: [
+
+                                    // Client exist hona chahiye
+                                    {
+                                        $ne: [
+                                            { $ifNull: ["$$vd.Client", ""] },
+                                            ""
+                                        ]
+                                    },
+
+                                    // Debit 0 hona chahiye
+                                    {
+                                        $eq: [
+                                            {
+                                                $convert: {
+                                                    input: { $ifNull: ["$$vd.Debit", 0] },
+                                                    to: "double",
+                                                    onError: 0,
+                                                    onNull: 0
+                                                }
+                                            },
+                                            0
+                                        ]
+                                    },
+
+                                    // Advance ya missing ClientRef2
+                                    {
+                                        $or: [
+                                            {
+                                                $regexMatch: {
+                                                    input: {
+                                                        $toString: {
+                                                            $ifNull: ["$$vd.ClientRef2", ""]
+                                                        }
+                                                    },
+                                                    regex: "^Advance",
+                                                    options: "i"
+                                                }
+                                            },
+                                            {
+                                                $eq: [
+                                                    { $ifNull: ["$$vd.ClientRef2", ""] },
+                                                    ""
+                                                ]
+                                            }
+                                        ]
+                                    },
+
+                                    // Credit ≠ Remain
+                                    {
+                                        $ne: ["$$vd.Credit", "$$vd.Remain"]
+                                    }
+
+                                ]
+                            }
+                        }
+                    }
+                }
+            },
+
+            {
+                $match: {
+                    "VoucharData.0": { $exists: true }
+                }
+            }
+        ]);
+
+        res.status(200).json(data);
+    } catch (err) {
+        console.log(err);
+        res.status(500).json({ error: err.message });
+    }
+};
+
+
+
+export const AdjustVoucher = async (req, res) => {
+    try {
+        const table = req.body[0]; // ✅ FIX 1
+        console.log(table)
+        // 1️⃣ Find voucher
+        const voucher = await VoucherModal.findOne({
+            VoucherNumber: table.Recipt.value
+        });
+
+        if (!voucher) {
+            return res.status(404).json({ message: "Voucher not found" });
+        }
+
+        // 2️⃣ Adjust voucher entry
+        voucher.VoucharData = voucher.VoucharData.map(item => {
+            if (item.id === table.EntryId) { // ✅ FIX 2
+                return {
+                    ...item,
+                    ClientRef2: `${item.ClientRef2} , ${table?.Invoice?.value}`,
+                    Remain:
+                        Number(item.Remain || 0) +
+                        Number(table.invoiceAmount || 0)
+                };
+
+            }
+            return item;
+        });
+
+        // 3️⃣ Opening invoice check
+        const AllOpeningInvoice = await InvoiceOpeningModal.findOne();
+
+        const Inv = AllOpeningInvoice?.InvoiceData.find(
+            inv => inv.Invoice === table?.Invoice?.value
+        );
+
+        if (Inv) {
+            Inv.RecivedAmount = (
+                Number(Inv.RecivedAmount || 0) +
+                Number(table.invoiceAmount)
+            ).toFixed(2);
+
+            Inv.RemaingAmount = (
+                Number(Inv.RemaingAmount || 0) -
+                Number(table.invoiceAmount)
+            ).toFixed(2);
+
+            await InvoiceOpeningModal.findByIdAndUpdate(
+                AllOpeningInvoice._id,
+                { InvoiceData: AllOpeningInvoice.InvoiceData }
+            );
+        } else {
+            // 4️⃣ Distributor invoice update
+            const invoice = await DistrbutorInvoiceModal.findOne({
+                DitributorInvoiceCode: table.Invoice.value
+            });
+
+            if (!invoice) {
+                return res.status(404).json({ message: "Invoice not found" });
+            }
+
+            await DistrbutorInvoiceModal.findOneAndUpdate(
+                { DitributorInvoiceCode: table.Invoice.value },
+                {
+                    Remaining: (
+                        Number(invoice.Remaining) -
+                        Number(table.invoiceAmount)
+                    ).toString(),
+                    RecivedAmount: (
+                        Number(invoice.RecivedAmount || 0) +
+                        Number(table.invoiceAmount)
+                    ).toString()
+                }
+            );
+        }
+
+        // 5️⃣ Save voucher
+        await voucher.save();
+
+        res.status(200).json({
+            message: "Voucher adjusted successfully",
+            voucher
+        });
+
+    } catch (err) {
+        console.error(err);
+        res.status(500).json({ error: err.message });
+    }
+};
+
+
+export const JvPost = async (req, res) => {
+    try {
+        const { id } = req.params
+        const Voucher = await VoucherModal.findById(id)
+        const invoiceEntries = Voucher.VoucharData.filter(item => item.Client);
+        for (const value of invoiceEntries) {
+
+            const invoiceRef = value.ClientRef2; // same as old: value.ref
+            const amountToApplyNum = parseFloat(value.Credit);
+
+            const customerInvoice = await SalesInvoiceModal.findOne({
+                SalesInvoice: invoiceRef
+            });
+            console.log(customerInvoice)
+
+            // 🔹 OLD BEHAVIOR: if invoice NOT found → opening invoice
+            if (customerInvoice == null) {
+
+                const AllOpeningInvoice = await InvoiceOpeningModal.findOne();
+                if (!AllOpeningInvoice) continue;
+
+                const Inv = AllOpeningInvoice.InvoiceData.find(
+                    In => In.Invoice == invoiceRef
+                );
+                if (!Inv) continue;
+
+                const RecivedAmount = parseFloat(Inv.RecivedAmount || 0);
+                const RemainingAmount = parseFloat(Inv.RemaingAmount || 0);
+                // 🔁 EXACT SAME calculation (string result)
+                Inv.RecivedAmount = (RecivedAmount + amountToApplyNum).toString();
+                Inv.RemaingAmount = (RemainingAmount - amountToApplyNum).toString();
+                await InvoiceOpeningModal.findByIdAndUpdate(
+                    AllOpeningInvoice._id,
+                    { InvoiceData: AllOpeningInvoice.InvoiceData }
+                );
+
+            } else {
+
+                // 🔹 OLD redundant check preserved logically
+                if (!customerInvoice) {
+                    return res.status(404).json({
+                        message: `Invoice not found for ref: ${invoiceRef}`
+                    });
+                }
+
+                customerInvoice.RecivedAmount =
+                    Number(customerInvoice.RecivedAmount || 0) + Number(value.Credit);
+
+                customerInvoice.RemainingAmount =
+                    Number(customerInvoice.RemainingAmount || 0) - Number(value.Credit);
+                await customerInvoice.save();
+
+                // 🔁 same as old
+                await SalesInvoiceModal.findByIdAndUpdate(
+                    customerInvoice._id,
+                    customerInvoice
+                );
+            }
+        }
+        await VoucherModal.findByIdAndUpdate(id, { status: "Post" })
+        res.status(200).send(200)
+    } catch (err) {
+        console.log(err)
+        res.status(400).send(err)
+
+    }
+}
+
+
+export const VoucherNumber = async (req, res) => {
+    try {
+        const { voucher } = req.params;
+        // Assuming Check is an array of voucher numbers
+        // temp fix if only one voucher
+        const Allupdate = [];
+
+        for (const num of Check) {
+            const data = await VoucherModal.findOne({ VoucherNumber: num.Number });
+            if (!data) {
+                // Push error for this voucher but continue
+                Allupdate.push({ VoucherNumber: num.Number, error: "Voucher not found" });
+                continue;
+            }
+
+            for (let i = 0; i < data.VoucharData.length; i++) {
+                const item = data.VoucharData[i];
+                const splitRef = item.ClientRef2
+                if (!item.ClientRef2) continue;
+                if (!item.ClientRef2 == "Advance") {
+                    item.Store = "69589f74bed54ca7db54930c";
+                }
+                // 1️⃣ Sales Invoice
+                const sale = await SalesInvoiceModal.findOne(
+                    { SalesInvoice: splitRef },
+                    { Store: 1 }
+                );
+                if (sale?.Store) {
+                    item.Store = sale.Store;
+                    continue;
+                }
+
+                // 2️⃣ Distributor Invoice
+                const distributorSale = await DistrbutorInvoiceModal.findOne(
+                    { DitributorInvoiceCode: splitRef },
+                    { Store: 1 }
+                );
+                if (distributorSale?.Store) {
+                    item.Store = distributorSale.Store;
+                    continue;
+                }
+
+                // 3️⃣ Opening Invoice
+                const openingInvoice = await InvoiceOpeningModal.findOne();
+                if (openingInvoice) {
+                    const inv = openingInvoice.InvoiceData.find(
+                        i => i.Invoice === splitRef
+                    );
+                    if (inv?.Store) {
+                        item.Store = inv.Store;
+                    }
+                }
+            }
+
+            // Update DB
+            await VoucherModal.findByIdAndUpdate(data._id, { VoucharData: data.VoucharData });
+            Allupdate.push({ VoucherNumber: num.Number, data: data.VoucharData });
+        }
+
+        res.status(200).json({
+            success: true,
+            data: Allupdate,
+        });
+
+    } catch (err) {
+        console.error(err);
+        res.status(500).json({
+            success: false,
+            message: err.message,
+        });
+    }
+};
+
+
+export const UpdateClient = async (req, res) => {
+    try {
+
+
+        for (const item of voucher) {
+            const data = await VoucherModal.findOne({ VoucherNumber: item.Voucher })
+            if (data) {
+                for (const Nestitem of data.VoucharData) {
+                    const invoice = await SalesInvoiceModal.findOne({ SalesInvoice: Nestitem.ClientRef2 })
+                    console.log(invoice)
+                    if (invoice) {
+                        Nestitem.Store = invoice.Store
+                    }
+                }
+                await VoucherModal.findByIdAndUpdate(data._id, {
+                    VoucharData: data.VoucharData
+                })
+            }
+
+
+        }
+        res.status(200).send("Hogia")
+    } catch (err) {
+        console.log(err)
+        res.status(200).send("Nahi howa")
+
+    }
+}
+
+export const DeleteVocuher = async (req, res) => {
+    try {
+        for (const item of voucher) {
+            await VoucherModal.findOneAndDelete({ VoucherNumber: `Pr${item.Voucher}` })
+        }
+        res.send("hogaia")
+    } catch (err) {
+        clg(err)
+    }
+}
+
+
+export const VoucherByID = async (req, res) => {
+    try {
+        const { id } = req.params;
+
+        // Validate ID
+        if (!id || id === 'undefined' || id === 'null') {
+            return res.status(400).json({
+                success: false,
+                message: "Invalid voucher ID provided"
+            });
+        }
+
+        // 1. Fetch voucher with proper error handling
+        const data = await VoucherModal.findById(id);
+
+        if (!data) {
+            return res.status(404).json({
+                success: false,
+                message: "Voucher not found"
+            });
+        }
+
+        // 2. Validate VoucharData exists
+        if (!data.VoucharData || !Array.isArray(data.VoucharData)) {
+            return res.status(200).json({
+                success: true,
+                data: []
+            });
+        }
+
+        const VoucharData = data.VoucharData;
+
+        // 3. Extract IDs with better filtering (handle null, undefined, empty strings)
+        const AccountID = VoucharData
+            .map(item => item?.Account)
+            .filter(val => val && val !== 'undefined' && val !== 'null');
+
+        const transporterID = VoucharData
+            .map(item => item?.Transporter)
+            .filter(val => val && val !== 'undefined' && val !== 'null');
+
+        const VendorID = VoucharData
+            .map(item => item?.Vendor)
+            .filter(val => val && val !== 'undefined' && val !== 'null');
+
+        const ClientID = VoucharData
+            .map(item => item?.Client)
+            .filter(val => val && val !== 'undefined' && val !== 'null');
+
+        const isValidObjectId = (id) => {
+            return typeof id === "string" && /^[a-fA-F0-9]{24}$/.test(id);
+        };
+        const StoreID = VoucharData
+            .map(item => item?.store ? item.store.toString() : null)
+            .filter(id => isValidObjectId(id)); // ✅ only valid IDs
+        console.log(StoreID);
+
+        // 4. Optimize: Only query if IDs exist
+        const promises = [];
+
+        if (AccountID.length > 0) {
+            promises.push(
+                ChartofAccountsModel.find({ _id: { $in: AccountID } })
+                    .select("AccountName")
+                    .lean() // Use lean() for better performance
+                    .then(accounts => accounts.map(acc => ({ ...acc, type: 'Account' })))
+            );
+        } else {
+            promises.push(Promise.resolve([]));
+        }
+
+        if (transporterID.length > 0) {
+            promises.push(
+                TransporterModal.find({ _id: { $in: transporterID } })
+                    .select("TransporterName")
+                    .lean()
+                    .then(transporters => transporters.map(t => ({ ...t, type: 'Transporter' })))
+            );
+        } else {
+            promises.push(Promise.resolve([]));
+        }
+
+        if (VendorID.length > 0) {
+            promises.push(
+                VendorModel.find({ _id: { $in: VendorID } })
+                    .select("VendorName")
+                    .lean()
+                    .then(vendors => vendors.map(v => ({ ...v, type: 'Vendor' })))
+            );
+        } else {
+            promises.push(Promise.resolve([]));
+        }
+
+        if (ClientID.length > 0) {
+            promises.push(
+                CutomerModal.find({ _id: { $in: ClientID } })
+                    .select("CutomerName")
+                    .lean()
+                    .then(clients => clients.map(c => ({ ...c, type: 'Client' })))
+            );
+        } else {
+            promises.push(Promise.resolve([]));
+        }
+        if (StoreID.length > 0) {
+            promises.push(
+                StoreModal.find({ _id: { $in: StoreID } })
+                    .select("StoreName")
+                    .lean()
+                    .then(stores => stores.map(s => ({ ...s, type: 'Store' })))
+            );
+        } else {
+            promises.push(Promise.resolve([]));
+        }
+
+
+        // 5. Execute all queries in parallel
+        const [accounts, transporters, vendors, clients, stores] = await Promise.all(promises);
+
+        // 6. Merge with type information
+        const mergeData = [...accounts, ...transporters, ...vendors, ...clients, ...stores];
+
+        // 7. Return structured response
+        res.status(200).json({
+            success: true,
+            data: mergeData,
+            voucher: data,
+            metadata: {
+                voucherId: id,
+                totalReferences: mergeData.length,
+
+                breakdown: {
+                    accounts: accounts.length,
+                    transporters: transporters.length,
+                    vendors: vendors.length,
+                    clients: clients.length
+                }
+            }
+        });
+
+    } catch (err) {
+        console.error("Error in VoucherByID:", {
+            message: err.message,
+            stack: err.stack,
+            params: req.params
+        });
+
+        // Send proper error response based on error type
+        if (err.name === 'CastError') {
+            return res.status(400).json({
+                success: false,
+                message: "Invalid ID format"
+            });
+        }
+
+        res.status(500).json({
+            success: false,
+            message: "Internal server error. Please try again later."
+        });
+    }
+}
+
+
+

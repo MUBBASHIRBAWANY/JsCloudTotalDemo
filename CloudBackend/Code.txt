@@ -1,0 +1,176 @@
+if (req.body.status === "Bounce") {
+    try {
+        // ==========================
+        // 1. VALIDATION
+        // ==========================
+        const { chq, _id } = req.body;
+        
+        if (!chq || !_id) {
+            return res.status(400).send({
+                message: "Cheque number and ID are required"
+            });
+        }
+
+        const currentDate = req.body.Date || new Date().toISOString().split('T')[0];
+
+        // ==========================
+        // 2. FIND CHEQUE RECORD
+        // ==========================
+        const data = await CustomerChqRecivedModal.findById(_id);
+        if (!data) {
+            return res.status(404).send({
+                message: "Cheque record not found"
+            });
+        }
+
+        // ==========================
+        // 3. FIND SPECIFIC CHEQUE GROUP
+        // ==========================
+        const group = data.grouped.find(
+            (item) => String(item.chq) === String(chq)
+        );
+
+        if (!group) {
+            return res.status(404).send({
+                message: "Cheque group not found"
+            });
+        }
+
+        // ==========================
+        // 4. UPDATE GROUP STATUS
+        // ==========================
+        group.RealizeDate = currentDate;
+        group.status = "Bounce";
+        group.staus = "Bounce";
+
+        // ==========================
+        // 5. UPDATE ITEMS STATUS
+        // ==========================
+        for (const item of group.items || []) {
+            item.status = "Bounce";
+            item.staus = "Bounce";
+        }
+
+        // ==========================
+        // 6. 🔥 FIX: GROUP INVOICES (UNIQUE)
+        // ==========================
+        const invoiceMap = new Map(); // Use Map to avoid duplicates
+
+        for (const item of group.items || []) {
+            // Skip UnRealized
+            if (item.Invoice === "UnRealized") continue;
+
+            const invoiceNo = item.Invoice;
+            
+            // ✅ Only add if not already in map
+            if (!invoiceMap.has(invoiceNo)) {
+                invoiceMap.set(invoiceNo, {
+                    invoice: invoiceNo,
+                    totalAmount: Number(item.Amount || 0),
+                    // Store first item's data for reference
+                    amount: Number(item.Amount || 0)
+                });
+            }
+            // ❌ DON'T accumulate - each invoice should be updated only once
+            // invoiceMap.get(invoiceNo).totalAmount += Number(item.Amount || 0);
+        }
+
+        // ==========================
+        // 7. UPDATE INVOICES (ONLY ONCE PER INVOICE)
+        // ==========================
+        const updatePromises = [];
+
+        for (const [invoiceNo, invoiceData] of invoiceMap) {
+            const amountToAdd = invoiceData.amount; // Individual amount (not accumulated)
+            
+            // ✅ Update Sales Invoice RemainingAmount (Increase)
+            const updateSalesInvoice = async () => {
+                const invoice = await SalesInvoiceModal.findOne({ 
+                    SalesInvoice: invoiceNo 
+                });
+
+                if (!invoice) {
+                    console.log(`⚠️ Invoice ${invoiceNo} not found`);
+                    return;
+                }
+
+                const currentRemaining = Number(invoice.RemainingAmount || 0);
+                const newRemaining = currentRemaining + amountToAdd;
+                
+                invoice.RemainingAmount = Number(newRemaining.toFixed(2));
+                
+                await SalesInvoiceModal.findByIdAndUpdate(
+                    invoice._id,
+                    { RemainingAmount: invoice.RemainingAmount }
+                );
+                
+                console.log(`✅ Invoice ${invoiceNo}: Remaining ${currentRemaining} → ${newRemaining.toFixed(2)} (Added: ${amountToAdd})`);
+            };
+
+            // ✅ Update Opening Invoice RemainingAmount (Increase)
+            const updateOpeningInvoice = async () => {
+                const opening = await InvoiceOpeningModal.findOne();
+                if (!opening) return;
+
+                const openingInv = opening.InvoiceData.find(
+                    inv => String(inv.Invoice) === String(invoiceNo)
+                );
+
+                if (!openingInv) {
+                    console.log(`⚠️ Invoice ${invoiceNo} not found in Opening`);
+                    return;
+                }
+
+                const currentRemaining = Number(openingInv.RemainingAmount || 0);
+                const newRemaining = currentRemaining + amountToAdd;
+                
+                openingInv.RemainingAmount = Number(newRemaining.toFixed(2));
+                
+                await InvoiceOpeningModal.findByIdAndUpdate(
+                    opening._id,
+                    { InvoiceData: opening.InvoiceData }
+                );
+                
+                console.log(`✅ Opening Invoice ${invoiceNo}: Remaining ${currentRemaining} → ${newRemaining.toFixed(2)} (Added: ${amountToAdd})`);
+            };
+
+            updatePromises.push(updateSalesInvoice());
+            updatePromises.push(updateOpeningInvoice());
+        }
+
+        // ==========================
+        // 8. WAIT FOR ALL UPDATES
+        // ==========================
+        await Promise.all(updatePromises);
+
+        // ==========================
+        // 9. SAVE CHEQUE RECORD
+        // ==========================
+        await CustomerChqRecivedModal.findByIdAndUpdate(
+            data._id,
+            {
+                grouped: data.grouped,
+                status: "Bounce"
+            }
+        );
+
+        // ==========================
+        // 10. SUCCESS RESPONSE
+        // ==========================
+        return res.status(200).send({
+            message: "Cheque bounced successfully",
+            invoicesUpdated: Array.from(invoiceMap.entries()).map(([inv, data]) => ({
+                invoice: inv,
+                amountAdded: data.amount
+            }))
+        });
+
+    } catch (err) {
+        console.error("ERROR in cheque bounce:", err);
+        
+        return res.status(500).send({
+            message: "Failed to bounce cheque: " + err.message,
+            stack: process.env.NODE_ENV === "development" ? err.stack : undefined
+        });
+    }
+}
