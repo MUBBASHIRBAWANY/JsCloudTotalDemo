@@ -1,0 +1,683 @@
+{
+  "_id": {
+    "$oid": "6a3faf8e5b791754e2f54653"
+  },
+  "DateStart": "2026-07-01",
+  "DateEnd": "2027-06-30",
+  "AccountsData": [
+    {
+      "id": "68821afdf93ac76a141e2698",
+      "Account": "68821afdf93ac76a141e2698",
+      "Debit": 0,
+      "Credit": 233602909.88
+    },
+    {
+      "id": "68821b0ef93ac76a141e269c",
+      "Account": "68821b0ef93ac76a141e269c",
+      "Debit": 0,
+      "Credit": 196030204.769
+    },
+    {
+      "id": "68821b23f93ac76a141e26a0",
+      "Account": "68821b23f93ac76a141e26a0",
+      "Debit": 0,
+      "Credit": 6693048.060000002
+    },
+    {
+      "id": "68821b5af93ac76a141e26a4",
+      "Account": "68821b5af93ac76a141e26a4",
+      "Debit": 0,
+      "Credit": 98698207.54000002
+    },
+    {
+      "id": "68821b64f93ac76a141e26a8",
+      "Account": "68821b64f93ac76a141e26a8",
+      "Debit": 0,
+      "Credit": 30203402
+    },
+    {
+      "id": "68821b6ef93ac76a141e26ac",
+      "Account": "68821b6ef93ac76a141e26ac",
+      "Debit": 0,
+      "Credit": 3882640.1500000004
+    },
+    {
+      "id": "68821b79f93ac76a141e26b0",
+      "Account": "68821b79f93ac76a141e26b0",
+      "Debit": 0,
+      "Credit": 30810645.74000001
+    },
+    {
+      "id": "68c7b560e8c037fe51707a2a",
+      "Account": "68c7b560e8c037fe51707a2a",
+      "Debit": 0,
+      "Credit": 10535.5
+    },
+    {
+      "id": "68e69cd32d3a575255bb7a98",
+      "Account": "68e69cd32d3a575255bb7a98",
+      "Debit": 11078018.479999999,
+      "Credit": 0
+    },
+    {
+      "id": "68e69d472d3a575255bb7aa4",
+      "Account": "68e69d472d3a575255bb7aa4",
+      "Debit": 0,
+      "Credit": 4386333.98
+    },
+    {
+      "id": "68e6a31b2d3a575255bb7b90",
+      "Account": "68e6a31b2d3a575255bb7b90",
+      "Debit": 0,
+      "Credit": 64585985
+    },
+    {
+      "id": "6946446963120b30cffc3cba",
+      "Account": "6946446963120b30cffc3cba",
+      "Debit": 0,
+      "Credit": 29697031
+    },
+    {
+      "id": "68c7b57ce8c037fe51707a2e",
+      "Account": "68c7b57ce8c037fe51707a2e",
+      "Debit": 24845,
+      "Credit": 0
+    },
+    {
+      "id": "69ff1c06b0a0c23078d14a31",
+      "Account": "69ff1c06b0a0c23078d14a31",
+      "Debit": 94439.17,
+      "Credit": 0
+    },
+    {
+      "id": "68821be2f93ac76a141e26c4",
+      "Account": "68821be2f93ac76a141e26c4",
+      "Debit": 500000,
+      "Credit": 0
+    },
+    {
+      "id": "6a1eb21049876bc8930ac045",
+      "Account": "6a1eb21049876bc8930ac045",
+      "Debit": 30000,
+      "Credit": 0
+    },
+    {
+      "id": "",
+      "Account": "",
+      "Debit": 532201,
+      "Credit": 0
+    },
+    {
+      "id": "68821fc0f93ac76a141e2700",
+      "Account": "68821fc0f93ac76a141e2700",
+      "Debit": 4838332,
+      "Credit": 0
+    },
+    {
+      "id": "688337a752625d01fb5b3fbf",
+      "Account": "688337a752625d01fb5b3fbf",
+      "Debit": 2409493,
+      "Credit": 0
+    },
+    {
+      "id": "68821e17f93ac76a141e26f0",
+      "Account": "68821e17f93ac76a141e26f0",
+      "Debit": 62610,
+      "Credit": 0
+    },
+    {
+      "id": "6976f21be9bc76e8db89aa6e",
+      "Account": "6976f21be9bc76e8db89aa6e",
+      "Debit": 0,
+      "Credit": 3777226
+    },
+    {
+      "id": "6960fe9afb9063d9ce2cd9ae",
+      "Account": "6960fe9afb9063d9ce2cd9ae",
+      "Debit": 208140,
+      "Credit": 0
+    },
+    {
+      "id": "6889e3aa038ee0cf542d2ac4",
+      "Account": "6889e3aa038ee0cf542d2ac4",
+      "Debit": 21279,
+      "Credit": 0
+    },
+    {
+      "id": "68c7b775e8c037fe51707a60",
+      "Account": "68c7b775e8c037fe51707a60",
+      "Debit": 167168414.91,
+      "Credit": 0
+    },
+    {
+      "id": "68821e3bf93ac76a141e26fc",
+      "Account": "68821e3bf93ac76a141e26fc",
+      "Debit": 280004,
+      "Credit": 0
+    },
+    {
+      "id": "68e60314a3f9d8606da07c1d",
+      "Account": "68e60314a3f9d8606da07c1d",
+      "Debit": 15157940.009,
+      "Credit": 0
+    },
+    {
+      "id": "6936a996b4914d7e58412304",
+      "Account": "6936a996b4914d7e58412304",
+      "Debit": 400,
+      "Credit": 0
+    },
+    {
+      "id": "69315b688c79c8f191a12372",
+      "Account": "69315b688c79c8f191a12372",
+      "Debit": 0,
+      "Credit": 521706146
+    },
+    {
+      "id": "69b5403f6c6d51b0199d5db6",
+      "Account": "69b5403f6c6d51b0199d5db6",
+      "Debit": 1324747.410275,
+      "Credit": 0
+    },
+    {
+      "id": "68da36a505b6863d05d0816f",
+      "Account": "68da36a505b6863d05d0816f",
+      "Debit": 10119379.123,
+      "Credit": 0
+    },
+    {
+      "id": "6a22a83c4b5442382981bac3",
+      "Account": "6a22a83c4b5442382981bac3",
+      "Debit": 10900,
+      "Credit": 0
+    },
+    {
+      "id": "6964f49b0bf062c9acb1f668",
+      "Account": "6964f49b0bf062c9acb1f668",
+      "Debit": 544416.27,
+      "Credit": 0
+    },
+    {
+      "id": "6960fc88fb9063d9ce2cd941",
+      "Account": "6960fc88fb9063d9ce2cd941",
+      "Debit": 318680,
+      "Credit": 0
+    },
+    {
+      "id": "694b8bbfdafe5260ad45040c",
+      "Account": "694b8bbfdafe5260ad45040c",
+      "Debit": 2971978,
+      "Credit": 0
+    },
+    {
+      "id": "695ca67603e2cf647ee64e38",
+      "Account": "695ca67603e2cf647ee64e38",
+      "Debit": 11119282,
+      "Credit": 0
+    },
+    {
+      "id": "68821bd2f93ac76a141e26c0",
+      "Account": "68821bd2f93ac76a141e26c0",
+      "Debit": 0,
+      "Credit": 0
+    },
+    {
+      "id": "6937e1b748a1c72f3c99957b",
+      "Account": "6937e1b748a1c72f3c99957b",
+      "Debit": 40153,
+      "Credit": 0
+    },
+    {
+      "id": "68821a5af93ac76a141e2688",
+      "Account": "68821a5af93ac76a141e2688",
+      "Debit": 1117113,
+      "Credit": 0
+    },
+    {
+      "id": "68f1dc25c7c8743dab737773",
+      "Account": "68f1dc25c7c8743dab737773",
+      "Debit": 953019,
+      "Credit": 0
+    },
+    {
+      "id": "6936ae04b4914d7e58412356",
+      "Account": "6936ae04b4914d7e58412356",
+      "Debit": 9065849,
+      "Credit": 0
+    },
+    {
+      "id": "68ecfeca249a4a2e536ee75f",
+      "Account": "68ecfeca249a4a2e536ee75f",
+      "Debit": 6000,
+      "Credit": 0
+    },
+    {
+      "id": "6936d3262b72a2e0ac9cabd7",
+      "Account": "6936d3262b72a2e0ac9cabd7",
+      "Debit": 200083,
+      "Credit": 0
+    },
+    {
+      "id": "68821a75f93ac76a141e2690",
+      "Account": "68821a75f93ac76a141e2690",
+      "Debit": 96440,
+      "Credit": 0
+    },
+    {
+      "id": "68e60e0ace6695b88107cf69",
+      "Account": "68e60e0ace6695b88107cf69",
+      "Debit": 23517984.385,
+      "Credit": 0
+    },
+    {
+      "id": "68e644a04d31d186684f0e32",
+      "Account": "68e644a04d31d186684f0e32",
+      "Debit": 72695508.924,
+      "Credit": 0
+    },
+    {
+      "id": "6960fc9dfb9063d9ce2cd945",
+      "Account": "6960fc9dfb9063d9ce2cd945",
+      "Debit": 278650,
+      "Credit": 0
+    },
+    {
+      "id": "688217eaf93ac76a141e264b",
+      "Account": "688217eaf93ac76a141e264b",
+      "Debit": 417300,
+      "Credit": 0
+    },
+    {
+      "id": "688218a3f93ac76a141e2663",
+      "Account": "688218a3f93ac76a141e2663",
+      "Debit": 0,
+      "Credit": 3000
+    },
+    {
+      "id": "688b35fc699ab72a90c5ec12",
+      "Account": "688b35fc699ab72a90c5ec12",
+      "Debit": 0,
+      "Credit": 133287577.818986
+    },
+    {
+      "id": "6a05ada2d7cd1c05bf9c561e",
+      "Account": "6a05ada2d7cd1c05bf9c561e",
+      "Debit": 600000,
+      "Credit": 0
+    },
+    {
+      "id": "68821c98f93ac76a141e26dc",
+      "Account": "68821c98f93ac76a141e26dc",
+      "Debit": 4000,
+      "Credit": 0
+    },
+    {
+      "id": "68ed00e0249a4a2e536ee767",
+      "Account": "68ed00e0249a4a2e536ee767",
+      "Debit": 19203144,
+      "Credit": 0
+    },
+    {
+      "id": "68ec8b59809bc9900ee15536",
+      "Account": "68ec8b59809bc9900ee15536",
+      "Debit": 30000,
+      "Credit": 0
+    },
+    {
+      "id": "692fcf9b23c964828988dfa0",
+      "Account": "692fcf9b23c964828988dfa0",
+      "Debit": 230350,
+      "Credit": 0
+    },
+    {
+      "id": "688217f3f93ac76a141e264f",
+      "Account": "688217f3f93ac76a141e264f",
+      "Debit": 71660,
+      "Credit": 0
+    },
+    {
+      "id": "68821a41f93ac76a141e2680",
+      "Account": "68821a41f93ac76a141e2680",
+      "Debit": 0,
+      "Credit": 4490000
+    },
+    {
+      "id": "693fba69ebccfcb8494773a9",
+      "Account": "693fba69ebccfcb8494773a9",
+      "Debit": 736923,
+      "Credit": 0
+    },
+    {
+      "id": "6960ffa2fb9063d9ce2cd9ef",
+      "Account": "6960ffa2fb9063d9ce2cd9ef",
+      "Debit": 33030,
+      "Credit": 0
+    },
+    {
+      "id": "68f722854acf85378a7a1a5e",
+      "Account": "68f722854acf85378a7a1a5e",
+      "Debit": 0,
+      "Credit": 1769198.0714059998
+    },
+    {
+      "id": "68821a9bf93ac76a141e2694",
+      "Account": "68821a9bf93ac76a141e2694",
+      "Debit": 25280,
+      "Credit": 0
+    },
+    {
+      "id": null,
+      "Account": null,
+      "Debit": 0,
+      "Credit": 15093034.93445
+    },
+    {
+      "id": "688337c452625d01fb5b3fc3",
+      "Account": "688337c452625d01fb5b3fc3",
+      "Debit": 205500,
+      "Credit": 0
+    },
+    {
+      "id": "6937c0f148a1c72f3c9949d7",
+      "Account": "6937c0f148a1c72f3c9949d7",
+      "Debit": 1391125,
+      "Credit": 0
+    },
+    {
+      "id": "68dd03eb1094ae933740b846",
+      "Account": "68dd03eb1094ae933740b846",
+      "Debit": 3287352.761,
+      "Credit": 0
+    },
+    {
+      "id": "6936c949fea005319f5bf39e",
+      "Account": "6936c949fea005319f5bf39e",
+      "Debit": 5700,
+      "Credit": 0
+    },
+    {
+      "id": "68e8d4cf5fbcd4d150aabcbc",
+      "Account": "68e8d4cf5fbcd4d150aabcbc",
+      "Debit": 1333015716.158627,
+      "Credit": 0
+    },
+    {
+      "id": "68c7b625e8c037fe51707a4c",
+      "Account": "68c7b625e8c037fe51707a4c",
+      "Debit": 0,
+      "Credit": 337248
+    },
+    {
+      "id": "68e6004972294c8f3aa951e0",
+      "Account": "68e6004972294c8f3aa951e0",
+      "Debit": 41514994.892,
+      "Credit": 0
+    },
+    {
+      "id": "68c7b74de8c037fe51707a58",
+      "Account": "68c7b74de8c037fe51707a58",
+      "Debit": 224323.72,
+      "Credit": 0
+    },
+    {
+      "id": "68c7b612e8c037fe51707a48",
+      "Account": "68c7b612e8c037fe51707a48",
+      "Debit": 22309336,
+      "Credit": 0
+    },
+    {
+      "id": "688217fff93ac76a141e2653",
+      "Account": "688217fff93ac76a141e2653",
+      "Debit": 45449,
+      "Credit": 0
+    },
+    {
+      "id": "69674e6bd98797bcb43b2a90",
+      "Account": "69674e6bd98797bcb43b2a90",
+      "Debit": 3202000,
+      "Credit": 0
+    },
+    {
+      "id": "6960fc7afb9063d9ce2cd93d",
+      "Account": "6960fc7afb9063d9ce2cd93d",
+      "Debit": 107860,
+      "Credit": 0
+    },
+    {
+      "id": "6883385a52625d01fb5b3fe0",
+      "Account": "6883385a52625d01fb5b3fe0",
+      "Debit": 201300895.75894308,
+      "Credit": 0
+    },
+    {
+      "id": "68c7b634e8c037fe51707a50",
+      "Account": "68c7b634e8c037fe51707a50",
+      "Debit": 3706766,
+      "Credit": 0
+    },
+    {
+      "id": "68f1e27cc7c8743dab7377d2",
+      "Account": "68f1e27cc7c8743dab7377d2",
+      "Debit": 0,
+      "Credit": 2103494
+    },
+    {
+      "id": "6960ff7ffb9063d9ce2cd9de",
+      "Account": "6960ff7ffb9063d9ce2cd9de",
+      "Debit": 13840,
+      "Credit": 0
+    },
+    {
+      "id": "68821e22f93ac76a141e26f4",
+      "Account": "68821e22f93ac76a141e26f4",
+      "Debit": 0,
+      "Credit": 14816634.8582072
+    },
+    {
+      "id": "688b0344699ab72a90c5eaf7",
+      "Account": "688b0344699ab72a90c5eaf7",
+      "Debit": 2150582350.2495804,
+      "Credit": 0
+    },
+    {
+      "id": "68821c32f93ac76a141e26cc",
+      "Account": "68821c32f93ac76a141e26cc",
+      "Debit": 178343,
+      "Credit": 0
+    },
+    {
+      "id": "68821c47f93ac76a141e26d0",
+      "Account": "68821c47f93ac76a141e26d0",
+      "Debit": 2477500,
+      "Credit": 0
+    },
+    {
+      "id": "68c8f2dbc22860c22dcafd57",
+      "Account": "68c8f2dbc22860c22dcafd57",
+      "Debit": 0,
+      "Credit": 154127129.7673
+    },
+    {
+      "id": "68c7b5f7e8c037fe51707a43",
+      "Account": "68c7b5f7e8c037fe51707a43",
+      "Debit": 1060088,
+      "Credit": 0
+    },
+    {
+      "id": "6936c6fbfea005319f5bf370",
+      "Account": "6936c6fbfea005319f5bf370",
+      "Debit": 198300,
+      "Credit": 0
+    },
+    {
+      "id": "696a210488aae831c50f4ba0",
+      "Account": "696a210488aae831c50f4ba0",
+      "Debit": 227500,
+      "Credit": 0
+    },
+    {
+      "id": "6960fecdfb9063d9ce2cd9b6",
+      "Account": "6960fecdfb9063d9ce2cd9b6",
+      "Debit": 263060,
+      "Credit": 0
+    },
+    {
+      "id": "6936bba2fea005319f5be33a",
+      "Account": "6936bba2fea005319f5be33a",
+      "Debit": 223198,
+      "Credit": 0
+    },
+    {
+      "id": "6936c6a8fea005319f5bf358",
+      "Account": "6936c6a8fea005319f5bf358",
+      "Debit": 11900,
+      "Credit": 0
+    },
+    {
+      "id": "68e603f4a3f9d8606da07c32",
+      "Account": "68e603f4a3f9d8606da07c32",
+      "Debit": 12314298.755,
+      "Credit": 0
+    },
+    {
+      "id": "68f1f556c7c8743dab73848c",
+      "Account": "68f1f556c7c8743dab73848c",
+      "Debit": 17147.52,
+      "Credit": 0
+    },
+    {
+      "id": "68821e30f93ac76a141e26f8",
+      "Account": "68821e30f93ac76a141e26f8",
+      "Debit": 7246051,
+      "Credit": 0
+    },
+    {
+      "id": "6960ff0dfb9063d9ce2cd9d6",
+      "Account": "6960ff0dfb9063d9ce2cd9d6",
+      "Debit": 92740,
+      "Credit": 0
+    },
+    {
+      "id": "68821ba4f93ac76a141e26b8",
+      "Account": "68821ba4f93ac76a141e26b8",
+      "Debit": 0,
+      "Credit": 422763145.87172437
+    },
+    {
+      "id": "68ecfe9f249a4a2e536ee75a",
+      "Account": "68ecfe9f249a4a2e536ee75a",
+      "Debit": 2721440,
+      "Credit": 0
+    },
+    {
+      "id": "688337d252625d01fb5b3fc7",
+      "Account": "688337d252625d01fb5b3fc7",
+      "Debit": 1772351,
+      "Credit": 0
+    },
+    {
+      "id": "688b3a735b88f9623d7612be",
+      "Account": "688b3a735b88f9623d7612be",
+      "Debit": 0,
+      "Credit": 2268429959.7770004
+    },
+    {
+      "id": "6937c34648a1c72f3c995c4d",
+      "Account": "6937c34648a1c72f3c995c4d",
+      "Debit": 173740,
+      "Credit": 0
+    },
+    {
+      "id": "6954da3df3fc317629d50099",
+      "Account": "6954da3df3fc317629d50099",
+      "Debit": 214501,
+      "Credit": 0
+    },
+    {
+      "id": "68e6008472294c8f3aa951ec",
+      "Account": "68e6008472294c8f3aa951ec",
+      "Debit": 16859283.884,
+      "Credit": 0
+    },
+    {
+      "id": "68e600b972294c8f3aa951fb",
+      "Account": "68e600b972294c8f3aa951fb",
+      "Debit": 4450022.471,
+      "Credit": 0
+    },
+    {
+      "id": "688219dbf93ac76a141e267c",
+      "Account": "688219dbf93ac76a141e267c",
+      "Debit": 0,
+      "Credit": 2877497
+    },
+    {
+      "id": "69567d01f087aefd41220952",
+      "Account": "69567d01f087aefd41220952",
+      "Debit": 91636,
+      "Credit": 0
+    },
+    {
+      "id": "69aaa142e00c9e852e15080e",
+      "Account": "69aaa142e00c9e852e15080e",
+      "Debit": 3714048,
+      "Credit": 0
+    },
+    {
+      "id": "6960fc64fb9063d9ce2cd939",
+      "Account": "6960fc64fb9063d9ce2cd939",
+      "Debit": 437630,
+      "Credit": 0
+    },
+    {
+      "id": "688219abf93ac76a141e2674",
+      "Account": "688219abf93ac76a141e2674",
+      "Debit": 0,
+      "Credit": 23394948
+    },
+    {
+      "id": "6961044cfb9063d9ce2cf0a8",
+      "Account": "6961044cfb9063d9ce2cf0a8",
+      "Debit": 276180,
+      "Credit": 0
+    },
+    {
+      "id": "68c7b68fe8c037fe51707a54",
+      "Account": "68c7b68fe8c037fe51707a54",
+      "Debit": 38167679,
+      "Credit": 0
+    },
+    {
+      "id": "68ecffe1249a4a2e536ee763",
+      "Account": "68ecffe1249a4a2e536ee763",
+      "Debit": 6864678,
+      "Credit": 0
+    },
+    {
+      "id": "68821c82f93ac76a141e26d8",
+      "Account": "68821c82f93ac76a141e26d8",
+      "Debit": 46000,
+      "Credit": 0
+    },
+    {
+      "id": "68c7b75fe8c037fe51707a5c",
+      "Account": "68c7b75fe8c037fe51707a5c",
+      "Debit": 792509.833739726,
+      "Credit": 0
+    },
+    {
+      "id": "688b39725b88f9623d7612a5",
+      "Account": "688b39725b88f9623d7612a5",
+      "Debit": 0,
+      "Credit": 136620
+    },
+    {
+      "id": "69bd30a47d8795e8c5b3d45c",
+      "Account": "69bd30a47d8795e8c5b3d45c",
+      "Debit": 87500,
+      "Credit": 0
+    }
+  ],
+  "Status": "Open",
+  "__v": 0
+}

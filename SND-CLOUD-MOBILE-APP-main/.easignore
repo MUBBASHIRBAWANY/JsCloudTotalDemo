@@ -1,0 +1,49 @@
+# dependencies
+node_modules/
+
+# Expo
+.expo/
+dist/
+web-build/
+expo-env.d.ts
+
+# Native
+android/
+ios/
+.kotlin/
+*.orig.*
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+
+# Metro
+.metro-health-check*
+
+# debug
+npm-debug.*
+yarn-debug.*
+yarn-error.*
+
+# macOS
+.DS_Store
+*.pem
+
+# local env files
+.env*.local
+
+# typescript
+*.tsbuildinfo
+
+example
+
+# Force EAS to use npm install (avoids broken npm ci lock sync)
+package-lock.json
+
+# Local git / IDE / old code not needed for build
+.git/
+oldCode/
+.vscode/
+*.md
+AGENTS.md

@@ -1,0 +1,13 @@
+import React from 'react'
+import DeductionTypeForm from '../../../Components/HrPayroll/DeductionType/DeductionTypeForm'
+
+const DeductionTypeEditPage = () => {
+  return (
+    <div className="p-6">
+      <h2 className="pd-section-title mb-5">Edit Deduction Type</h2>
+      <DeductionTypeForm />
+    </div>
+  )
+}
+
+export default DeductionTypeEditPage

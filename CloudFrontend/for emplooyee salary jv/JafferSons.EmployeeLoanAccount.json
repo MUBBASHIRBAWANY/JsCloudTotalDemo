@@ -1,0 +1,6201 @@
+[{
+  "_id": {
+    "$oid": "6ad4b0e7824ca42487512205"
+  },
+  "empId": {
+    "$oid": "6ad4b0e764afa8f4db11d833"
+  },
+  "__v": 0,
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- Naveed Baig ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "6adb360eb04f22cf6d5f9b10"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6645ba"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a46"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- M. BILAL YOUNUS ( PACKING SUPR ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "6adb360eb04f22cf6d5f9b10"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6645bb"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a47"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- M. AKRAM KHAN (COOKING SUPR) ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "6adb360eb04f22cf6d5f9b10"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6645bc"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a48"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- S. ZULFIQAR HASSAN (BOILER OPT ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "6adb360eb04f22cf6d5f9b10"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6645bd"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a49"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- M. GHUFRAN (COOKING HELPER) ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "6adb360eb04f22cf6d5f9b10"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6645be"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a4a"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- MAHAM IRFAN (QRD) ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "6adb360eb04f22cf6d5f9b10"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6645bf"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a4b"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- MUHAMMAD SOHAIL (PEON) ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "6adb360eb04f22cf6d5f9b10"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6645c0"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a4c"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- MUHAMMAD SAAD NASIR ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "6adb360eb04f22cf6d5f9b10"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6645c1"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a4d"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- MUHAMMAD IBRAHIM ANSARI ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "0"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6645c2"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a4e"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- MUHAMMAD ATHAR ANSARI ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": "20506002034",
+  "Store": "0"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6645c3"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a4f"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- MUHAMMAD ASIF LATIF(ITMANG) ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": "20506002076",
+  "Store": "0"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6645c4"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a50"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- ATIF SOHAIL KHAN ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "0"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6645c5"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a51"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- MUHAMMAD FARAZ KHAN ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": "20506002086",
+  "Store": "0"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6645c6"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a52"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- MUHAMMAD YAQOOB ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": "20506002104",
+  "Store": "0"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6645c7"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a53"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- MUHAMMAD NOMAN RAFQUE ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "0"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6645c8"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a54"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- ZEESHAN ALI RECEPTIONEST ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "0"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6645c9"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a55"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- MUHAMMAD ABDULLAH TAX ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "0"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6645ca"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a56"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- USMAN RAZA THEBO - AC ASSIT ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": "20506002085",
+  "Store": "0"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6645cb"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a57"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- UMER ALI (PEON) ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "0"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6645cc"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a58"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- MUHAMMAD SHARIQ ASGHAR ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "0"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6645cd"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a59"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- ABDUL HAMEED - SEC OFFICER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": "10212114",
+  "Store": "0"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6645ce"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a5a"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- HABIB ULLAH (PEON) ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": "20506002107",
+  "Store": "0"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6645cf"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a5b"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- SABIH UR REHMAN - ELEC ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": "20506002093",
+  "Store": "0"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6645d0"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a5c"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- SAJJAD KHAN - HELPER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": "20506002106",
+  "Store": "0"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6645d1"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a5d"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- EIDGUL  - WATCHMAN ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "0"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6645d2"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a5e"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- MUHAMMAD SALEEM - PEON ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "0"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6645d3"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a5f"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- ZIA ULLAH - PEON ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "0"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6645d4"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a60"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- SAMUEL SWEEPER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "0"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6645d5"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a61"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- IKRAM MASIH (SWEEPER) ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "0"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6645d6"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a62"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- FARHAN BOTA (SWEEPER) ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "0"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6645d7"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a63"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- MUHAMMAD SIDDIQ ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": "20506002051",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6645d8"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a64"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- BILAL - OB - (GALAXY ENTRP) ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": "20506002110",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6645d9"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a65"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- AKBER ALI KHAN - OB- (GALAXY ) ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": "20506002108",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6645da"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a66"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- MUHAMMAD HASHIM - DRIVER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6645db"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a67"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- SYED WAZEER HASSAN ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": "20506002098",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6645dc"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a68"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- MUHAMMAD HARIS ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6645dd"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a69"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- SHARJEEL ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6645de"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a6a"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- WAQAS - DRIVER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6645df"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a6b"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- ABDUL BASIT - ACC ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": "20506002099",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6645e0"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a6c"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- MUHAMMAD ADEEL H  FAROOQI- ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6645e1"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a6d"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- SYED SHAN - TSO (ABEEHA ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": "10212174",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6645e2"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a6e"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- AMEER HAMZA - OB- (ABEEHA ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6645e3"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a6f"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- IMRAN KHAN - OB - (GALAXY ENT) ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": "20506002109",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6645e4"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a70"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- M. BILAL- OB- (ABEEHA TRADER) ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6645e5"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a71"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- MUHAMMAD DAWOOD OB ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": "20506002130",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6645e6"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a72"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- UZAIR OB (ABEEHA TRADER) ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6645e7"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a73"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- SANAULLAH -OB- (GALAXY ENTRP) ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6645e8"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a74"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- HAFIZ S. AMMAR ALI ZAIDI - TSO ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6645e9"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a75"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- RUSTAM - DRIVER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": "20506002044",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6645ea"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a76"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- AMAR JALIL  (MANAGER SALES) ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": "20506002030",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6645eb"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a77"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- HAMEEDULLAH- OB ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": "20506002115",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6645ec"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a78"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- JUNAID HASSAN BUT KASHMIRI ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": "20506002045",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6645ed"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a79"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- MUHAMMAD JABBAR - ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": "10212169",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6645ee"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a7a"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- KHURRAM SHEHZAD - W/ASIS ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6645ef"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a7b"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- ABDUL AZIZ - LOADER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6645f0"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a7c"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- JALAL AHMED - LOADER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6645f1"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a7d"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- MUHAMMAD RIAZ - W/I ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6645f2"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a7e"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- AMAAN - LOADER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6645f3"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a7f"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- MUHAMMAD MUKARRAM LOADER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6645f4"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a80"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- ADNAN LOADER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6645f5"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a81"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- HAMZA LOADER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6645f6"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a82"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- GHULAM HUSSAIN QURESHI - ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6645f7"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a83"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- SHAKIR ALI - ASM ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6645f8"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a84"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- HAMEEDULLAH  - SO ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "#N/A"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6645f9"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a85"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- ASIF SHAHZAD - ZSM  - LH ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6645fa"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a86"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- ABID HUSSAIN - ZSM - SARGODHA ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6645fb"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a87"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- SYED ARSALAN ALI - ASM - MULTA ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6645fc"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a88"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- SYED ASAD ALI - TSO - MULTAN ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6645fd"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a89"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- AQIB SAEED - ZSM - RAWALPINDI ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6645fe"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a8a"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- M.BILAL ASHFAQ - LH-TSO ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6645ff"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a8b"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- MUHAMMAD ALI JAVAD LH-SR ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea664600"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a8c"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- MUHAMMAD WAQAS-LR-SR ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea664601"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a8d"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- RIZWANASGHAR-LR-SR ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea664602"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a8e"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- MUHAMMAD USMAN KARAMAT- ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea664603"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a8f"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- AMIR SHEHZAD-LR-SR ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea664604"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a90"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- ARMGHANYOUNUS LR-TSO ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea664605"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a91"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- HAIDER MIR-LR-SR ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea664606"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a92"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- SHER ALI-LR-SR ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea664607"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a93"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- AYYAZ IJAZ-LR-SR ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea664608"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a94"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- ZEESHAN ALI-LR-SR ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea664609"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a95"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- HAFIZ M. USAMA SALEEM-LR-SR ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea66460a"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a96"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- BEHZAD SABIR-LR-SR ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea66460b"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a97"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- SHABEER HUSSAIN-LR-SR ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea66460c"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a98"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- YASIR JAMIL-LR-SR ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea66460d"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a99"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- ZEESHAN ALI-LR-TSO ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea66460e"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a9a"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- WAQAS-LR-SR ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea66460f"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a9b"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- UMAIR YOUNUS-LR-SR ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea664610"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a9c"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- MUHAMMAD FAISAL-LR-SR ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea664611"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a9d"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- KHURRAM ABBAS-LR-SR ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea664612"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a9e"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- SYED HUSNAIN HAIDER-LR-SR ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea664613"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a9f"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- MUHAMMAD IMRAN-FS-TSO ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea664614"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910aa0"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- ARSHAD KHAN-TSO-KPK ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea664615"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910aa1"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- MUHAMMAD YOUSUF SANI-LR-TSO ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea664616"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910aa2"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- SHAN ALI-SR-LR ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea664617"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910aa3"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- FAISAL SIDDIQUI-SR-LR ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea664618"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910aa4"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- RIAZ AHMED-QT-TSO ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea664619"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910aa5"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- WAQAR ALI -LR-SR ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea66461a"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910aa6"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- WALEED-SR-LR ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea66461b"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910aa7"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- SYED NAVEED RIZVI - SO - BMK ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": "10212176",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea66461c"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910aa8"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- RAHEEL AHMED - OB - BMK ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": "20506002112",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea66461d"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910aa9"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- AQEEL KHAN - OB - BMK ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": "20506002096",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea66461e"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910aaa"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- ALAM - OB - BMK ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": "20506002113",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea66461f"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910aab"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- WASEEM AHMED - OB -BMK ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": "20506002111",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea664620"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910aac"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- SALEEM TAYAB - OB - BMK ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea664621"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910aad"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- SHAHAN SARKAR - SS - AWMK ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea664622"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910aae"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- MOHAMMAD RASHID - OB - AWMK ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea664623"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910aaf"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- SYED RASHID ALI - OB - AWMK ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea664624"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910ab0"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- M. BILAL KHAN - OB - ADNAN ENT ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea664625"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910ab1"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- ABDUL SALAM - TSO - ATK ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": "20506002092",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea664626"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910ab2"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- ZOHAIB - SS - ATK ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea664627"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910ab3"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- M. KAMRAN FAROOQUI - OB - ATK ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea664628"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910ab4"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- FAIZAN HAMEED - OB - ATK ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea664629"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910ab5"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- MOHAMMAD ADIL - OB - ATK ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea66462a"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910ab6"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- MUHAMMAD NADEEM - TSO - ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea66462b"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910ab7"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- NAEEM AHMED - SS - BSIMA TRAD) ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea66462c"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910ab8"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- AMJAD - OB - BMW ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea66462d"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910ab9"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- M. FARHAN - OB - BT ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea66462e"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910aba"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- M. TAHIR - OB - ATK ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea66462f"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910abb"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- BABAR ISMAIL-TSO-ATK ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": "20506002120",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea664630"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910abc"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- MUHAMMAD LARAIB-OB-BT ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": "20506002125",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea664631"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910abd"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- ANJUM WAQAR-TSO-AWMK ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea664632"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910abe"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- IMRAN PARVAIZ-SS-R.I.TRADER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea664633"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910abf"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- KHURRAM-OB-R.I.TRADER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea664634"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910ac0"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- MAZHAR ULLAHA KHAN -OB-BMW ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea664635"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910ac1"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- MUHAMMAD REHAN-OB-BT ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea664636"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910ac2"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- MANSOOR ALI -OB-BT ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea664637"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910ac3"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- M. ABDULLAH KHAN-OB R.I. TRADE ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea664638"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910ac4"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- MUHAMMAD ADNAN-BT-OB ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea664639"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910ac5"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- SHAMIM UDDIN-GALAXY ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": "20506002114",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea66463a"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910ac6"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- NASIR ALI-OB-GALAXY ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea66463b"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910ac7"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- DAD MUHAMMAD - BABU ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea66463c"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910ac8"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- UMER JILLANI -OB- GALAXY ENTR ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea66463d"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910ac9"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- MUHAMMAD SAJID - OB - GALAXY ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea66463e"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910aca"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- FAIZAN - OB - (GALAXY ENTR) ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea66463f"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910acb"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- FAIZAN ALI - OB - BABU TRADER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea664640"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910acc"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- ABDUL SATTAR - OB - BISMA TRAD ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea664641"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910acd"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- UBAID-UR-REHMAN - OB - BISMA ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea664642"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910ace"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- ABSAR AHMED FAROOQUI - OB - ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea664643"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910acf"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- MUHAMMAD KHALID -OB- (ADNAN) ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea664644"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910ad0"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- MUHAMMAD KAMRAN -OB- (ADNAN) ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea664645"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910ad1"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- ALI RAZA - OB- (BISMA) ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea664646"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910ad2"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- SYED ATHAR HUSSAIN - ASM - LS ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea664647"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910ad3"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- MANZAR - SO - L. SINDH ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea664648"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910ad4"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- M. FAISAL - SO - L.SINDH ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": "20506002101",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea664649"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910ad5"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- MOHAMMAD NASIR - SO - L.SINDH ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea66464a"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910ad6"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- MOHAMMAD ASIF - SO - L.SINDH ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea66464b"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910ad7"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- JAMEEL AHMED SIDDIQUE - SO - U ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea66464c"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910ad8"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- M. SHEHZAD KHAN - SS - U. SIND ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea66464d"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910ad9"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- ARSALAN HASHMI  -OB-  L.SIND ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea66464e"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910ada"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- IMRAN ALI LARIK-OB-U SIND ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": "20506002129",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea66464f"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910adb"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- AZM-UL-HAQ SIDDIQUI - OB- U-SI ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea664650"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910adc"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- ALI QASIM -OB- UPPER SINDH ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea664651"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910add"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- MUHAMMAD WASEEM ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": "20506002028",
+  "Store": "6854edbcf31562c896094387"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea664652"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910ade"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- MOHAMMAD SABIR (LOADER) ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "6854edbcf31562c896094387"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea664653"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910adf"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- MUHAMMAD AAMIR ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": "20506002050",
+  "Store": "6854edbcf31562c896094387"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea664654"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910ae0"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- JUNAID AKBAR ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": "20506002001",
+  "Store": "6854edbcf31562c896094387"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea664655"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910ae1"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- IMRAN NASEEM (KPO/HR OFFICER) ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": "20506002039",
+  "Store": "6854edbcf31562c896094387"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea664656"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910ae2"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- NADIR KHAN - DM ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": "20506002089",
+  "Store": "6854edbcf31562c896094387"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea664657"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910ae3"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- ATIF HUSSAIN SIDDIQUI ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "6854edbcf31562c896094387"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea664658"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910ae4"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- SAMI UDDIN SO FASIH UDDIN - BM ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "6854edbcf31562c896094387"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea664659"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910ae5"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- MUHAMMAD KASHAN ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "6854edbcf31562c896094387"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea66465a"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910ae6"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- MUHAMMAD IMRAN KHAN - OB ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": "20506002055",
+  "Store": "6854edbcf31562c896094387"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea66465b"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910ae7"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- MUHAMMAD HANIF - LOADER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "6854edbcf31562c896094387"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea66465c"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910ae8"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- WASIM - LOADER - FSD ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "6854edbcf31562c896094387"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea66465d"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910ae9"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- MUHAMMAD AREEB - OB ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "6854edbcf31562c896094387"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea66465e"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910aea"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- SAHIB ZAR GUL ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": "20506002024",
+  "Store": "6854edbcf31562c896094387"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea66465f"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910aeb"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- MUHAMMAD TALHA SHAH - OB ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "6854edbcf31562c896094387"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea664660"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910aec"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- MURTAZA JAMIL - OB ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": "20506002074",
+  "Store": "6854edbcf31562c896094387"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea664661"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910aed"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- SHAHZAIB LOADER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "6854edbcf31562c896094387"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea664662"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910aee"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- JAWWAD LOADER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "6854edbcf31562c896094387"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea664663"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910aef"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- BILAL - LOADER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "6854edbcf31562c896094387"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea664664"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910af0"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- SHERAZ AHMED KHAN ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": "20506002021",
+  "Store": "6a96633b8a3d6ba690168565"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea664665"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910af1"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- KHALID IQBAL ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": "20506002003",
+  "Store": "6a96633b8a3d6ba690168565"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea664666"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910af2"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- SIRAJ DIN (WATCHMAN) ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": "20506002072",
+  "Store": "6a96633b8a3d6ba690168565"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea664667"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910af3"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- MUBBASHIR ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "6a96633b8a3d6ba690168565"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea664668"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910af4"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- BILAL ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "6a96633b8a3d6ba690168565"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea664669"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910af5"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- SOHAIB JAMIL J. DEVELOPER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "6a96633b8a3d6ba690168565"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea66466a"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910af6"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- SAEED GUL (SOTWARE ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "6a96633b8a3d6ba690168565"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea66466b"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910af7"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- SYED JUNAID IMAM ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": "20506002073",
+  "Store": "6854ed7af31562c89609436d"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea66466c"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910af8"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- FAISAL RASHID (KPO) ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "6854ed7af31562c89609436d"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea66466d"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910af9"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- MUHAMMAD FAIZAN ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": "20506002005",
+  "Store": "6854ed7af31562c89609436d"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea66466e"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910afa"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- MUHAMMAD BILAL ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": "20506002018",
+  "Store": "6854ed7af31562c89609436d"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea66466f"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910afb"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- WAQAR AHMED (DSR) ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": "20506002065",
+  "Store": "6854ed7af31562c89609436d"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea664670"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910afc"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- JAN SARDAR (D/DM) ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": "20506002047",
+  "Store": "6854ed7af31562c89609436d"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea664671"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910afd"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- SHAFI UR RAHMAN ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "6854ed7af31562c89609436d"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea664672"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910afe"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- HAMZA IRSHAD (A. FSE) ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": "20506002105",
+  "Store": "6854ed7af31562c89609436d"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea664673"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910aff"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- MUHAMMAD SARWAR ALAM ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": "20506002069",
+  "Store": "6854ed7af31562c89609436d"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea664674"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b00"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- AHSAN ALI - SHEHZORE ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": "20506002025",
+  "Store": "6854ed7af31562c89609436d"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea664675"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b01"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- UBAID IMAM ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": "20506002087",
+  "Store": "6854ed7af31562c89609436d"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea664676"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b02"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- AQIB RAZA  (DSR) ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": "20506002048",
+  "Store": "6854ed7af31562c89609436d"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea664677"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b03"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- MUHAMMAD SAJAWAL SHAHID ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": "20506002031",
+  "Store": "6854ed7af31562c89609436d"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea664678"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b04"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- MUHAMMAD RAHEEL ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": "20506002029",
+  "Store": "6854ed7af31562c89609436d"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea664679"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b05"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- MUHAMMAD NASIR ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": "20506002035",
+  "Store": "6854ed7af31562c89609436d"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea66467a"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b06"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- USMAN GHANI - DRIVER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": "20506002067",
+  "Store": "6854ed7af31562c89609436d"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea66467b"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b07"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- MUHAMMAD UBAID SALAM - DSR ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": "20506002032",
+  "Store": "6854ed7af31562c89609436d"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea66467c"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b08"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- SULTAN MEHMOOD(DM) ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": "20506002078",
+  "Store": "6854ed7af31562c89609436d"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea66467d"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b09"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- MUHAMMAD IMRAN (DRIVER) ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": "20506002088",
+  "Store": "6854ed7af31562c89609436d"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea66467e"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b0a"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- MUHAMMAD REHAN (DM) ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "6854ed7af31562c89609436d"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea66467f"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b0b"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- MUHAMMAD MUBASHIR AHMED - ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": "20506002054",
+  "Store": "6854ed7af31562c89609436d"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea664680"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b0c"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- AHMED DIN ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "6854ed7af31562c89609436d"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea664681"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b0d"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- MUHAMMAD HAMZA - DSR ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": "20506002081",
+  "Store": "6854ed7af31562c89609436d"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea664682"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b0e"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- ANWER INAYAT - DRIVER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": "20506002062",
+  "Store": "6854ed7af31562c89609436d"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea664683"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b0f"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- MUHAMMAD SHABBIR - DRIVER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": "20506002009",
+  "Store": "6854ed7af31562c89609436d"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea664684"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b10"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- TANVEER FAROOQ KHAN -  ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": "20506002097",
+  "Store": "6854ed7af31562c89609436d"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea664685"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b11"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- MUHAMMAD EJAZ - DSR ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": "20506002080",
+  "Store": "6854ed7af31562c89609436d"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea664686"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b12"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- WAQAR YOUNIS - DSR ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "6854ed7af31562c89609436d"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea664687"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b13"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- YASEEN KHAN - DM ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "6854ed7af31562c89609436d"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea664688"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b14"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- SYED NABEEL MOHSIN - DM ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "6854ed7af31562c89609436d"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea664689"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b15"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- SOHAIL AHMED - DRIVER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": "20506002066",
+  "Store": "6854ed7af31562c89609436d"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea66468a"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b16"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- KAMRAN SO SULEMAN - DM ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "6854ed7af31562c89609436d"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea66468b"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b17"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- FAKHAR ALAM - DSR ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "6854ed7af31562c89609436d"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea66468c"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b18"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- HANIF MUHAMMAD - SHEHZORE ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "6854ed7af31562c89609436d"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea66468d"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b19"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- MUHAMMAD USAMA ZAHID - DSR ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": "20506002117",
+  "Store": "6854ed7af31562c89609436d"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea66468e"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b1a"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- MUHAMMAD IMRAN - DM ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "6854ed7af31562c89609436d"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea66468f"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b1b"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- ANIS KHAN - DM ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "6854ed7af31562c89609436d"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea664690"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b1c"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- SHOAIB AHMED (DRIVER) ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "6854ed7af31562c89609436d"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea664691"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b1d"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- ASIF KHAN - DRIVER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": "20506002070",
+  "Store": "6854ed7af31562c89609436d"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea664692"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b1e"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- ASIF - SHEHZORE ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": "10212175",
+  "Store": "6854ed7af31562c89609436d"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea664693"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b1f"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- HAKEEM KHAN DRIVER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": "20506002124",
+  "Store": "6854ed7af31562c89609436d"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea664694"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b20"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- FAYYAZ AHMED -OB ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": "20506002123",
+  "Store": "6854ed7af31562c89609436d"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea664695"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b21"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- MAROOF AHMED DM ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": "20506002127",
+  "Store": "6854ed7af31562c89609436d"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea664696"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b22"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- MUHAMMAD TUFAIL DRIVER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": "20506002121",
+  "Store": "6854ed7af31562c89609436d"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea664697"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b23"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- PARVAIZ NASEEM DRIVER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "6854ed7af31562c89609436d"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea664698"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b24"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- MUHAMMAD WAQAS SIDDIQUI- DM ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "#N/A"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea664699"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b25"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- HABIBULLAH - DM ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "6854ed7af31562c89609436d"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea66469a"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b26"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- M. FAIZ-UL-REHMAN DRIVER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "6854ed7af31562c89609436d"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea66469b"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b27"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- JAVED - DM ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "6854ed7af31562c89609436d"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea66469c"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b28"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- MUHAMMAD AYAN -  DM ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "#N/A"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea66469d"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b29"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- ASAD ALI - DM ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "6854ed7af31562c89609436d"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea66469e"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b2a"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- IBRAHIM KHAN -  DRIVER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "6854ed7af31562c89609436d"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea66469f"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b2b"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- ADEEL - DM ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "6854ed7af31562c89609436d"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6646a0"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b2c"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- MOHAMMAD AMMAD - LOADER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "6854ed7af31562c89609436d"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6646a1"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b2d"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- SALA UDDIN - LOADER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": "10212166",
+  "Store": "6854ed7af31562c89609436d"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6646a2"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b2e"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- IMRAN ALI (LOADER) ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "6854ed7af31562c89609436d"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6646a3"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b2f"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- ASIF - LOADER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "6854ed7af31562c89609436d"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6646a4"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b30"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- MOHIUDDIN - DM ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "6854ed7af31562c89609436d"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6646a5"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b31"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- MAJID ALI - LOADER - CBL-1 ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "#N/A"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6646a6"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b32"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- MUHAMMAD SHAZAIB - LOADER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "6854ed7af31562c89609436d"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6646a7"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b33"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- ARIF SHAFIQ (W/INCHARGE) CBL1 ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": "20506002077",
+  "Store": "6854ed7af31562c89609436d"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6646a8"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b34"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- MUHAMMAD MUZAMMIL - DM ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "6854ed7af31562c89609436d"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6646a9"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b35"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- SHAKEEL AHMED LOADER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "6854ed7af31562c89609436d"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6646aa"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b36"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- HUSSAIN LOADER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "6854ed7af31562c89609436d"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6646ab"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b37"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- HASSAN LOADER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "6854ed7af31562c89609436d"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6646ac"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b38"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- MUHAMMAD USAMA LOADER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "6854ed7af31562c89609436d"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6646ad"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b39"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- NAVEED USMAN GHANI LOADER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "6854ed7af31562c89609436d"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6646ae"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b3a"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- LIAQAT ALI BALOCH LOADER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "6854ed7af31562c89609436d"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6646af"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b3b"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- M.JAMIL KHAN - LOADER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "6854ed7af31562c89609436d"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6646b0"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b3c"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- ALI HASSAN - LOADER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "6854ed7af31562c89609436d"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6646b1"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b3d"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- AFTAB AHMED (FSE) ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": "20506002102",
+  "Store": "6854ed92f31562c896094374"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6646b2"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b3e"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- SALMAN NADEEM - A.FSE ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": "20506002033",
+  "Store": "6854ed92f31562c896094374"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6646b3"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b3f"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- MUHAMMAD HANIF MEMON - DSR ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "6854ed92f31562c896094374"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6646b4"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b40"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- MUHAMMAD FAISAL SOLANKI - DSR ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "6854ed92f31562c896094374"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6646b5"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b41"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- MUHAMMAD TARIQ SIDDIQUE - ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "6854ed92f31562c896094374"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6646b6"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b42"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- ADNAN - DSR ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "6854ed92f31562c896094374"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6646b7"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b43"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- MUHAMMAD WAQAR  - DSR ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": "20506002084",
+  "Store": "6854ed92f31562c896094374"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6646b8"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b44"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- MUHAMMAD HASSNAIN - DSR ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": "10212173",
+  "Store": "6854ed92f31562c896094374"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6646b9"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b45"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- OWAIS UR REHMAN KHAN - DSR ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "6854ed92f31562c896094374"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6646ba"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b46"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- SOHAIL AHMED - DSR ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": "20506002059",
+  "Store": "6854ed92f31562c896094374"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6646bb"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b47"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- ABDUL AZIZ KHAN - DSR ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": "20506002071",
+  "Store": "6854ed92f31562c896094374"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6646bc"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b48"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- NOMAN - DM ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "6854ed92f31562c896094374"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6646bd"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b49"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- SYED MUDASIR ALI - DM ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "6854ed92f31562c896094374"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6646be"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b4a"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- MUHAMMAD ALI - DM ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "6854ed92f31562c896094374"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6646bf"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b4b"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- AKBER KHAN - SHEHZORE ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": "20506002056",
+  "Store": "6854ed92f31562c896094374"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6646c0"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b4c"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- UQBA YAQOOB - DSR ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": "20506002116",
+  "Store": "6854ed92f31562c896094374"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6646c1"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b4d"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- MUHAMMAD ARIF - DSR ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "6854ed92f31562c896094374"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6646c2"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b4e"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- ABDUL SAMAD - DM ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": "20506002119",
+  "Store": "6854ed92f31562c896094374"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6646c3"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b4f"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- AMEER HAMZA - DM/DRIVER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "6854ed92f31562c896094374"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6646c4"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b50"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- MUHAMMAD OWAIS - DM ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "6854ed92f31562c896094374"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6646c5"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b51"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- RAFIQ - DRIVER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "6854ed92f31562c896094374"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6646c6"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b52"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- SHAKEEL AHMED - DRIVER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "6854ed92f31562c896094374"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6646c7"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b53"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- ALTAF S/O SULTAN ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "#N/A"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6646c8"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b54"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- NIAZ MUHAMMAD - DM/DRIVER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "6854ed92f31562c896094374"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6646c9"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b55"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- ARYAN ALI DRIVER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "6854ed92f31562c896094374"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6646ca"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b56"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- MALIK SHAHRUKH ISLAM DRIVER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "6854ed92f31562c896094374"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6646cb"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b57"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- MUHAMMAD ASHFAQ DRIVER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": "20506002126",
+  "Store": "6854ed92f31562c896094374"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6646cc"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b58"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- SHAD MUHAMMAD DM ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "6854ed92f31562c896094374"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6646cd"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b59"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- MUHAMMAD ILYAS DRIVER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": "20506002122",
+  "Store": "6854ed92f31562c896094374"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6646ce"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b5a"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- SHUJA-UR-REHMAN DM ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "6854ed92f31562c896094374"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6646cf"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b5b"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- HASEEB RAZA - DM ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "#N/A"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6646d0"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b5c"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- AMEER ZAREEN DRIVER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "6854ed92f31562c896094374"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6646d1"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b5d"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- NASIR MUHAMMAD (DRIVER) ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "6854ed92f31562c896094374"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6646d2"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b5e"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- AHMED HASSAN BAIG (W/I) ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": "20506002075",
+  "Store": "6854ed92f31562c896094374"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6646d3"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b5f"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- ARSLAN YOUNUS - LOADER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "6854ed92f31562c896094374"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6646d4"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b60"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- MOHISAN BAIG - DM ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": "10212172",
+  "Store": "6854ed92f31562c896094374"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6646d5"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b61"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- MOHAMMAD HASSAN - LOADER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "6854ed92f31562c896094374"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6646d6"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b62"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- MUHAMMAD NADIR - LOADER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": "10212171",
+  "Store": "6854ed92f31562c896094374"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6646d7"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b63"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- JAVED LOADER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "6854ed92f31562c896094374"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6646d8"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b64"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- JAHANZAIB LOADER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "6854ed92f31562c896094374"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6646d9"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b65"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- SALMAN KHASKHELI LOADER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "6854ed92f31562c896094374"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6646da"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b66"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- ZAINULLAH LOADER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "6854ed92f31562c896094374"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6646db"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b67"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- MUHAMMAD JAMIL LOADER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "6854ed92f31562c896094374"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6646dc"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b68"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- MUHAMMAD KHALIL LOADER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "6854ed92f31562c896094374"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6646dd"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b69"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- ABID HUSSAIN LOADER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "6854ed92f31562c896094374"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6646de"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b6a"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- WASEEM ABBAS - W/CHARGE ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "6854ed92f31562c896094374"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6646df"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b6b"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- SHAHID - W/ASSISTANT ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "6854ed92f31562c896094374"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6646e0"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b6c"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- FARAZ LOADER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "6854ed92f31562c896094374"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6646e1"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b6d"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- MUDDASIR ALI -  LOADER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "6854ed92f31562c896094374"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6646e2"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b6e"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- MUHAMMAD KASHIF - LOADER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "6854ed92f31562c896094374"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6646e3"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b6f"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- AYAN - LOADER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "6854ed92f31562c896094374"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6646e4"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b70"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- SYED MUHAMMAD AQIB HASNAIN - ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": "20506002061",
+  "Store": "6854ee18f31562c8960943a1"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6646e5"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b71"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- ALI AHMED - KPO ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "6854ee18f31562c8960943a1"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6646e6"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b72"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- FAISAL - LOADER - MILKFIELD ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "6854ee18f31562c8960943a1"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6646e7"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b73"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- DIN MUHAMMAD - LOADER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "6854ee18f31562c8960943a1"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6646e8"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b74"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- BASIT ALI - LOADER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "6854ee18f31562c8960943a1"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6646e9"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b75"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- JAMSHAD - DRIVER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "6854ee18f31562c8960943a1"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6646ea"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b76"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- MUHAMMAD USMAN - DM/DRIVER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": "20506002103",
+  "Store": "6854ee18f31562c8960943a1"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6646eb"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b77"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- GHULAM QADIR (LOADER) ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "6854ee18f31562c8960943a1"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6646ec"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b78"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- MUHAMMAD ADNAN (EXPORT) ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": "10212177",
+  "Store": "6aa7882319a528e86293fee2"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6646ed"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b79"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- MUDASSIR (EXPORT) ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "6aa7882319a528e86293fee2"
+},
+{
+  "_id": {
+    "$oid": "6ad84ce6fc650d75ea6646ee"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b7a"
+  },
+  "account": {
+    "$oid": "68821c47f93ac76a141e26d0"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "name": "Loan- IMRAN MEMON (EXPORT) ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.151Z"
+  },
+  "AccountRef": " ",
+  "Store": "6aa7882319a528e86293fee2"
+}]

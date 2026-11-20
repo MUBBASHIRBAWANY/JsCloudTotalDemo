@@ -1,0 +1,6112 @@
+[{
+  "_id": {
+    "$oid": "6ad4b0e7824ca424875121ff"
+  },
+  "empId": {
+    "$oid": "6ad4b0e764afa8f4db11d833"
+  },
+  "__v": 0,
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- Naveed Baig ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001370",
+  "Store": "6adb360eb04f22cf6d5f9b10"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea6640e1"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a46"
+  },
+  "__v": 0,
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- M. BILAL YOUNUS ( PACKING SUPR ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "Store": "6adb360eb04f22cf6d5f9b10"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea6640e2"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a47"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- M. AKRAM KHAN (COOKING SUPR) ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "Store": "6adb360eb04f22cf6d5f9b10"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea6640e3"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a48"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- S. ZULFIQAR HASSAN (BOILER OPT ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "Store": "6adb360eb04f22cf6d5f9b10"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea6640e4"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a49"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- M. GHUFRAN (COOKING HELPER) ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "Store": "6adb360eb04f22cf6d5f9b10"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea6640e5"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a4a"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- MAHAM IRFAN (QRD) ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "Store": "6adb360eb04f22cf6d5f9b10"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea6640e6"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a4b"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- MUHAMMAD SOHAIL (PEON) ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "Store": "6adb360eb04f22cf6d5f9b10"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea6640e7"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a4c"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- MUHAMMAD SAAD NASIR ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001455",
+  "Store": "6adb360eb04f22cf6d5f9b10"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea6640e8"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a4d"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- MUHAMMAD IBRAHIM ANSARI ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001001",
+  "Store": "0"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea6640e9"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a4e"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- MUHAMMAD ATHAR ANSARI ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001043",
+  "Store": "0"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea6640ea"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a4f"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- MUHAMMAD ASIF LATIF(ITMANG) ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001044",
+  "Store": "0"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea6640eb"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a50"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- ATIF SOHAIL KHAN ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001110",
+  "Store": "0"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea6640ec"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a51"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- MUHAMMAD FARAZ KHAN ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001200",
+  "Store": "0"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea6640ed"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a52"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- MUHAMMAD YAQOOB ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001426",
+  "Store": "0"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea6640ee"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a53"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- MUHAMMAD NOMAN RAFQUE ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001375",
+  "Store": "0"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea6640ef"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a54"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- ZEESHAN ALI RECEPTIONEST ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001383",
+  "Store": "0"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea6640f0"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a55"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- MUHAMMAD ABDULLAH TAX ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001379",
+  "Store": "0"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea6640f1"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a56"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- USMAN RAZA THEBO - AC ASSIT ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001189",
+  "Store": "0"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea6640f2"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a57"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- UMER ALI (PEON) ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "Store": "0"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea6640f3"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a58"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- MUHAMMAD SHARIQ ASGHAR ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001123",
+  "Store": "0"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea6640f4"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a59"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- ABDUL HAMEED - SEC OFFICER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001144",
+  "Store": "0"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea6640f5"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a5a"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- HABIB ULLAH (PEON) ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "Store": "0"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea6640f6"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a5b"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- SABIH UR REHMAN - ELEC ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001173",
+  "Store": "0"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea6640f7"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a5c"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- SAJJAD KHAN - HELPER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "Store": "0"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea6640f8"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a5d"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- EIDGUL  - WATCHMAN ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "Store": "0"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea6640f9"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a5e"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- MUHAMMAD SALEEM - PEON ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "Store": "0"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea6640fa"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a5f"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- ZIA ULLAH - PEON ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "Store": "0"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea6640fb"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a60"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- SAMUEL SWEEPER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001417",
+  "Store": "0"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea6640fc"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a61"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- IKRAM MASIH (SWEEPER) ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "Store": "0"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea6640fd"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a62"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- FARHAN BOTA (SWEEPER) ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "Store": "0"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea6640fe"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a63"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- MUHAMMAD SIDDIQ ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001162",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea6640ff"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a64"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- BILAL - OB - (GALAXY ENTRP) ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001246",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea664100"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a65"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- AKBER ALI KHAN - OB- (GALAXY ) ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001247",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea664101"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a66"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- MUHAMMAD HASHIM - DRIVER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001347",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea664102"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a67"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- SYED WAZEER HASSAN ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001232",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea664103"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a68"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- MUHAMMAD HARIS ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001233",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea664104"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a69"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- SHARJEEL ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001342",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea664105"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a6a"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- WAQAS - DRIVER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001336",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea664106"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a6b"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- ABDUL BASIT - ACC ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001337",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea664107"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a6c"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- MUHAMMAD ADEEL H  FAROOQI- ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001363",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea664108"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a6d"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- SYED SHAN - TSO (ABEEHA ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001355",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea664109"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a6e"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- AMEER HAMZA - OB- (ABEEHA ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001354",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea66410a"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a6f"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- IMRAN KHAN - OB - (GALAXY ENT) ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001377",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea66410b"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a70"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- M. BILAL- OB- (ABEEHA TRADER) ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001378",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea66410c"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a71"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- MUHAMMAD DAWOOD OB ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001380",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea66410d"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a72"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- UZAIR OB (ABEEHA TRADER) ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001381",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea66410e"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a73"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- SANAULLAH -OB- (GALAXY ENTRP) ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001382",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea66410f"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a74"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- HAFIZ S. AMMAR ALI ZAIDI - TSO ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001384",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea664110"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a75"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- RUSTAM - DRIVER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001190",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea664111"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a76"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- AMAR JALIL  (MANAGER SALES) ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001019",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea664112"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a77"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- HAMEEDULLAH- OB ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001237",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea664113"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a78"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- JUNAID HASSAN BUT KASHMIRI ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001013",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea664114"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a79"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- MUHAMMAD JABBAR - ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001226",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea664115"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a7a"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- KHURRAM SHEHZAD - W/ASIS ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001348",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea664116"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a7b"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- ABDUL AZIZ - LOADER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea664117"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a7c"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- JALAL AHMED - LOADER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea664118"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a7d"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- MUHAMMAD RIAZ - W/I ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001234",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea664119"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a7e"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- AMAAN - LOADER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea66411a"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a7f"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- MUHAMMAD MUKARRAM LOADER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea66411b"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a80"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- ADNAN LOADER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea66411c"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a81"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- HAMZA LOADER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea66411d"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a82"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- GHULAM HUSSAIN QURESHI - ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea66411e"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a83"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- SHAKIR ALI - ASM ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001236",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea66411f"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a84"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- HAMEED ULLAH  - SO ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001237",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea664120"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a85"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- ASIF SHAHZAD - ZSM  - LH ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001238",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea664121"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a86"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- ABID HUSSAIN - ZSM - SARGODHA ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001243",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea664122"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a87"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- SYED ARSALAN ALI - ASM - MULTA ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001255",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea664123"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a88"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- SYED ASAD ALI - TSO - MULTAN ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001257",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea664124"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a89"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- AQIB SAEED - ZSM - RAWALPINDI ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001366",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea664125"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a8a"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- M.BILAL ASHFAQ - LH-TSO ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001430",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea664126"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a8b"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- MUHAMMAD ALI JAVAD LH-SR ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001431",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea664127"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a8c"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- MUHAMMAD WAQAS-LR-SR ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001432",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea664128"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a8d"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- RIZWANASGHAR-LR-SR ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001433",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea664129"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a8e"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- MUHAMMAD USMAN KARAMAT- ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001434",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea66412a"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a8f"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- AMIR SHEHZAD-LR-SR ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001435",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea66412b"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a90"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- ARMGHANYOUNUS LR-TSO ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001436",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea66412c"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a91"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- HAIDER MIR-LR-SR ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001437",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea66412d"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a92"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- SHER ALI-LR-SR ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001438",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea66412e"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a93"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- AYYAZ IJAZ-LR-SR ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001439",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea66412f"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a94"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- ZEESHAN ALI-LR-SR ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001440",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea664130"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a95"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- HAFIZ M. USAMA SALEEM-LR-SR ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001441",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea664131"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a96"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- BEHZAD SABIR-LR-SR ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001442",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea664132"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a97"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- SHABEER HUSSAIN-LR-SR ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001443",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea664133"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a98"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- YASIR JAMIL-LR-SR ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001444",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea664134"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a99"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- ZEESHAN ALI-LR-TSO ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001445",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea664135"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a9a"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- WAQAS-LR-SR ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001446",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea664136"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a9b"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- UMAIR YOUNUS-LR-SR ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001447",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea664137"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a9c"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- MUHAMMAD FAISAL-LR-SR ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001448",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea664138"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a9d"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- KHURRAM ABBAS-LR-SR ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001449",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea664139"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a9e"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- SYED HUSNAIN HAIDER-LR-SR ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001450",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea66413a"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910a9f"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- MUHAMMAD IMRAN-FS-TSO ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001330",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea66413b"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910aa0"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- ARSHAD KHAN-TSO-KPK ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001329",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea66413c"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910aa1"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- MUHAMMAD YOUSUF SANI-LR-TSO ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001423",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea66413d"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910aa2"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- SHAN ALI-SR-LR ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001421",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea66413e"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910aa3"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- FAISAL SIDDIQUI-SR-LR ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001420",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea66413f"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910aa4"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- RIAZ AHMED-QT-TSO ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001397",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea664140"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910aa5"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- WAQAR ALI -LR-SR ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001419",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea664141"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910aa6"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- WALEED-SR-LR ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001452",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea664142"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910aa7"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- SYED NAVEED RIZVI - SO - BMK ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001296",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea664143"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910aa8"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- RAHEEL AHMED - OB - BMK ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001286",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea664144"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910aa9"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- AQEEL KHAN - OB - BMK ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001287",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea664145"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910aaa"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- ALAM - OB - BMK ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001288",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea664146"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910aab"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- WASEEM AHMED - OB -BMK ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001289",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea664147"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910aac"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- SALEEM TAYAB - OB - BMK ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001332",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea664148"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910aad"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- SHAHAN SARKAR - SS - AWMK ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001291",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea664149"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910aae"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- MOHAMMAD RASHID - OB - AWMK ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001333",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea66414a"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910aaf"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- SYED RASHID ALI - OB - AWMK ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001292",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea66414b"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910ab0"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- M. BILAL KHAN - OB - ADNAN ENT ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001295",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea66414c"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910ab1"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- ABDUL SALAM - TSO - ATK ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001281",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea66414d"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910ab2"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- ZOHAIB - SS - ATK ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001282",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea66414e"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910ab3"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- M. KAMRAN FAROOQUI - OB - ATK ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001283",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea66414f"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910ab4"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- FAIZAN HAMEED - OB - ATK ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001284",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea664150"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910ab5"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- MOHAMMAD ADIL - OB - ATK ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001280",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea664151"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910ab6"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- MUHAMMAD NADEEM - TSO - ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001364",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea664152"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910ab7"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- NAEEM AHMED - SS - BSIMA TRAD) ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001365",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea664153"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910ab8"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- AMJAD - OB - BMW ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001427",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea664154"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910ab9"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- M. FARHAN - OB - BT ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001389",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea664155"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910aba"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- M. TAHIR - OB - ATK ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001451",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea664156"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910abb"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- BABAR ISMAIL-TSO-ATK ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001388",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea664157"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910abc"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- MUHAMMAD LARAIB-OB-BT ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001392",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea664158"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910abd"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- ANJUM WAQAR-TSO-AWMK ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001405",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea664159"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910abe"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- IMRAN PARVAIZ-SS-R.I.TRADER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001406",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea66415a"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910abf"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- KHURRAM-OB-R.I.TRADER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001412",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea66415b"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910ac0"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- MAZHAR ULLAHA KHAN -OB-BMW ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001416",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea66415c"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910ac1"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- MUHAMMAD REHAN-OB-BT ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001413",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea66415d"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910ac2"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- MANSOOR ALI -OB-BT ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001415",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea66415e"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910ac3"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- M. ABDULLAH KHAN-OB R.I. TRADE ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea66415f"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910ac4"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- MUHAMMAD ADNAN-BT-OB ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea664160"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910ac5"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- SHAMIM UDDIN-GALAXY ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001454",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea664161"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910ac6"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- NASIR ALI-OB-GALAXY ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea664162"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910ac7"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- DAD MUHAMMAD - BABU ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea664163"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910ac8"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- UMER JILLANI -OB- GALAXY ENTR ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea664164"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910ac9"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- MUHAMMAD SAJID - OB - GALAXY ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea664165"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910aca"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- FAIZAN - OB - (GALAXY ENTR) ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea664166"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910acb"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- FAIZAN ALI - OB - BABU TRADER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea664167"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910acc"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- ABDUL SATTAR - OB - BISMA TRAD ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea664168"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910acd"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- UBAID-UR-REHMAN - OB - BISMA ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea664169"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910ace"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- ABSAR AHMED FAROOQUI - OB - ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea66416a"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910acf"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- MUHAMMAD KHALID -OB- (ADNAN) ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea66416b"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910ad0"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- MUHAMMAD KAMRAN -OB- (ADNAN) ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea66416c"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910ad1"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- ALI RAZA - OB- (BISMA) ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea66416d"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910ad2"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- SYED ATHAR HUSSAIN - ASM - LS ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001259",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea66416e"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910ad3"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- MANZAR - SO - L. SINDH ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001263",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea66416f"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910ad4"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- M. FAISAL - SO - L.SINDH ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001264",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea664170"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910ad5"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- MOHAMMAD NASIR - SO - L.SINDH ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001265",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea664171"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910ad6"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- MOHAMMAD ASIF - SO - L.SINDH ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001266",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea664172"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910ad7"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- JAMEEL AHMED SIDDIQUE - SO - U ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001276",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea664173"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910ad8"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- M. SHEHZAD KHAN - SS - U. SIND ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001367",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea664174"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910ad9"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- ARSALAN HASHMI  -OB-  L.SIND ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001425",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea664175"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910ada"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- IMRAN ALI LARIK-OB-U SIND ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001458",
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea664176"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910adb"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- AZM-UL-HAQ SIDDIQUI - OB- U-SI ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea664177"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910adc"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- ALI QASIM -OB- UPPER SINDH ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "Store": "69589f74bed54ca7db54930c"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea664178"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910add"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- MUHAMMAD WASEEM ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001021",
+  "Store": "6854edbcf31562c896094387"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea664179"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910ade"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- MOHAMMAD SABIR (LOADER) ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "Store": "6854edbcf31562c896094387"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea66417a"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910adf"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- MUHAMMAD AAMIR ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001023",
+  "Store": "6854edbcf31562c896094387"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea66417b"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910ae0"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- JUNAID AKBAR ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001024",
+  "Store": "6854edbcf31562c896094387"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea66417c"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910ae1"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- IMRAN NASEEM (KPO/HR OFFICER) ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001025",
+  "Store": "6854edbcf31562c896094387"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea66417d"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910ae2"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- NADIR KHAN - DM ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001230",
+  "Store": "6854edbcf31562c896094387"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea66417e"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910ae3"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- ATIF HUSSAIN SIDDIQUI ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001045",
+  "Store": "6854edbcf31562c896094387"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea66417f"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910ae4"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- SAMI UDDIN SO FASIH UDDIN - BM ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001101",
+  "Store": "6854edbcf31562c896094387"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea664180"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910ae5"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- MUHAMMAD KASHAN ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001106",
+  "Store": "6854edbcf31562c896094387"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea664181"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910ae6"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- MUHAMMAD IMRAN KHAN - OB ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001133",
+  "Store": "6854edbcf31562c896094387"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea664182"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910ae7"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- MUHAMMAD HANIF - LOADER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "Store": "6854edbcf31562c896094387"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea664183"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910ae8"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- WASIM - LOADER - FSD ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "Store": "6854edbcf31562c896094387"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea664184"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910ae9"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- MUHAMMAD AREEB - OB ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001217",
+  "Store": "6854edbcf31562c896094387"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea664185"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910aea"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- SAHIB ZAR GUL ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001010",
+  "Store": "6854edbcf31562c896094387"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea664186"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910aeb"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- MUHAMMAD TALHA SHAH - OB ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001307",
+  "Store": "6854edbcf31562c896094387"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea664187"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910aec"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- MURTAZA JAMIL - OB ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001137",
+  "Store": "6854edbcf31562c896094387"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea664188"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910aed"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- SHAHZAIB LOADER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "Store": "6854edbcf31562c896094387"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea664189"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910aee"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- JAWWAD LOADER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "Store": "6854edbcf31562c896094387"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea66418a"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910aef"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- BILAL - LOADER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "Store": "6854edbcf31562c896094387"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea66418b"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910af0"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- SHERAZ AHMED KHAN ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001035",
+  "Store": "6a96633b8a3d6ba690168565"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea66418c"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910af1"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- KHALID IQBAL ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001036",
+  "Store": "6a96633b8a3d6ba690168565"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea66418d"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910af2"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- SIRAJ DIN (WATCHMAN) ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "Store": "6a96633b8a3d6ba690168565"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea66418e"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910af3"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- MUBBASHIR ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001210",
+  "Store": "6a96633b8a3d6ba690168565"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea66418f"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910af4"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- BILAL ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001424",
+  "Store": "6a96633b8a3d6ba690168565"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea664190"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910af5"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- SOHAIB JAMIL J. DEVELOPER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "Store": "6a96633b8a3d6ba690168565"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea664191"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910af6"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- SAEED GUL (SOTWARE ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "Store": "6a96633b8a3d6ba690168565"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea664192"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910af7"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- SYED JUNAID IMAM ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001051",
+  "Store": "6854ed7af31562c89609436d"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea664193"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910af8"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- FAISAL RASHID (KPO) ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001052",
+  "Store": "6854ed7af31562c89609436d"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea664194"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910af9"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- MUHAMMAD FAIZAN ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001018",
+  "Store": "6854ed7af31562c89609436d"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea664195"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910afa"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- MUHAMMAD BILAL ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001062",
+  "Store": "6854ed7af31562c89609436d"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea664196"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910afb"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- WAQAR AHMED (DSR) ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001063",
+  "Store": "6854ed7af31562c89609436d"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea664197"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910afc"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- JAN SARDAR (D/DM) ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001068",
+  "Store": "6854ed7af31562c89609436d"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea664198"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910afd"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- SHAFI UR RAHMAN ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001072",
+  "Store": "6854ed7af31562c89609436d"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea664199"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910afe"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- HAMZA IRSHAD (A. FSE) ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001073",
+  "Store": "6854ed7af31562c89609436d"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea66419a"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910aff"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- MUHAMMAD SARWAR ALAM ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001076",
+  "Store": "6854ed7af31562c89609436d"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea66419b"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b00"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- AHSAN ALI - SHEHZORE ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001078",
+  "Store": "6854ed7af31562c89609436d"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea66419c"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b01"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- UBAID IMAM ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001085",
+  "Store": "6854ed7af31562c89609436d"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea66419d"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b02"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- AQIB RAZA  (DSR) ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001086",
+  "Store": "6854ed7af31562c89609436d"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea66419e"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b03"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- MUHAMMAD SAJAWAL SHAHID ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001091",
+  "Store": "6854ed7af31562c89609436d"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea66419f"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b04"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- MUHAMMAD RAHEEL ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001114",
+  "Store": "6854ed7af31562c89609436d"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea6641a0"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b05"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- MUHAMMAD NASIR ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001119",
+  "Store": "6854ed7af31562c89609436d"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea6641a1"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b06"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- USMAN GHANI - DRIVER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001131",
+  "Store": "6854ed7af31562c89609436d"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea6641a2"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b07"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- MUHAMMAD UBAID SALAM - DSR ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001138",
+  "Store": "6854ed7af31562c89609436d"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea6641a3"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b08"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- SULTAN MEHMOOD(DM) ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001143",
+  "Store": "6854ed7af31562c89609436d"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea6641a4"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b09"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- MUHAMMAD IMRAN (DRIVER) ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001120",
+  "Store": "6854ed7af31562c89609436d"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea6641a5"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b0a"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- MUHAMMAD REHAN (DM) ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001146",
+  "Store": "6854ed7af31562c89609436d"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea6641a6"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b0b"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- MUHAMMAD MUBASHIR AHMED - ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001149",
+  "Store": "6854ed7af31562c89609436d"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea6641a7"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b0c"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- AHMED DIN ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001151",
+  "Store": "6854ed7af31562c89609436d"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea6641a8"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b0d"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- MUHAMMAD HAMZA - DSR ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001153",
+  "Store": "6854ed7af31562c89609436d"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea6641a9"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b0e"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- ANWER INAYAT - DRIVER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001158",
+  "Store": "6854ed7af31562c89609436d"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea6641aa"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b0f"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- MUHAMMAD SHABBIR - DRIVER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001160",
+  "Store": "6854ed7af31562c89609436d"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea6641ab"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b10"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- TANVEER FAROOQ KHAN -  ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001159",
+  "Store": "6854ed7af31562c89609436d"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea6641ac"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b11"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- MUHAMMAD EJAZ - DSR ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001161",
+  "Store": "6854ed7af31562c89609436d"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea6641ad"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b12"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- WAQAR YOUNIS - DSR ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001186",
+  "Store": "6854ed7af31562c89609436d"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea6641ae"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b13"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- YASEEN KHAN - DM ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001197",
+  "Store": "6854ed7af31562c89609436d"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea6641af"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b14"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- SYED NABEEL MOHSIN - DM ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001207",
+  "Store": "6854ed7af31562c89609436d"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea6641b0"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b15"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- SOHAIL AHMED - DRIVER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001135",
+  "Store": "6854ed7af31562c89609436d"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea6641b1"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b16"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- KAMRAN SO SULEMAN - DM ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001195",
+  "Store": "6854ed7af31562c89609436d"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea6641b2"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b17"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- FAKHAR ALAM - DSR ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001221",
+  "Store": "6854ed7af31562c89609436d"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea6641b3"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b18"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- HANIF MUHAMMAD - SHEHZORE ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001211",
+  "Store": "6854ed7af31562c89609436d"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea6641b4"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b19"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- MUHAMMAD USAMA ZAHID - DSR ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001299",
+  "Store": "6854ed7af31562c89609436d"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea6641b5"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b1a"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- MUHAMMAD IMRAN - DM ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001229",
+  "Store": "6854ed7af31562c89609436d"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea6641b6"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b1b"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- ANIS KHAN - DM ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001344",
+  "Store": "6854ed7af31562c89609436d"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea6641b7"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b1c"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- SHOAIB AHMED (DRIVER) ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001071",
+  "Store": "6854ed7af31562c89609436d"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea6641b8"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b1d"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- ASIF KHAN - DRIVER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001188",
+  "Store": "6854ed7af31562c89609436d"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea6641b9"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b1e"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- ASIF - SHEHZORE ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001429",
+  "Store": "6854ed7af31562c89609436d"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea6641ba"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b1f"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- HAKEEM KHAN DRIVER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001393",
+  "Store": "6854ed7af31562c89609436d"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea6641bb"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b20"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- FAYYAZ AHMED -OB ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001395",
+  "Store": "6854ed7af31562c89609436d"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea6641bc"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b21"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- MAROOF AHMED DM ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001398",
+  "Store": "6854ed7af31562c89609436d"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea6641bd"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b22"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- MUHAMMAD TUFAIL DRIVER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001399",
+  "Store": "6854ed7af31562c89609436d"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea6641be"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b23"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- PARVAIZ NASEEM DRIVER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001403",
+  "Store": "6854ed7af31562c89609436d"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea6641bf"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b24"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- MUHAMMAD WAQAS SIDDIQUI- DM ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "Store": "0"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea6641c0"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b25"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- HABIBULLAH - DM ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001409",
+  "Store": "6854ed7af31562c89609436d"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea6641c1"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b26"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- M. FAIZ-UL-REHMAN DRIVER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001410",
+  "Store": "6854ed7af31562c89609436d"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea6641c2"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b27"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- JAVED - DM ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "Store": "6854ed7af31562c89609436d"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea6641c3"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b28"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- MUHAMMAD AYAN -  DM ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "Store": "0"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea6641c4"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b29"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- ASAD ALI - DM ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "Store": "6854ed7af31562c89609436d"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea6641c5"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b2a"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- IBRAHIM KHAN -  DRIVER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "Store": "6854ed7af31562c89609436d"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea6641c6"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b2b"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- ADEEL - DM ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "Store": "6854ed7af31562c89609436d"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea6641c7"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b2c"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- MOHAMMAD AMMAD - LOADER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "Store": "6854ed7af31562c89609436d"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea6641c8"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b2d"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- SALA UDDIN - LOADER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "Store": "6854ed7af31562c89609436d"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea6641c9"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b2e"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- IMRAN ALI (LOADER) ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "Store": "6854ed7af31562c89609436d"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea6641ca"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b2f"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- ASIF - LOADER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "Store": "6854ed7af31562c89609436d"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea6641cb"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b30"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- MOHIUDDIN - DM ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "Store": "6854ed7af31562c89609436d"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea6641cc"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b31"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- MAJID ALI - LOADER - CBL-1 ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "Store": "0"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea6641cd"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b32"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- MUHAMMAD SHAZAIB - LOADER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "Store": "6854ed7af31562c89609436d"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea6641ce"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b33"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- ARIF SHAFIQ (W/INCHARGE) CBL1 ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001015",
+  "Store": "6854ed7af31562c89609436d"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea6641cf"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b34"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- MUHAMMAD MUZAMMIL - DM ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001302",
+  "Store": "6854ed7af31562c89609436d"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea6641d0"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b35"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- SHAKEEL AHMED LOADER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "Store": "6854ed7af31562c89609436d"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea6641d1"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b36"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- HUSSAIN LOADER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "Store": "6854ed7af31562c89609436d"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea6641d2"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b37"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- HASSAN LOADER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "Store": "6854ed7af31562c89609436d"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea6641d3"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b38"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- MUHAMMAD USAMA LOADER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "Store": "6854ed7af31562c89609436d"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea6641d4"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b39"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- NAVEED USMAN GHANI LOADER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "Store": "6854ed7af31562c89609436d"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea6641d5"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b3a"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- LIAQAT ALI BALOCH LOADER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "Store": "6854ed7af31562c89609436d"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea6641d6"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b3b"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- M.JAMIL KHAN - LOADER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "Store": "6854ed7af31562c89609436d"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea6641d7"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b3c"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- ALI HASSAN - LOADER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "Store": "6854ed7af31562c89609436d"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea6641d8"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b3d"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- AFTAB AHMED (FSE) ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001205",
+  "Store": "6854ed92f31562c896094374"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea6641d9"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b3e"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- SALMAN NADEEM - A.FSE ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001084",
+  "Store": "6854ed92f31562c896094374"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea6641da"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b3f"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- MUHAMMAD HANIF MEMON - DSR ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001176",
+  "Store": "6854ed92f31562c896094374"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea6641db"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b40"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- MUHAMMAD FAISAL SOLANKI - DSR ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001175",
+  "Store": "6854ed92f31562c896094374"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea6641dc"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b41"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- MUHAMMAD TARIQ SIDDIQUE - ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001177",
+  "Store": "6854ed92f31562c896094374"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea6641dd"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b42"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- ADNAN - DSR ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001178",
+  "Store": "6854ed92f31562c896094374"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea6641de"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b43"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- MUHAMMAD WAQAR  - DSR ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001169",
+  "Store": "6854ed92f31562c896094374"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea6641df"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b44"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- MUHAMMAD HASSNAIN - DSR ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001170",
+  "Store": "6854ed92f31562c896094374"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea6641e0"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b45"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- OWAIS UR REHMAN KHAN - DSR ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001171",
+  "Store": "6854ed92f31562c896094374"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea6641e1"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b46"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- SOHAIL AHMED - DSR ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001179",
+  "Store": "6854ed92f31562c896094374"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea6641e2"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b47"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- ABDUL AZIZ KHAN - DSR ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001167",
+  "Store": "6854ed92f31562c896094374"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea6641e3"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b48"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- NOMAN - DM ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001180",
+  "Store": "6854ed92f31562c896094374"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea6641e4"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b49"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- SYED MUDASIR ALI - DM ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001172",
+  "Store": "6854ed92f31562c896094374"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea6641e5"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b4a"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- MUHAMMAD ALI - DM ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001130",
+  "Store": "6854ed92f31562c896094374"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea6641e6"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b4b"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- AKBER KHAN - SHEHZORE ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001165",
+  "Store": "6854ed92f31562c896094374"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea6641e7"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b4c"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- UQBA YAQOOB - DSR ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001201",
+  "Store": "6854ed92f31562c896094374"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea6641e8"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b4d"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- MUHAMMAD ARIF - DSR ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001202",
+  "Store": "6854ed92f31562c896094374"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea6641e9"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b4e"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- ABDUL SAMAD - DM ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001212",
+  "Store": "6854ed92f31562c896094374"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea6641ea"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b4f"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- AMEER HAMZA - DM/DRIVER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001219",
+  "Store": "6854ed92f31562c896094374"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea6641eb"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b50"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- MUHAMMAD OWAIS - DM ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001220",
+  "Store": "6854ed92f31562c896094374"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea6641ec"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b51"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- RAFIQ - DRIVER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001346",
+  "Store": "6854ed92f31562c896094374"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea6641ed"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b52"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- SHAKEEL AHMED - DRIVER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001334",
+  "Store": "6854ed92f31562c896094374"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea6641ee"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b53"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- ALTAF S/O SULTAN ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "Store": "0"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea6641ef"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b54"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- NIAZ MUHAMMAD - DM/DRIVER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001304",
+  "Store": "6854ed92f31562c896094374"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea6641f0"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b55"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- ARYAN ALI DRIVER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001385",
+  "Store": "6854ed92f31562c896094374"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea6641f1"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b56"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- MALIK SHAHRUKH ISLAM DRIVER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001102",
+  "Store": "6854ed92f31562c896094374"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea6641f2"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b57"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- MUHAMMAD ASHFAQ DRIVER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001387",
+  "Store": "6854ed92f31562c896094374"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea6641f3"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b58"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- SHAD MUHAMMAD DM ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001400",
+  "Store": "6854ed92f31562c896094374"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea6641f4"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b59"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- MUHAMMAD ILYAS DRIVER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001401",
+  "Store": "6854ed92f31562c896094374"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea6641f5"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b5a"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- SHUJA-UR-REHMAN DM ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001404",
+  "Store": "6854ed92f31562c896094374"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea6641f6"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b5b"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- HASEEB RAZA - DM ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "Store": "0"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea6641f7"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b5c"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- AMEER ZAREEN DRIVER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001411",
+  "Store": "6854ed92f31562c896094374"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea6641f8"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b5d"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- NASIR MUHAMMAD (DRIVER) ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "Store": "6854ed92f31562c896094374"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea6641f9"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b5e"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- AHMED HASSAN BAIG (W/I) ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001008",
+  "Store": "6854ed92f31562c896094374"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea6641fa"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b5f"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- ARSLAN YOUNUS - LOADER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "Store": "6854ed92f31562c896094374"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea6641fb"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b60"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- MOHISAN BAIG - DM ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001301",
+  "Store": "6854ed92f31562c896094374"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea6641fc"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b61"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- MOHAMMAD HASSAN - LOADER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "Store": "6854ed92f31562c896094374"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea6641fd"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b62"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- MUHAMMAD NADIR - LOADER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "Store": "6854ed92f31562c896094374"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea6641fe"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b63"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- JAVED LOADER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "Store": "6854ed92f31562c896094374"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea6641ff"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b64"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- JAHANZAIB LOADER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "Store": "6854ed92f31562c896094374"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea664200"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b65"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- SALMAN KHASKHELI LOADER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "Store": "6854ed92f31562c896094374"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea664201"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b66"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- ZAINULLAH LOADER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "Store": "6854ed92f31562c896094374"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea664202"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b67"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- MUHAMMAD JAMIL LOADER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "Store": "6854ed92f31562c896094374"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea664203"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b68"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- MUHAMMAD KHALIL LOADER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "Store": "6854ed92f31562c896094374"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea664204"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b69"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- ABID HUSSAIN LOADER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "Store": "6854ed92f31562c896094374"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea664205"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b6a"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- WASEEM ABBAS - W/CHARGE ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001422",
+  "Store": "6854ed92f31562c896094374"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea664206"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b6b"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- SHAHID - W/ASSISTANT ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "Store": "6854ed92f31562c896094374"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea664207"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b6c"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- FARAZ LOADER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "Store": "6854ed92f31562c896094374"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea664208"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b6d"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- MUDDASIR ALI -  LOADER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "Store": "6854ed92f31562c896094374"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea664209"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b6e"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- MUHAMMAD KASHIF - LOADER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "Store": "6854ed92f31562c896094374"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea66420a"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b6f"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- AYAN - LOADER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "Store": "6854ed92f31562c896094374"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea66420b"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b70"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- SYED MUHAMMAD AQIB HASNAIN - ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001206",
+  "Store": "6854ee18f31562c8960943a1"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea66420c"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b71"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- ALI AHMED - KPO ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001374",
+  "Store": "6854ee18f31562c8960943a1"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea66420d"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b72"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- FAISAL - LOADER - MILKFIELD ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "Store": "6854ee18f31562c8960943a1"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea66420e"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b73"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- DIN MUHAMMAD - LOADER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "Store": "6854ee18f31562c8960943a1"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea66420f"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b74"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- BASIT ALI - LOADER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "Store": "6854ee18f31562c8960943a1"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea664210"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b75"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- JAMSHAD - DRIVER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "Store": "6854ee18f31562c8960943a1"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea664211"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b76"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- MUHAMMAD USMAN - DM/DRIVER ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001428",
+  "Store": "6854ee18f31562c8960943a1"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea664212"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b77"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- GHULAM QADIR (LOADER) ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "Store": "6854ee18f31562c8960943a1"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea664213"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b78"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- MUHAMMAD ADNAN (EXPORT) ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001371",
+  "Store": "6aa7882319a528e86293fee2"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea664214"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b79"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- MUDASSIR (EXPORT) ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001372",
+  "Store": "6aa7882319a528e86293fee2"
+},
+{
+  "_id": {
+    "$oid": "6ad846dffc650d75ea664215"
+  },
+  "empId": {
+    "$oid": "6ad7b4c6269b119f03910b7a"
+  },
+  "account": {
+    "$oid": "68f1dc25c7c8743dab737773"
+  },
+  "createdAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "name": "EBF- IMRAN MEMON (EXPORT) ",
+  "updatedAt": {
+    "$date": "2026-10-18T11:43:35.135Z"
+  },
+  "AccountRef": "20506001373",
+  "Store": "6aa7882319a528e86293fee2"
+}]

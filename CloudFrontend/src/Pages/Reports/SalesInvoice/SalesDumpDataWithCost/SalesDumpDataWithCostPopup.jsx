@@ -1,0 +1,1266 @@
+import React, { useEffect, useState, useMemo, useRef, useCallback } from "react";
+import { exportProfessionalExcel } from "../../../../utils/exportProfessionalExcel";
+import {
+  Document,
+  Packer,
+  Paragraph,
+  Table,
+  TableRow,
+  TableCell,
+  WidthType,
+} from "docx";
+import { saveAs } from "file-saver";
+import jsPDF from "jspdf";
+import autoTable from "jspdf-autotable";
+import { getDataFundtion } from "../../../../Api/CRUDFunctions";
+
+// Safe number converter — never returns NaN
+const safeNum = (val, fallback = 0) => {
+  const n = Number(val);
+  return Number.isFinite(n) ? n : fallback;
+};
+
+// Safe format — never shows NaN in the UI
+const safeFormat = (val, opts = { minimumFractionDigits: 2, maximumFractionDigits: 2 }) => {
+  return safeNum(val).toLocaleString("en-US", opts);
+};
+
+const SalesDumpDataWithCostPopup = ({ data = {} }) => {
+  const [isLoading, setIsLoading] = useState(false);
+  const { startDate, endDate, store } = data;
+  const [rows, setRows] = useState([]);
+  const [productWiseData, setProductWiseData] = useState([]);
+  const [filter, setFilter] = useState("");
+  const reportRef = useRef(null);
+  
+  // Cache lookups to avoid repeated find operations
+  const lookupsRef = useRef({});
+
+  // Update lookups when data dependencies change
+  useEffect(() => {
+    if (data && Object.keys(data).length) {
+      lookupsRef.current = {
+        skuOptionsMap: new Map(data.SkuOptions?.map(p => [p._id, p]) || []),
+        brandMap: new Map(data.Brand?.map(b => [b.mastercode, b]) || []),
+        categoryMap: new Map(data.Category?.map(c => [c.mastercode, c]) || []),
+        masterSkuMap: new Map(data.MastarSku?.map(m => [m.mastercode, m]) || []),
+        vendorMap: new Map(data.Vendor?.map(v => [v.mastercode, v]) || []),
+        customerMap: new Map(data.Customer?.map(c => [c._id, c]) || []),
+        orderBookerMap: new Map(data.TotalOrderBooker?.map(o => [o._id, o]) || []),
+        cityMap: new Map(data.City?.map(c => [c._id, c]) || []),
+        zsmMap: new Map(data.Zsm?.map(z => [z._id, z]) || []),
+        zoneMap: new Map(data.Zone?.map(z => [z._id, z]) || []),
+        regionMap: new Map(data.Region?.map(r => [r._id, r]) || [])
+      };
+    }
+  }, [data]);
+
+  // Fetch data - optimized with single pass processing
+  const getData = useCallback(async () => {
+    setIsLoading(true);
+    try {
+      const res = await getDataFundtion(
+        `/SaleInvoice/SalesDumpData?startDate=${startDate}&endDate=${endDate}&Store=${store}`
+      );
+
+      // Fetch AvgRate from Costing avg-rate-report API (same as AvgRateReport)
+      const avgRateRes = await getDataFundtion(
+        `/Costing/avg-rate-report?startDate=${startDate}&endDate=${endDate}&Store=${store}`
+      );
+
+      // Build AvgRate lookup map: key = product _id, value = avgRate
+      const avgRateMap = new Map();
+      (avgRateRes.data || []).forEach((item) => {
+        if (item.product) {
+          avgRateMap.set(item.product, {
+            avgRate: safeNum(item.avgRate),
+            totalBox: safeNum(item.totalBox),
+            totalGrossAmount: safeNum(item.totalGrossAmount),
+          });
+        }
+      });
+
+      const {
+        skuOptionsMap,
+        brandMap,
+        categoryMap,
+        masterSkuMap,
+        vendorMap,
+        customerMap,
+        orderBookerMap,
+        cityMap,
+        zsmMap,
+        zoneMap,
+        regionMap
+      } = lookupsRef.current;
+const PclData = res.AllOrder || [];
+// Build DC Number -> Order lookup Map for O(1) merge (case-insensitive, type-safe)
+const dcOrderMap = new Map();
+PclData.forEach((order) => {
+  const key = String(order.dcNumber || '').trim();
+  if (key) dcOrderMap.set(key, order);
+});
+      // Single pass through data with Map lookups (O(1) instead of O(n))
+      const processedData = res.data.map((item, index) => {
+        const product = skuOptionsMap.get(item.Product);
+        if (!product) return null;
+        
+        const mastercode = product.mastercode || '';
+        const brandCode = mastercode.slice(0, 6);
+        const categoryCode = mastercode.slice(0, 4);
+        const masterSkuCode = mastercode.slice(0, 9);
+        const vendorCode = mastercode.slice(0, 2);
+        
+        const Brand = brandMap.get(brandCode);
+        const Category = categoryMap.get(categoryCode);
+        const MasterSku = masterSkuMap.get(masterSkuCode);
+        const Vendor = vendorMap.get(vendorCode);
+        const customer = customerMap.get(item.Client);
+
+        // Get Zone and Region through OrderBooker -> ZSM -> Zone -> Region hierarchy
+        const orderBookerId = customer?.OrderBooker;
+        const obData = orderBookerMap.get(orderBookerId);
+        const zsmData = zsmMap.get(obData?.ZSM);
+        const zoneData = zoneMap.get(zsmData?.Zone);
+        const regionData = regionMap.get(zoneData?.Region);
+
+        const carton = safeNum(item.carton);
+        const pcsinBox = safeNum(product?.PcsinBox);
+        const gram = safeNum(product?.GRAM);
+        
+        // Pre-calculate discount total once
+        const discounts = {
+          diBspass: safeNum(item.diBspass),
+          rtoffer: safeNum(item.RToffer),
+          wtoffer: safeNum(item.WToffer),
+          rpDrive: safeNum(item.RpDrive),
+          wholesaleDeal: safeNum(item.WHOLESALEDEAL),
+          rtwholesale: safeNum(item.RTWholeSale),
+          subDisTPromotion: safeNum(item.SubDisTPromotion),
+          tradeOffer: safeNum(item.TradeOffer) || safeNum(item.discount),
+          hotzoneDrive: safeNum(item.HOTZONEDRIVE),
+          scheme: safeNum(item.SpecialTO),
+          specialDiscount: safeNum(item?.SPECIALDISCOUNT),
+          tts: safeNum(item.TTS),
+        };
+        const claimedScheme = safeNum(item.ClaimableSpecialTO);
+        const unclaimedScheme = safeNum(item.UnClaimableSpecialTO);
+        
+        const totalDiscount = Object.values(discounts).reduce((sum, val) => sum + val, 0);
+
+        // Calculate SalesInUnit (sales qty) and Cost
+        const salesInUnit = safeNum(carton * pcsinBox);
+        const avgRateEntry = avgRateMap.get(item.Product);
+        const avgRate = safeNum(avgRateEntry?.avgRate);
+        const discountPercentage = safeNum(
+          product?.PurchaseDiscountPer ??
+          product?.DiscountPercentage ??
+          product?.DiscountPersentage
+        );
+        const grossCost = safeNum(carton * avgRate);
+        const cost = safeNum(grossCost - (grossCost / 100) * discountPercentage);
+        const brandMarketingExpence = String(
+          Brand?.MarketingExpence ?? Brand?.MarketingExpense ?? ""
+        ).trim().toLowerCase();
+        const marketingExpense = brandMarketingExpence === "yes"
+          ? safeNum((safeNum(item.GrossAmount) / 100) * 2)
+          : 0;
+        
+        return {
+          id: index + 1,
+          productCode: product?.code || '',
+          productName: product?.ProductName || '',
+          ProductSalesflowRef: product?.salesFlowRef || '',
+          VendorName: Vendor?.label2 || '',
+          VendorCode: Vendor?.mastercode || '',
+          Customer: customer?.ClientName || customer?.DistrbutorName || '',
+          OrderBooker: orderBookerMap.get(customer?.OrderBooker)?.OrderBookerName || '',
+          City: cityMap.get(customer?.City)?.CityName || "",
+          Zone: zoneData?.ZoneName || '',
+          Region: regionData?.RegionName || '',
+          DCnumber : item.DCNumber || '',
+          OrderNumber : dcOrderMap.get(String(item.DCNumber || '').trim())?.OrderCode || '',
+          OrderDate : dcOrderMap.get(String(item.DCNumber || '').trim())?.OrderDate || '',
+          Brandcode: Brand?.mastercode || '',
+          GRAM: safeNum(gram),
+          KG: safeNum(((pcsinBox * carton) * gram) / 1000),
+          BrandName: Brand?.label2 || '',
+          CategoryName: Category?.label2 || '',
+          Categorycode: Category?.mastercode || '',
+          MasterSkuName: MasterSku?.label2 || '',
+          MasterSkucode: MasterSku?.mastercode || '',
+          salesInvoice: item.SalesInvoice || '',
+          saleType: item.SaleType === "Return" ? "Return" : item.SaleType === "Distributor" ? "Distributor" : "Sale",
+          salesFlowRef: item.SalesFlowRef || '',
+          totalBOX: carton,
+          totalBOX1: safeNum(item.totalBox),
+          BOX: safeNum(item.Box),
+          SalesInCarton: safeNum(carton / (safeNum(product?.BoxinCarton) || 1)),
+          SalesInUnit: safeNum(salesInUnit),
+          SalesInvoiceDate: item.SalesInvoiceDate,
+          totalGrossAmount: safeNum(item.GrossAmount),
+          marketingExpense: safeNum(marketingExpense),
+          totalGst: safeNum(item.Gst),
+          cityid : customer?.City,
+          totalAdvanceTax: safeNum(item.Advancetax),
+          ...discounts,
+          claimedScheme,
+          unclaimedScheme,
+          totalDiscount,
+          totalNetAmount: safeNum(item.GrossAmount) + safeNum(item.Gst) + safeNum(item.Advancetax) - totalDiscount,
+          // Cost fields (cost is after product PurchaseDiscountPer)
+          avgRate: safeNum(avgRate),
+          discountPercentage: safeNum(discountPercentage),
+          cost: safeNum(cost),
+        };
+      }).filter(item => item !== null); // Remove any null items
+let allprocessed = []
+if(data.loginVendor.OnlyDist == true){
+  allprocessed = processedData.filter((item)=> item.cityid == data.loginVendor.City )
+}
+else {
+  allprocessed = processedData
+}
+       
+      
+      setProductWiseData(allprocessed);
+    } catch (error) {
+      console.error("Error fetching product-wise sales summary:", error);
+    } finally {
+      setIsLoading(false);
+    }
+  }, [startDate, endDate, store]);
+
+  useEffect(() => {
+    if (lookupsRef.current.skuOptionsMap?.size) {
+      getData();
+    }
+  }, [getData, data.SkuOptions]);
+
+  // Memoized filtered data for search
+  const filteredData = useMemo(() => {
+    if (!filter) return productWiseData;
+    
+    const lowerFilter = filter.toLowerCase();
+    return productWiseData.filter(item => 
+      item.productName?.toLowerCase().includes(lowerFilter) ||
+      item.productCode?.toLowerCase().includes(lowerFilter) ||
+      item.Customer?.toLowerCase().includes(lowerFilter) ||
+      item.salesInvoice?.toLowerCase().includes(lowerFilter) ||
+      item.saleType?.toLowerCase().includes(lowerFilter)
+    );
+  }, [productWiseData, filter]);
+
+  // Memoized totals from filtered rows (footer + summary stats)
+  const totals = useMemo(() => {
+    const initialTotals = {
+      totalProducts: filteredData.length,
+      totalBOX: 0,
+      totalBOX1: 0,
+      BOX: 0,
+      SalesInCarton: 0,
+      SalesInUnit: 0,
+      KG: 0,
+      totalGrossAmount: 0,
+      marketingExpense: 0,
+      totalGst: 0,
+      totalAdvanceTax: 0,
+      diBspass: 0,
+      rtoffer: 0,
+      wtoffer: 0,
+      rpDrive: 0,
+      wholesaleDeal: 0,
+      rtwholesale: 0,
+      subDisTPromotion: 0,
+      tradeOffer: 0,
+      hotzoneDrive: 0,
+      Scheme: 0,
+      claimedScheme: 0,
+      unclaimedScheme: 0,
+      specialDiscount: 0,
+      totalDiscount: 0,
+      totalNetAmount: 0,
+      cost: 0,
+    };
+
+    const summed = filteredData.reduce((acc, product) => {
+      acc.totalBOX += Number(product.totalBOX) || 0;
+      acc.totalBOX1 += Number(product.totalBOX1) || 0;
+      acc.BOX += Number(product.BOX) || 0;
+      acc.SalesInCarton += Number(product.SalesInCarton) || 0;
+      acc.SalesInUnit += Number(product.SalesInUnit) || 0;
+      acc.KG += Number(product.KG) || 0;
+      acc.totalGrossAmount += Number(product.totalGrossAmount) || 0;
+      acc.marketingExpense += Number(product.marketingExpense) || 0;
+      acc.totalGst += Number(product.totalGst) || 0;
+      acc.totalAdvanceTax += Number(product.totalAdvanceTax) || 0;
+      acc.diBspass += Number(product.diBspass) || 0;
+      acc.rtoffer += Number(product.rtoffer) || 0;
+      acc.wtoffer += Number(product.wtoffer) || 0;
+      acc.rpDrive += Number(product.rpDrive) || 0;
+      acc.wholesaleDeal += Number(product.wholesaleDeal) || 0;
+      acc.rtwholesale += Number(product.rtwholesale) || 0;
+      acc.subDisTPromotion += Number(product.subDisTPromotion) || 0;
+      acc.tradeOffer += Number(product.tradeOffer) || 0;
+      acc.hotzoneDrive += Number(product.hotzoneDrive) || 0;
+      acc.Scheme += Number(product.scheme) || 0;
+      acc.claimedScheme += Number(product.claimedScheme) || 0;
+      acc.unclaimedScheme += Number(product.unclaimedScheme) || 0;
+      acc.specialDiscount += Number(product.specialDiscount) || 0;
+      acc.totalDiscount += Number(product.totalDiscount) || 0;
+      acc.cost += Number(product.cost) || 0;
+      return acc;
+    }, initialTotals);
+
+    summed.totalNetAmount =
+      summed.totalGrossAmount +
+      summed.totalGst +
+      summed.totalAdvanceTax -
+      summed.totalDiscount;
+
+    return summed;
+  }, [filteredData]);
+
+  const formatDate = useCallback((dateString) => {
+    if (!dateString) return "-";
+    const date = new Date(dateString);
+    return date
+      .toLocaleDateString("en-GB", {
+        day: "2-digit",
+        month: "short",
+        year: "numeric",
+      })
+      .replace(",", "");
+  }, []);
+
+  const buildExcelTotalsRow = useCallback(() => ({
+    "Product Code": "TOTAL",
+    "Product Name": "",
+    "Product Categorycode": "",
+    "Product CategoryName": "",
+    "Product BrandName": "",
+    "invocie Sale Flow Ref": "",
+    "Order Date": "",
+    "DC Number": "",
+    "Order Number": "",
+    "SalesInvoice Date": "",
+    "Product Sales Flow Ref": "",
+    "Customer": "",
+    "City": "",
+    "Zone": "",
+    "Region": "",
+    "OrderBooker": "",
+    "Sales Invoice": "",
+    "Type": "",
+    "BOX": Number(Number(totals.totalBOX || 0).toFixed(2)),
+    "BOX1": Number(Number(totals.BOX || 0).toFixed(2)),
+    "totalBOX": Number(Number(totals.totalBOX1 || 0).toFixed(2)),
+    "Sales Carton": Number(Number(totals.SalesInCarton || 0).toFixed(2)),
+    "Sales Unit": Number(Number(totals.SalesInUnit || 0).toFixed(2)),
+    "KG": Number(Number(totals.KG || 0).toFixed(2)),
+    "GRAM": "",
+    "Gross Amount": Number(Number(totals.totalGrossAmount || 0).toFixed(2)),
+    "GST": Number(Number(totals.totalGst || 0).toFixed(2)),
+    "Advance Tax": Number(Number(totals.totalAdvanceTax || 0).toFixed(2)),
+    "diBspass": Number(Number(totals.diBspass || 0).toFixed(2)),
+    "RT Offer": Number(Number(totals.rtoffer || 0).toFixed(2)),
+    "WT Offer": Number(Number(totals.wtoffer || 0).toFixed(2)),
+    "Rp Drive": Number(Number(totals.rpDrive || 0).toFixed(2)),
+    "Wholesale Deal": Number(Number(totals.wholesaleDeal || 0).toFixed(2)),
+    "RT Wholesale": Number(Number(totals.rtwholesale || 0).toFixed(2)),
+    "Sub Dis T Promotion": Number(Number(totals.subDisTPromotion || 0).toFixed(2)),
+    "Trade Offer": Number(Number(totals.tradeOffer || 0).toFixed(2)),
+    "Hotzone Drive": Number(Number(totals.hotzoneDrive || 0).toFixed(2)),
+    "Scheme": Number(Number(totals.Scheme || 0).toFixed(2)),
+    "Claimed Scheme": Number(Number(totals.claimedScheme || 0).toFixed(2)),
+    "Unclaimed Scheme": Number(Number(totals.unclaimedScheme || 0).toFixed(2)),
+    "Special Discount": Number(Number(totals.specialDiscount || 0).toFixed(2)),
+    "Total Discount": Number(Number(totals.totalDiscount || 0).toFixed(2)),
+    "Net Amount": Number(Number(totals.totalNetAmount || 0).toFixed(2)),
+    "Avg Rate": "",
+    "Discount %": "",
+    "Cost": Number(Number(totals.cost || 0).toFixed(2)),
+    "Marketing Expense": Number(Number(totals.marketingExpense || 0).toFixed(2)),
+  }), [totals]);
+
+  // Optimized export functions
+  const exportToExcel = useCallback(async () => {
+    const exportData = filteredData.map(product => ({
+      "Product Code": product.productCode,
+      "Product Name": product.productName,
+      "Product Categorycode": product.Categorycode,
+      "Product CategoryName": product.CategoryName,
+      "Product BrandName": product.BrandName,
+      "invocie Sale Flow Ref": product.salesFlowRef,
+      "Order Date": product.OrderDate ? formatDate(product.OrderDate) : '',
+      "DC Number": product.DCnumber || '',
+      "Order Number": product.OrderNumber || '',
+      "SalesInvoice Date": product.SalesInvoiceDate,
+      "Product Sales Flow Ref": product.ProductSalesflowRef,
+      "Zone": product.Zone,
+      "Region": product.Region,
+      "Customer": product.Customer,
+      "City": product.City,
+      "OrderBooker": product.OrderBooker,
+      "Sales Invoice": product.salesInvoice,
+      "Type": product.saleType || "Sale",
+      "BOX": Number(Number(product.totalBOX || 0).toFixed(2)),
+      "BOX1": Number(Number(product.BOX || 0).toFixed(2)),
+      "totalBOX": Number(Number(product.totalBOX1 || 0).toFixed(2)),
+      "Sales Carton": Number(Number(product.SalesInCarton || 0).toFixed(2)),
+      "Sales Unit": Number(Number(product.SalesInUnit || 0).toFixed(2)),
+      "KG": Number(Number(product.KG || 0).toFixed(2)),
+      "GRAM": Number(Number(product.GRAM || 0).toFixed(2)),
+      "Gross Amount": Number(Number(product.totalGrossAmount || 0).toFixed(2)),
+      "GST": Number(Number(product.totalGst || 0).toFixed(2)),
+      "Advance Tax": Number(Number(product.totalAdvanceTax || 0).toFixed(2)),
+      "diBspass": Number(Number(product.diBspass || 0).toFixed(2)),
+      "RT Offer": Number(Number(product.rtoffer || 0).toFixed(2)),
+      "WT Offer": Number(Number(product.wtoffer || 0).toFixed(2)),
+      "Rp Drive": Number(Number(product.rpDrive || 0).toFixed(2)),
+      "Wholesale Deal": Number(Number(product.wholesaleDeal || 0).toFixed(2)),
+      "RT Wholesale": Number(Number(product.rtwholesale || 0).toFixed(2)),
+      "Sub Dis T Promotion": Number(Number(product.subDisTPromotion || 0).toFixed(2)),
+      "Trade Offer": Number(Number(product.tradeOffer || 0).toFixed(2)),
+      "Hotzone Drive": Number(Number(product.hotzoneDrive || 0).toFixed(2)),
+      "Scheme": Number(Number(product.scheme || 0).toFixed(2)),
+      "Claimed Scheme": Number(Number(product.claimedScheme || 0).toFixed(2)),
+      "Unclaimed Scheme": Number(Number(product.unclaimedScheme || 0).toFixed(2)),
+      "Special Discount": Number(Number(product.specialDiscount || 0).toFixed(2)),
+      "Total Discount": Number(Number(product.totalDiscount || 0).toFixed(2)),
+      "Net Amount": Number(Number(product.totalNetAmount || 0).toFixed(2)),
+      "Avg Rate": Number(Number(product.avgRate || 0).toFixed(2)),
+      "Discount %": Number(Number(product.discountPercentage || 0).toFixed(2)),
+      "Cost": Number(Number(product.cost || 0).toFixed(2)),
+      "Marketing Expense": Number(Number(product.marketingExpense || 0).toFixed(2)),
+    }));
+
+    if (filteredData.length > 0) {
+      exportData.push(buildExcelTotalsRow());
+    }
+
+    const department = data.store?.length > 0
+      ? data.storeforDrp
+        ?.filter(item => data.store.includes(item._id))
+        .map(item => item.StoreName)
+        .join(", ") || "All"
+      : "All";
+
+    await exportProfessionalExcel({
+      title: "Product Wise Sale Summary With Cost",
+      fileName: "Product_Wise_Sale_Summary_With_Cost",
+      sheetName: "Product Wise Summary",
+      rows: exportData,
+      meta: [
+        `Period: ${startDate || ""} to ${endDate || ""}`,
+        `Department: ${department}`,
+      ],
+    });
+  }, [filteredData, formatDate, buildExcelTotalsRow, startDate, endDate, data.store, data.storeforDrp]);
+
+  const exportToWord = useCallback(async () => {
+    if (!filteredData.length) return;
+    
+    const headers = ["#", "Product Code", "Sales Flow Ref", "Product Name", "Sales Invoice", "BOX",
+      "Gross Amount", "GST", "Advance Tax", "diBspass", "RT Offer",
+      "WT Offer", "Rp Drive", "Wholesale Deal", "RT Wholesale", "Sub Dis T Promotion",
+      "Trade Offer", "Hotzone Drive", "Scheme", "Claimed Scheme", "Unclaimed Scheme", "Special Discount", "Total Discount", "Net Amount", "Cost", "Marketing Expense"];
+
+    const tableRows = [
+      new TableRow({
+        children: headers.map(header =>
+          new TableCell({ children: [new Paragraph(header)] })
+        ),
+      }),
+      ...filteredData.map((product) =>
+        new TableRow({
+          children: [
+            new TableCell({ children: [new Paragraph(String(product.id || ""))] }),
+            new TableCell({ children: [new Paragraph(product.productCode || "")] }),
+            new TableCell({ children: [new Paragraph(product.ProductSalesflowRef || "")] }),
+            new TableCell({ children: [new Paragraph(product.productName || "")] }),
+            new TableCell({ children: [new Paragraph(product.Customer || "")] }),
+            new TableCell({ children: [new Paragraph(product.salesInvoice || "")] }),
+            new TableCell({ children: [new Paragraph(product.totalBOX?.toString() || "0")] }),
+            new TableCell({ children: [new Paragraph(product.totalGrossAmount?.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) || "0")] }),
+            new TableCell({ children: [new Paragraph(product.totalGst?.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) || "0")] }),
+            new TableCell({ children: [new Paragraph(product.totalAdvanceTax?.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) || "0")] }),
+            new TableCell({ children: [new Paragraph(product.diBspass?.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) || "0")] }),
+            new TableCell({ children: [new Paragraph(product.rtoffer?.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) || "0")] }),
+            new TableCell({ children: [new Paragraph(product.wtoffer?.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) || "0")] }),
+            new TableCell({ children: [new Paragraph(product.rpDrive?.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) || "0")] }),
+            new TableCell({ children: [new Paragraph(product.wholesaleDeal?.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) || "0")] }),
+            new TableCell({ children: [new Paragraph(product.rtwholesale?.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) || "0")] }),
+            new TableCell({ children: [new Paragraph(product.subDisTPromotion?.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) || "0")] }),
+            new TableCell({ children: [new Paragraph(product.tradeOffer?.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) || "0")] }),
+            new TableCell({ children: [new Paragraph(product.hotzoneDrive?.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) || "0")] }),
+            new TableCell({ children: [new Paragraph(product.scheme?.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) || "0")] }),
+            new TableCell({ children: [new Paragraph(product.claimedScheme?.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) || "0")] }),
+            new TableCell({ children: [new Paragraph(product.unclaimedScheme?.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) || "0")] }),
+            new TableCell({ children: [new Paragraph(product.specialDiscount?.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) || "0")] }),
+            new TableCell({ children: [new Paragraph(product.totalDiscount?.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) || "0")] }),
+            new TableCell({ children: [new Paragraph(product.totalNetAmount?.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) || "0")] }),
+            new TableCell({ children: [new Paragraph(product.cost?.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) || "0")] }),
+            new TableCell({ children: [new Paragraph(product.marketingExpense?.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) || "0")] }),
+          ],
+        })
+      ),
+      new TableRow({
+        children: [
+          new TableCell({ children: [new Paragraph("TOTAL")] }),
+          new TableCell({ children: [new Paragraph("")] }),
+          new TableCell({ children: [new Paragraph("")] }),
+          new TableCell({ children: [new Paragraph("")] }),
+          new TableCell({ children: [new Paragraph("")] }),
+          new TableCell({ children: [new Paragraph("")] }),
+          new TableCell({ children: [new Paragraph(totals.totalBOX?.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) || "0")] }),
+          new TableCell({ children: [new Paragraph(totals.totalGrossAmount?.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) || "0")] }),
+          new TableCell({ children: [new Paragraph(totals.totalGst?.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) || "0")] }),
+          new TableCell({ children: [new Paragraph(totals.totalAdvanceTax?.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) || "0")] }),
+          new TableCell({ children: [new Paragraph(totals.diBspass?.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) || "0")] }),
+          new TableCell({ children: [new Paragraph(totals.rtoffer?.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) || "0")] }),
+          new TableCell({ children: [new Paragraph(totals.wtoffer?.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) || "0")] }),
+          new TableCell({ children: [new Paragraph(totals.rpDrive?.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) || "0")] }),
+          new TableCell({ children: [new Paragraph(totals.wholesaleDeal?.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) || "0")] }),
+          new TableCell({ children: [new Paragraph(totals.rtwholesale?.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) || "0")] }),
+          new TableCell({ children: [new Paragraph(totals.subDisTPromotion?.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) || "0")] }),
+          new TableCell({ children: [new Paragraph(totals.tradeOffer?.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) || "0")] }),
+          new TableCell({ children: [new Paragraph(totals.hotzoneDrive?.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) || "0")] }),
+          new TableCell({ children: [new Paragraph(totals.Scheme?.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) || "0")] }),
+          new TableCell({ children: [new Paragraph(totals.claimedScheme?.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) || "0")] }),
+          new TableCell({ children: [new Paragraph(totals.unclaimedScheme?.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) || "0")] }),
+          new TableCell({ children: [new Paragraph(totals.specialDiscount?.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) || "0")] }),
+          new TableCell({ children: [new Paragraph(totals.totalDiscount?.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) || "0")] }),
+          new TableCell({ children: [new Paragraph(totals.totalNetAmount?.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) || "0")] }),
+          new TableCell({ children: [new Paragraph(totals.cost?.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) || "0")] }),
+          new TableCell({ children: [new Paragraph(totals.marketingExpense?.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) || "0")] }),
+        ],
+      }),
+    ];
+
+    const doc = new Document({
+      sections: [{
+        children: [
+          new Paragraph({ text: "Pearl Dynamics", heading: "Heading1" }),
+          new Paragraph({ text: "Product Wise Sale Summary Report With Cost" }),
+          new Paragraph({ text: `Period: ${formatDate(startDate)} to ${formatDate(endDate)}` }),
+          new Paragraph({ text: `Generated: ${new Date().toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}` }),
+          new Table({ rows: tableRows, width: { size: 100, type: WidthType.PERCENTAGE } }),
+        ],
+      }],
+    });
+
+    const blob = await Packer.toBlob(doc);
+    saveAs(blob, "Product_Wise_Sale_Summary_With_Cost.docx");
+  }, [filteredData, formatDate, startDate, endDate, totals]);
+
+  const exportToPDF = useCallback(() => {
+    if (!filteredData.length) return;
+    
+    const doc = new jsPDF("landscape");
+    
+    doc.setFontSize(16);
+    doc.text("Product Wise Sale Summary Report With Cost", 14, 15);
+    doc.setFontSize(10);
+    doc.text(`Period: ${formatDate(startDate)} to ${formatDate(endDate)}`, 14, 22);
+    doc.text(`Generated: ${new Date().toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`, 14, 28);
+
+    const headers = [
+      "#", "Product Code", "Sales Flow Ref", "Product Name", "Sales Invoice", "BOX",
+      "Gross Amount", "GST", "Advance Tax", "diBspass", "RT Offer",
+      "WT Offer", "Rp Drive", "Wholesale Deal", "RT Wholesale", "Sub Dis T Promotion",
+      "Trade Offer", "Scheme", "Claimed Scheme", "Unclaimed Scheme", "Hotzone Drive", "Special Discount", "Total Discount", "Net Amount", "Cost", "Marketing Expense"
+    ];
+
+    const tableData = filteredData.map(product => [
+      product.id,
+      product.productCode || "",
+      product.ProductSalesflowRef || "",
+      product.productName || "",
+      product.salesInvoice || "",
+      Number(Number(product.totalBOX || 0).toFixed(2)),
+      { content: product.totalGrossAmount?.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) || "0", styles: { halign: 'right' } },
+      { content: product.totalGst?.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) || "0", styles: { halign: 'right' } },
+      { content: product.totalAdvanceTax?.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) || "0", styles: { halign: 'right' } },
+      { content: product.diBspass?.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) || "0", styles: { halign: 'right' } },
+      { content: product.rtoffer?.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) || "0", styles: { halign: 'right' } },
+      { content: product.wtoffer?.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) || "0", styles: { halign: 'right' } },
+      { content: product.rpDrive?.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) || "0", styles: { halign: 'right' } },
+      { content: product.wholesaleDeal?.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) || "0", styles: { halign: 'right' } },
+      { content: product.rtwholesale?.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) || "0", styles: { halign: 'right' } },
+      { content: product.subDisTPromotion?.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) || "0", styles: { halign: 'right' } },
+      { content: product.tradeOffer?.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) || "0", styles: { halign: 'right' } },
+      { content: product.scheme?.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) || "0", styles: { halign: 'right' } },
+      { content: product.claimedScheme?.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) || "0", styles: { halign: 'right' } },
+      { content: product.unclaimedScheme?.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) || "0", styles: { halign: 'right' } },
+      { content: product.hotzoneDrive?.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) || "0", styles: { halign: 'right' } },
+      { content: product.specialDiscount?.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) || "0", styles: { halign: 'right' } },
+      { content: product.totalDiscount?.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) || "0", styles: { halign: 'right' } },
+      { content: product.totalNetAmount?.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) || "0", styles: { halign: 'right' } },
+      { content: product.cost?.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) || "0", styles: { halign: 'right' } },
+      { content: product.marketingExpense?.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) || "0", styles: { halign: 'right' } }
+    ]);
+
+    tableData.push([
+      { content: "TOTAL", colSpan: 6, styles: { fontStyle: 'bold', halign: 'center' } },
+      { content: totals.totalGrossAmount.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 }), styles: { fontStyle: 'bold', halign: 'right' } },
+      { content: totals.totalGst.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 }), styles: { fontStyle: 'bold', halign: 'right' } },
+      { content: totals.totalAdvanceTax.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 }), styles: { fontStyle: 'bold', halign: 'right' } },
+      { content: totals.diBspass.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 }), styles: { fontStyle: 'bold', halign: 'right' } },
+      { content: totals.rtoffer.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 }), styles: { fontStyle: 'bold', halign: 'right' } },
+      { content: totals.wtoffer.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 }), styles: { fontStyle: 'bold', halign: 'right' } },
+      { content: totals.rpDrive.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 }), styles: { fontStyle: 'bold', halign: 'right' } },
+      { content: totals.wholesaleDeal.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 }), styles: { fontStyle: 'bold', halign: 'right' } },
+      { content: totals.rtwholesale.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 }), styles: { fontStyle: 'bold', halign: 'right' } },
+      { content: totals.subDisTPromotion.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 }), styles: { fontStyle: 'bold', halign: 'right' } },
+      { content: totals.tradeOffer.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 }), styles: { fontStyle: 'bold', halign: 'right' } },
+      { content: totals.Scheme.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 }), styles: { fontStyle: 'bold', halign: 'right' } },
+      { content: totals.claimedScheme.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 }), styles: { fontStyle: 'bold', halign: 'right' } },
+      { content: totals.unclaimedScheme.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 }), styles: { fontStyle: 'bold', halign: 'right' } },
+      { content: totals.hotzoneDrive.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 }), styles: { fontStyle: 'bold', halign: 'right' } },
+      { content: totals.specialDiscount.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 }), styles: { fontStyle: 'bold', halign: 'right' } },
+      { content: totals.totalDiscount.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 }), styles: { fontStyle: 'bold', halign: 'right' } },
+      { content: totals.totalNetAmount.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 }), styles: { fontStyle: 'bold', halign: 'right', fillColor: [22, 160, 133] } },
+      { content: totals.cost.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 }), styles: { fontStyle: 'bold', halign: 'right' } },
+      { content: totals.marketingExpense.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 }), styles: { fontStyle: 'bold', halign: 'right' } }
+    ]);
+
+    autoTable(doc, {
+      head: [headers],
+      body: tableData,
+      startY: 35,
+      styles: { fontSize: 6, cellPadding: 1, lineColor: [50, 50, 50], lineWidth: 0.1 },
+      headStyles: { fillColor: [41, 128, 185], textColor: 255, fontStyle: 'bold', fontSize: 6 },
+      alternateRowStyles: { fillColor: [245, 245, 245] },
+      columnStyles: {
+        6: { halign: 'right' }, 7: { halign: 'right' }, 8: { halign: 'right' },
+        9: { halign: 'right' }, 10: { halign: 'right' }, 11: { halign: 'right' },
+        12: { halign: 'right' }, 13: { halign: 'right' }, 14: { halign: 'right' },
+        15: { halign: 'right' }, 16: { halign: 'right' }, 17: { halign: 'right' },
+        18: { halign: 'right' }, 19: { halign: 'right' }, 20: { halign: 'right' },
+        21: { halign: 'right' }, 22: { halign: 'right' }, 23: { halign: 'right' },
+        24: { halign: 'right' }
+      },
+      margin: { top: 35 }
+    });
+
+    const finalY = doc.lastAutoTable.finalY + 10;
+    doc.setFontSize(8);
+    doc.setFont(undefined, 'bold');
+    doc.text("Summary:", 14, finalY);
+    doc.setFont(undefined, 'normal');
+    doc.text(`Total Products: ${totals.totalProducts}`, 14, finalY + 5);
+    doc.text(`Total BOX: ${Number(Number(totals.totalBOX || 0).toFixed(2))}`, 14, finalY + 10);
+    doc.text(`Grand Total Amount: ${totals.totalNetAmount.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`, 14, finalY + 15);
+    doc.text(`Total Cost: ${totals.cost.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`, 14, finalY + 20);
+    doc.text(`Total Gross Amount: ${totals.totalGrossAmount.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`, 60, finalY + 5);
+    doc.text(`Total GST: ${totals.totalGst.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`, 60, finalY + 15);
+    doc.text(`Total Advance Tax: ${totals.totalAdvanceTax.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`, 100, finalY + 5);
+    doc.text(`Total Discount: ${totals.totalDiscount.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`, 100, finalY + 10);
+
+    doc.save("Product_Wise_Sale_Summary_With_Cost.pdf");
+  }, [filteredData, totals, formatDate, startDate, endDate]);
+
+  const handlePrint = useCallback(() => {
+    const content = reportRef.current?.innerHTML;
+    if (!content) return;
+    
+    const win = window.open("", "_blank", "width=1400,height=800");
+    win.document.write(`
+      <html>
+        <head>
+          <title>Product Wise Sale Summary Report With Cost</title>
+          <style>
+            body { font-family: Arial; padding:20px; }
+            table { border-collapse: collapse; width:100%; font-size:8px; }
+            th, td { border:1px solid #ccc; padding:3px; text-align:left; }
+            th { background:#f4f4f4; font-weight:bold; }
+            .numeric { text-align:right; }
+            .summary-stats { margin:15px 0; font-weight:bold; }
+            .product-table { min-width: 2200px; }
+            .report-actions { display: none; }
+          </style>
+        </head>
+        <body>${content}</body>
+      </html>
+    `);
+    win.document.close();
+    win.focus();
+    setTimeout(() => win.print(), 500);
+  }, []);
+
+  // Add search input handler
+  const handleSearch = useCallback((e) => {
+    setFilter(e.target.value);
+  }, []);
+
+  // Display limited rows for better performance (virtual scrolling)
+  const displayData = useMemo(() => {
+    return filteredData.slice(0, 500);
+  }, [filteredData]);
+
+  return (
+    <div className="sales-report-container" ref={reportRef}>
+      <div className="sales-report-header">
+        <div className="company-info">
+          <h2 className="company-name">Pearl Dynamics</h2>
+          <p>Product Wise Sale Summary Report With Cost</p>
+        </div>
+        <div className="report-info">
+          <p>Generated: {new Date().toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</p>
+          <p>
+            {productWiseData.length > 0
+              ? `Period: ${formatDate(startDate)} to ${formatDate(endDate)}`
+              : "No data"}
+          </p>
+        </div>
+      </div>
+
+      {/* Search Box */}
+      <div className="search-container">
+        <input
+          type="text"
+          placeholder="Search by Product Name, Code, Customer or Invoice..."
+          value={filter}
+          onChange={handleSearch}
+          className="search-input"
+        />
+      </div>
+
+      <div className="summary-stats">
+        <span>Total Products: {totals.totalProducts}</span>
+        <span>Total BOX: {safeNum(totals.totalBOX).toFixed(2)}</span>
+        <span>Gross Amount: {safeFormat(totals.totalGrossAmount)}</span>
+        <span>Total GST: {safeFormat(totals.totalGst)}</span>
+        <span>Total Advance Tax: {safeFormat(totals.totalAdvanceTax)}</span>
+        <span>Total Discount: {safeFormat(totals.totalDiscount)}</span>
+        <span>Net Amount: {safeFormat(totals.totalNetAmount)}</span>
+        <span>Total Cost: {safeFormat(totals.cost)}</span>
+        <span>Marketing Expense: {safeFormat(totals.marketingExpense)}</span>
+      </div>
+
+      <div className="table-container">
+        {isLoading ? (
+          <div className="loader-wrapper">
+            <div className="spinner"></div>
+          </div>
+        ) : (
+          <div className="sticky-table-wrapper">
+            <table className="sales-data-table product-table" border={"All"}>
+              <thead className="sticky-header">
+                <tr>
+                  <th>#</th>
+                  <th>Order Number</th>
+                  <th>Order Date</th>
+                  <th>Sales Invoice</th>
+                  <th>Type</th>
+                  <th>Sales Invoice Date</th>
+                  <th>Sales FLow Ref</th>
+                  <th>Vendor Code</th>
+                  <th>Vendor</th>
+                  <th>Customer</th>
+                  <th>City</th>
+                  <th>Zone</th>
+                  <th>Region</th>
+                  <th>OrderBooker</th>
+                  <th>Category Code</th>
+                  <th>Category</th>
+                  <th>Brand Code</th>
+                  <th>Brand</th>
+                  <th>Master Sku Code</th>
+                  <th>Master Sku</th>
+                  <th>Product Code</th>
+                  <th>Product Sales flow Ref</th>
+                  <th>Product Name</th>
+                  <th>Sales Box</th>
+                  <th>totalBox</th>
+                  <th>Box</th>
+                  <th>Sales Carton</th>
+                  <th>Sales Unit</th>
+                  <th>KG</th>
+                  <th>GRAM</th>
+                  <th>Gross Amount</th>
+                  <th>GST</th>
+                  <th>Advance Tax</th>
+                  <th>diBspass</th>
+                  <th>RT Offer</th>
+                  <th>WT Offer</th>
+                  <th>Rp Drive</th>
+                  <th>Wholesale Deal</th>
+                  <th>RT Wholesale</th>
+                  <th>Sub Dis T Promotion</th>
+                  <th>Trade Offer</th>
+                  <th>Hotzone Drive</th>
+                  <th>Scheme</th>
+                  <th>Claimed Scheme</th>
+                  <th>Unclaimed Scheme</th>
+                  <th>Special Discount</th>
+                  <th>Total Discount</th>
+                  <th>Net Amount</th>
+                  <th>Avg Rate</th>
+                  <th>Discount %</th>
+                  <th>Cost</th>
+                  <th>Marketing Expense</th>
+                </tr>
+              </thead>
+              <tbody>
+                {displayData.length > 0 ? (
+                  displayData.map((product) => (
+                    <tr key={product.id}>
+                      <td>{product.id}</td>
+                      <td>{product.OrderNumber}</td>
+                      <td>{product.OrderDate}</td>
+                      <td>{product.salesInvoice}</td>
+                      <td>{product.saleType}</td>
+                      <td>{product.SalesInvoiceDate}</td>
+                      <td>{product.salesFlowRef}</td>
+                      <td>{product.VendorCode}</td>
+                      <td>{product.VendorName}</td>
+                      <td>{product.Customer}</td>
+                      <td>{product.City}</td>
+                      <td>{product.Zone}</td>
+                      <td>{product.Region}</td>
+                      <td>{product.OrderBooker}</td>
+                      <td>{product.Categorycode}</td>
+                      <td>{product.CategoryName}</td>
+                      <td>{product.Brandcode}</td>
+                      <td>{product.BrandName}</td>
+                      <td>{product.MasterSkucode}</td>
+                      <td>{product.MasterSkuName}</td>
+                      <td>{product.productCode}</td>
+                      <td>{product.ProductSalesflowRef}</td>
+                      <td>{product.productName}</td>
+                      <td className="numeric">{safeNum(product.totalBOX).toFixed(2)}</td>
+                      <td className="numeric">{safeNum(product.totalBOX1).toFixed(2)}</td>
+                      <td className="numeric">{safeNum(product.BOX).toFixed(2)}</td>
+                      <td className="numeric">{safeNum(product.SalesInCarton).toFixed(2)}</td>
+                      <td className="numeric">{safeNum(product.SalesInUnit).toFixed(2)}</td>
+                      <td className="numeric">{safeNum(product.KG).toFixed(2)}</td>
+                      <td className="numeric">{safeNum(product.GRAM).toFixed(2)}</td>
+                      <td className="numeric">{safeFormat(product.totalGrossAmount)}</td>
+                      <td className="numeric">{safeFormat(product.totalGst)}</td>
+                      <td className="numeric">{safeFormat(product.totalAdvanceTax)}</td>
+                      <td className="numeric">{safeFormat(product.diBspass)}</td>
+                      <td className="numeric">{safeFormat(product.rtoffer)}</td>
+                      <td className="numeric">{safeFormat(product.wtoffer)}</td>
+                      <td className="numeric">{safeFormat(product.rpDrive)}</td>
+                      <td className="numeric">{safeFormat(product.wholesaleDeal)}</td>
+                      <td className="numeric">{safeFormat(product.rtwholesale)}</td>
+                      <td className="numeric">{safeFormat(product.subDisTPromotion)}</td>
+                      <td className="numeric">{safeFormat(product.tradeOffer)}</td>
+                      <td className="numeric">{safeFormat(product.hotzoneDrive)}</td>
+                      <td className="numeric">{safeFormat(product.scheme)}</td>
+                      <td className="numeric">{safeFormat(product.claimedScheme)}</td>
+                      <td className="numeric">{safeFormat(product.unclaimedScheme)}</td>
+                      <td className="numeric">{safeFormat(product.specialDiscount)}</td>
+                      <td className="numeric">{safeFormat(product.totalDiscount)}</td>
+                      <td className="numeric">{safeFormat(product.totalNetAmount)}</td>
+                      <td className="numeric">{safeFormat(product.avgRate)}</td>
+                      <td className="numeric">{safeFormat(product.discountPercentage)}</td>
+                      <td className="numeric">{safeFormat(product.cost)}</td>
+                      <td className="numeric">{safeFormat(product.marketingExpense)}</td>
+                    </tr>
+                  ))
+                ) : (
+                  <tr>
+                    <td colSpan="52" className="no-data">No records found</td>
+                  </tr>
+                )}
+              </tbody>
+              {displayData.length > 0 && (
+                <tfoot>
+                  <tr className="footer-total">
+                    <td >Total</td>
+                    <td ></td>
+                    <td ></td>
+                    <td ></td>
+                    <td ></td>
+                    <td ></td>
+                    <td ></td>
+                    <td ></td>
+                    <td ></td>
+                    <td ></td>
+                    <td ></td>
+                    <td ></td>
+                    <td ></td>
+                    <td ></td>
+                    <td ></td>
+                    <td ></td>
+                    <td ></td>
+                    <td ></td>
+                    <td ></td>
+                    <td ></td>
+                    <td ></td>
+                    <td ></td>
+                    <td ></td>
+                    <td className="numeric">{safeFormat(totals.totalBOX)}</td>
+                    <td className="numeric">{safeFormat(totals.totalBOX1)}</td>
+                    <td className="numeric">{safeFormat(totals.BOX)}</td>
+                    <td className="numeric">{safeFormat(totals.SalesInCarton)}</td>
+                    <td className="numeric">{safeFormat(totals.SalesInUnit)}</td>
+                    <td className="numeric">{safeFormat(totals.KG, { maximumFractionDigits: 2 })}</td>
+                    <td className="numeric"></td>
+                    <td className="numeric">{safeFormat(totals.totalGrossAmount)}</td>
+                    <td className="numeric">{safeFormat(totals.totalGst)}</td>
+                    <td className="numeric">{safeFormat(totals.totalAdvanceTax)}</td>
+                    <td className="numeric">{safeFormat(totals.diBspass)}</td>
+                    <td className="numeric">{safeFormat(totals.rtoffer)}</td>
+                    <td className="numeric">{safeFormat(totals.wtoffer)}</td>
+                    <td className="numeric">{safeFormat(totals.rpDrive)}</td>
+                    <td className="numeric">{safeFormat(totals.wholesaleDeal)}</td>
+                    <td className="numeric">{safeFormat(totals.rtwholesale)}</td>
+                    <td className="numeric">{safeFormat(totals.subDisTPromotion)}</td>
+                    <td className="numeric">{safeFormat(totals.tradeOffer)}</td>
+                    <td className="numeric">{safeFormat(totals.hotzoneDrive)}</td>
+                    <td className="numeric">{safeFormat(totals.Scheme)}</td>
+                    <td className="numeric">{safeFormat(totals.claimedScheme)}</td>
+                    <td className="numeric">{safeFormat(totals.unclaimedScheme)}</td>
+                    <td className="numeric">{safeFormat(totals.specialDiscount)}</td>
+                    <td className="numeric">{safeFormat(totals.totalDiscount)}</td>
+                    <td className="numeric">{safeFormat(totals.totalNetAmount)}</td>
+                    <td className="numeric"></td>
+                    <td className="numeric"></td>
+                    <td className="numeric">{safeFormat(totals.cost)}</td>
+                    <td className="numeric">{safeFormat(totals.marketingExpense)}</td>
+                  </tr>
+                </tfoot>
+              )}
+            </table>
+          </div>
+        )}
+      </div>
+
+      <div className="report-actions">
+        <button className="btn btn-word" onClick={exportToWord}>Word</button>
+        <button className="btn btn-excel" onClick={exportToExcel}>Excel</button>
+        <button className="btn btn-pdf" onClick={exportToPDF}>PDF</button>
+        <button className="btn btn-print" onClick={handlePrint}>Print</button>
+      </div>
+
+      <style>{`
+        @keyframes spin {
+          0% { transform: rotate(0deg); }
+          100% { transform: rotate(360deg); }
+        }
+        
+        .loader-wrapper {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 200px;
+        }
+        
+        .spinner {
+          width: 48px;
+          height: 48px;
+          border: 6px solid #ccc;
+          border-top: 6px solid #3b82f6;
+          border-radius: 50%;
+          animation: spin 1s linear infinite;
+        }
+        
+        .sales-report-container {
+          font-family: 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', sans-serif;
+          background: #fff;
+          border-radius: 8px;
+          box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+          padding: 24px;
+          margin: 20px auto;
+          max-width: 100%;
+          color: #333;
+          position: relative;
+        }
+        
+        .sales-report-header {
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-start;
+          margin-bottom: 24px;
+          padding-bottom: 20px;
+          border-bottom: 1px solid #eaeaea;
+        }
+        
+        .company-info {
+          text-align: left;
+        }
+        
+        .company-name {
+          font-size: 24px;
+          font-weight: 700;
+          color: #2c3e50;
+          margin: 0 0 8px 0;
+        }
+        
+        .report-info {
+          text-align: right;
+        }
+        
+        .report-info p {
+          margin: 4px 0;
+          font-size: 14px;
+          color: #666;
+        }
+        
+        .search-container {
+          margin-bottom: 20px;
+        }
+        
+        .search-input {
+          padding: 8px 12px;
+          border: 1px solid #ddd;
+          border-radius: 4px;
+          font-size: 14px;
+          width: 100%;
+          max-width: 400px;
+        }
+        
+        .summary-stats {
+          display: flex;
+          gap: 12px;
+          margin-bottom: 20px;
+          flex-wrap: wrap;
+        }
+        
+        .summary-stats span {
+          background: #f8f9fa;
+          padding: 6px 10px;
+          border-radius: 6px;
+          font-weight: 600;
+          font-size: 11px;
+          border: 1px solid #e9ecef;
+        }
+        
+        .table-container {
+          overflow: auto;
+          border: 1px solid #e0e0e0;
+          border-radius: 6px;
+          margin-bottom: 20px;
+          max-height: 70vh;
+          position: relative;
+        }
+        
+        .sticky-table-wrapper {
+          position: relative;
+          height: 100%;
+        }
+        
+        .sales-data-table {
+          width: 100%;
+          border-collapse: collapse;
+          font-size: 10px;
+        }
+        
+        .product-table {
+          min-width: 2400px;
+        }
+        
+        .sticky-header {
+          position: sticky;
+          top: 0;
+          z-index: 10;
+        }
+        
+        .sales-data-table th {
+          background: #2c3e50;
+          color: white;
+          padding: 10px 6px;
+          text-align: left;
+          font-weight: 600;
+          border-bottom: 2px solid #1a252f;
+          white-space: nowrap;
+          position: sticky;
+          top: 0;
+          z-index: 10;
+        }
+        
+        /* Different z-index for first column if needed */
+        .sales-data-table th:first-child {
+          position: sticky;
+          left: 0;
+          z-index: 11;
+        }
+        
+        .sales-data-table td {
+          padding: 8px 6px;
+          border-bottom: 1px solid #eaeaea;
+          white-space: nowrap;
+        }
+        
+        /* Sticky first column for better UX */
+        .sales-data-table td:first-child {
+          position: sticky;
+          left: 0;
+          background: white;
+          z-index: 5;
+          font-weight: 600;
+        }
+        
+        .sales-data-table tbody tr:hover td:first-child {
+          background: #f8f9fa;
+        }
+        
+        .sales-data-table tbody tr:hover {
+          background-color: #f8f9fa;
+        }
+        
+        .numeric {
+          text-align: right;
+          font-family: 'Courier New', monospace;
+          font-weight: 600;
+        }
+        
+        .no-data {
+          text-align: center;
+          color: #95a5a6;
+          font-style: italic;
+          padding: 20px;
+        }
+        
+        tfoot {
+          border-top: 2px solid #e0e0e0;
+          position: sticky;
+          bottom: 0;
+          background: white;
+          z-index: 5;
+        }
+        
+        .footer-total {
+          font-weight: 700;
+          background: #f8f9fa;
+        }
+        
+        .footer-total td {
+          border-top: 2px solid #e0e0e0;
+          background: #f8f9fa;
+        }
+        
+        .report-actions {
+          display: flex;
+          justify-content: flex-end;
+          gap: 12px;
+        }
+        
+        .btn {
+          padding: 8px 16px;
+          border: none;
+          border-radius: 4px;
+          font-size: 12px;
+          font-weight: 600;
+          cursor: pointer;
+          transition: all 0.2s ease;
+        }
+        
+        .btn-word {
+          background: #2b579a;
+          color: white;
+        }
+        
+        .btn-word:hover {
+          background: #1e3f6e;
+        }
+        
+        .btn-excel {
+          background: #217346;
+          color: white;
+        }
+        
+        .btn-excel:hover {
+          background: #18532f;
+        }
+        
+        .btn-pdf {
+          background: #f40f02;
+          color: white;
+        }
+        
+        .btn-pdf:hover {
+          background: #c30c01;
+        }
+        
+        .btn-print {
+          background: #555;
+          color: white;
+        }
+        
+        .btn-print:hover {
+          background: #333;
+        }
+        
+        /* Scrollbar styling */
+        .table-container::-webkit-scrollbar {
+          width: 8px;
+          height: 8px;
+        }
+        
+        .table-container::-webkit-scrollbar-track {
+          background: #f1f1f1;
+          border-radius: 4px;
+        }
+        
+        .table-container::-webkit-scrollbar-thumb {
+          background: #888;
+          border-radius: 4px;
+        }
+        
+        .table-container::-webkit-scrollbar-thumb:hover {
+          background: #555;
+        }
+        
+        @media (max-width: 1200px) {
+          .sales-report-header {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+          }
+          
+          .company-info, .report-info {
+            text-align: center;
+            margin-bottom: 16px;
+          }
+          
+          .summary-stats {
+            justify-content: center;
+          }
+          
+          .report-actions {
+            flex-wrap: wrap;
+            justify-content: center;
+          }
+        }
+        
+        @media print {
+          .sales-report-container {
+            box-shadow: none;
+            padding: 0;
+          }
+          
+          .report-actions, .search-container {
+            display: none;
+          }
+          
+          .table-container {
+            overflow: visible;
+            border: none;
+            max-height: none;
+          }
+          
+          .sales-data-table {
+            font-size: 8px;
+          }
+          
+          .sticky-header {
+            position: static;
+          }
+          
+          .footer-total {
+            background: #f0f0f0 !important;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+          }
+        }
+      `}</style>
+    </div>
+  );
+};
+
+export default SalesDumpDataWithCostPopup;

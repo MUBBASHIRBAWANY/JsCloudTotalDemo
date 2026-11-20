@@ -1,0 +1,31 @@
+{
+  "fill": {
+    "solid": "srgb:0.90980,0.89412,0.96078,1.00000"
+  },
+  "groups": [
+    {
+      "layers": [
+        {
+          "image-name": "jsi-icon.png",
+          "name": "jsi-icon",
+          "position": {
+            "scale": 1,
+            "translation-in-points": [0, 0]
+          }
+        }
+      ],
+      "shadow": {
+        "kind": "neutral",
+        "opacity": 0.3
+      },
+      "translucency": {
+        "enabled": false,
+        "value": 0.5
+      }
+    }
+  ],
+  "supported-platforms": {
+    "circles": ["watchOS"],
+    "squares": "shared"
+  }
+}

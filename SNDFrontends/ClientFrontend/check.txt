@@ -1,0 +1,163 @@
+export const SattelDsr = async (req, res) => {
+    try {
+        const DsrData = req.body;
+        const currentDate = new Date().toISOString().split('T')[0];
+
+
+        if (!Array.isArray(DsrData) || DsrData.length === 0) {
+            return res.status(400).json({ message: "Invalid DSR Data" });
+        }
+
+        /* 🔹 0. DEDUPE INCOMING DATA */
+        // Agar frontend se koi invoice 2 baar aaye (duplicate load form data), to sirf EK baar process karo
+        // Key = SalesInvoice + Client (taake alag clients ki same-number wali invoices drop na hon)
+        const seenInvoices = new Set();
+        const uniqueDsrData = DsrData.filter(item => {
+            if (item.SalesInvoice == null) return true;
+            const key = `${String(item.SalesInvoice)}|${String(item.Client || '')}`;
+            if (seenInvoices.has(key)) return false;
+            seenInvoices.add(key);
+            return true;
+        });
+
+        /* 🔹 0b. SKIP ALREADY SETTLED / CANCELLED INVOICES */
+        const lookup = uniqueDsrData.filter((item) => item.SalesInvoice != null)
+        const existingInvoices = lookup.length
+            ? await SalesInvoiceModal.find({
+                $or: lookup.map((item) => ({
+                    SalesInvoice: item.SalesInvoice,
+                    ...(item.Client ? { Client: item.Client } : {}),
+                })),
+            }).select("SalesInvoice Client PostStatus")
+            : []
+        const skipKeys = new Set(
+            existingInvoices
+                .filter((inv) => inv.PostStatus === "Serviced" || inv.PostStatus === "Cancel")
+                .map((inv) => `${String(inv.SalesInvoice)}|${String(inv.Client || "")}`)
+        )
+        const toProcess = uniqueDsrData.filter((item) => {
+            const key = `${String(item.SalesInvoice)}|${String(item.Client || "")}`
+            return !skipKeys.has(key)
+        })
+
+        /* 🔹 1. RTG DATA – ONLY ONCE, invoice header Distrbutor par */
+        const RTgData = toProcess.flatMap((dsr) =>
+            (dsr.SalesData || []).map((line) => ({
+                ...line,
+                Distrbutor: dsr.Distrbutor,
+            }))
+        )
+
+        // ✅ RTGBox validation: negative values ko roko — stock kabhi minus nahi hona chahiye
+        for (const RTD of RTgData) {
+            const rtgQty = Number(RTD.RTGBox) || 0;
+            if (rtgQty < 0) {
+                return res.status(400).json({
+                    success: false,
+                    message: `RTGBox negative nahi ho sakta for product ${RTD.product}`
+                });
+            }
+        }
+
+        const bulkOps = RTgData
+            .filter((RTD) => RTD.product && RTD.Distrbutor && (Number(RTD.RTGBox) || 0) > 0)
+            .map((RTD) => ({
+            updateOne: {
+                filter: {
+                    ProductName: RTD.product,
+                    Distrbutor: RTD.Distrbutor
+                },
+                update: {
+                    $inc: {
+                        TotalQuantity: Number(RTD.RTGBox) || 0
+                    },
+                    $setOnInsert: {
+                        ProductName: RTD.product,
+                        Distrbutor: RTD.Distrbutor,
+                        AvgRate: "0",
+                        Amount: 0,
+                    }
+                },
+                upsert: true
+            }
+        }));
+
+        /* 🔹 2. UPDATE SALES INVOICES */
+        for (const item of toProcess) {
+             const { _id, __v, Remaining, Recived, Credit, RemainigAmount, ...updateData } = item;
+            const received = (Number(item.Chq) || 0) + (Number(item.cashAmount) || 0);
+            const netSale = Number(item.NetSale) || 0;
+            const remaining = Math.round((
+                item.Credit != null && item.Credit !== ""
+                    ? Number(item.Credit)
+                    : netSale - received
+            ) * 100) / 100;
+
+            // updateMany: agar same invoice ki koi duplicate copy mojood ho (same number + same client)
+            // to wo bhi settle ho jaye — taake koi copy "Open" reh kar dobara double na dikhe.
+            // Kisi aur customer ki invoice galti se update na ho isliye Client bhi match karte hain.
+            await SalesInvoiceModal.updateMany(
+                { SalesInvoice: item.SalesInvoice, Client: item.Client },
+            {
+            $set: {
+                ...updateData,
+                Totalamount: netSale,
+                Recived: received,
+                Remaining: Number.isFinite(remaining) ? remaining : 0,
+                SlabDiscount: Number(item.SlabDiscount) || 0,
+                SlabPercentage: Number(item.SlabPercentage) || 0,
+                ChqDate: item.chqDate,
+                ChqNumber: item.chqNumber,
+                PostStatus: "Serviced"
+            }
+        }
+            );
+            if (item.Chq > 0) {
+                await ChqModal.findOneAndUpdate(
+                    {
+                        SalesInvoice: item.SalesInvoice,
+                        ChqNumber: item.chqNumber
+                    },
+                    {
+                        $setOnInsert: {
+                            Amount: item.Chq,
+                            ChqDate: item.chqDate,
+                            Distrbutor: item.Distrbutor,
+                            Customer: item.Client,
+                            Status : "Pending"
+                        }
+                    },
+                    { upsert: true }
+                );
+
+            }
+        }
+
+        /* 🔹 3. UPDATE STOCK ONCE */
+        if (bulkOps.length > 0) {
+            await TotalProductModal.bulkWrite(bulkOps);
+        }
+
+        /* 🔹 4. UPDATE LOAD FORM */
+        const updatedLoadForm = await LoadFormModal.findOneAndUpdate(
+            { LoadFormNumber: uniqueDsrData[0].LoadFormNumber },
+            { Status: "Serviced", LoadFormDate : currentDate},
+            
+            { new: true }
+        );
+
+        return res.status(200).json({
+            success: true,
+            data: updatedLoadForm
+        });
+
+    } catch (err) {
+        console.log(err);
+        
+        return res.status(500).json({
+            success: false,
+            error : err,
+            message: "Internal Server Error"
+        });
+    }
+};

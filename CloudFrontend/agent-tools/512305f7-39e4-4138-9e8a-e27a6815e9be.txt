@@ -1,0 +1,1506 @@
+diff --git a/src/Pages/Reports/SalesInvoice/SalesDumpData/SalesDumpDataPopup.jsx b/src/Pages/Reports/SalesInvoice/SalesDumpData/SalesDumpDataPopup.jsx
+index 46785b4..63ddd09 100644
+--- a/src/Pages/Reports/SalesInvoice/SalesDumpData/SalesDumpDataPopup.jsx
++++ b/src/Pages/Reports/SalesInvoice/SalesDumpData/SalesDumpDataPopup.jsx
+@@ -1,706 +1,494 @@
+-import React, { useEffect, useState, useMemo, useRef, useCallback } from "react";
+-import * as XLSX from "xlsx";
+-import {
+-  Document,
+-  Packer,
+-  Paragraph,
+-  Table,
+-  TableRow,
+-  TableCell,
+-  WidthType,
+-} from "docx";
+-import { saveAs } from "file-saver";
+-import jsPDF from "jspdf";
++import React, { useEffect, useState, useMemo, useRef, useCallback } from 'react';
++
++import * as XLSX from 'xlsx';
++import { Document, Packer, Paragraph, Table, TableRow, TableCell, WidthType, AlignmentType } from 'docx';
++import { saveAs } from 'file-saver';
++import jsPDF from 'jspdf';
+ import autoTable from "jspdf-autotable";
+-import { getDataFundtion } from "../../../../Api/CRUDFunctions";
+-import ReportPopupHeader from "../../../../Components/Global/ReportPopupHeader";
++import { getDataFundtion } from '../../../../Api/CRUDFunctions';
+ 
+-const SalesDumpDataPopup = ({ data = {} }) => {
++const SalesDumpDataPopup = ({ filterData = [] }) => {
+   const [isLoading, setIsLoading] = useState(false);
+-  const { startDate, endDate, store } = data;
++  const { startDate, endDate } = filterData
+   const [rows, setRows] = useState([]);
+-  const [productWiseData, setProductWiseData] = useState([]);
+-  const [filter, setFilter] = useState("");
++  const [filter, setFilter] = useState('');
++  const [data, setData] = useState([])
++  const [sortConfig, setSortConfig] = useState({ key: null, direction: 'ascending' });
+   const reportRef = useRef(null);
+   
+-  // Cache lookups to avoid repeated find operations
++  // Cache for lookup objects to avoid repeated find operations
+   const lookupsRef = useRef({});
+-
+-  // Update lookups when data dependencies change
++  
++  // Update lookups when filterData changes
+   useEffect(() => {
+-    if (data && Object.keys(data).length) {
++    if (filterData && Object.keys(filterData).length) {
+       lookupsRef.current = {
+-        skuOptionsMap: new Map(data.SkuOptions?.map(p => [p._id, p]) || []),
+-        brandMap: new Map(data.Brand?.map(b => [b.mastercode, b]) || []),
+-        categoryMap: new Map(data.Category?.map(c => [c.mastercode, c]) || []),
+-        masterSkuMap: new Map(data.MastarSku?.map(m => [m.mastercode, m]) || []),
+-        vendorMap: new Map(data.Vendor?.map(v => [v.mastercode, v]) || []),
+-        customerMap: new Map(data.Customer?.map(c => [c._id, c]) || []),
+-        orderBookerMap: new Map(data.TotalOrderBooker?.map(o => [o._id, o]) || []),
+-        cityMap: new Map(data.City?.map(c => [c._id, c]) || [])
++        productMap: new Map(filterData.Product?.map(p => [p.value, p]) || []),
++        customerMap: new Map(filterData.Customer?.map(c => [c.value, c]) || []),
++        regionMap: new Map(filterData.Region?.map(r => [r.value, r]) || []),
++        cityMap: new Map(filterData.City?.map(c => [c.value, c]) || []),
++        zoneMap: new Map(filterData.Zone?.map(z => [z.value, z]) || []),
++        orderBookerMap: new Map(filterData.OrderBooker?.map(ob => [ob.value, ob]) || []),
++        // Pre-filter Sets for faster validation
++        validProducts: new Set(filterData.Product?.map(p => p.value) || []),
++        validRegions: new Set(filterData.Region?.map(r => r.value) || []),
++        validCities: new Set(filterData.City?.map(c => c.value) || []),
++        validZones: new Set(filterData.Zone?.map(z => z.value) || []),
++        validOrderBookers: new Set(filterData.OrderBooker?.map(ob => ob.value) || [])
+       };
+     }
+-  }, [data]);
++  }, [filterData]);
+ 
+-  // Fetch data - optimized with single pass processing
+   const getData = useCallback(async () => {
+     setIsLoading(true);
+     try {
+-      const res = await getDataFundtion(
+-        `/SaleInvoice/SalesDumpData?startDate=${startDate}&endDate=${endDate}&Store=${store}`
+-      );
+-      
+-      const {
+-        skuOptionsMap,
+-        brandMap,
+-        categoryMap,
+-        masterSkuMap,
+-        vendorMap,
+-        customerMap,
+-        orderBookerMap,
+-        cityMap
+-      } = lookupsRef.current;
+-const PclData = res.AllOrder || [];
+-console.log(PclData , "PClData")
+-      // Single pass through data with Map lookups (O(1) instead of O(n))
+-      const processedData = res.data.map((item, index) => {
+-        const product = skuOptionsMap.get(item.Product);
+-        if (!product) return null;
+-        
+-        const mastercode = product.mastercode || '';
+-        const brandCode = mastercode.slice(0, 6);
+-        const categoryCode = mastercode.slice(0, 4);
+-        const masterSkuCode = mastercode.slice(0, 9);
+-        const vendorCode = mastercode.slice(0, 2);
+-        
+-        const Brand = brandMap.get(brandCode);
+-        const Category = categoryMap.get(categoryCode);
+-        const MasterSku = masterSkuMap.get(masterSkuCode);
+-        const Vendor = vendorMap.get(vendorCode);
++      const gettingdata = await getDataFundtion(`inventoryReport/SalesDumpData?startDate=${startDate}&endDate=${endDate}`);
++      setData(gettingdata);
++    } catch (err) {
++      console.error('Error fetching data:', err);
++    } finally {
++      setIsLoading(false);
++    }
++  }, [startDate, endDate]);
++
++  useEffect(() => {
++    getData();
++  }, [getData]);
++
++  // Optimized data processing - single pass with Map lookups
++  useEffect(() => {
++    if (!data?.length || !lookupsRef.current.productMap?.size) return;
++
++    const {
++      productMap,
++      customerMap,
++      regionMap,
++      cityMap,
++      zoneMap,
++      orderBookerMap,
++      validProducts,
++      validRegions,
++      validCities,
++      validZones,
++      validOrderBookers
++    } = lookupsRef.current;
++
++    // Single pass sorting and filtering
++    const processed = data
++      .sort((a, b) => {
++        const statusA = a.PostStatus === true ? 1 : 0;
++        const statusB = b.PostStatus === true ? 1 : 0;
++        if (statusA !== statusB) return statusB - statusA;
++        return Number(a.invoice) - Number(b.invoice);
++      })
++      .sort((a, b) => new Date(a.date) - new Date(b.date))
++      .filter(item => {
+         const customer = customerMap.get(item.Client);
+-        
+-        const carton = item.carton || 0;
+-        const pcsinBox = Number(product?.PcsinBox || 0);
+-        const gram = product?.GRAM || 0;
+-        
+-        // Pre-calculate discount total once
+-        const discounts = {
+-          diBspass: item.diBspass || 0,
+-          rtoffer: item.RToffer || 0,
+-          wtoffer: item.WToffer || 0,
+-          rpDrive: item.RpDrive || 0,
+-          wholesaleDeal: item.WHOLESALEDEAL || 0,
+-          rtwholesale: item.RTWholeSale || 0,
+-          subDisTPromotion: item.SubDisTPromotion || 0,
+-          tradeOffer: item.TradeOffer || 0,
+-          hotzoneDrive: item.HOTZONEDRIVE || 0,
+-          scheme: item.SpecialTO || 0,
+-          specialDiscount: item.SPECIALDISCOUNT || 0,
+-        };
+-        
+-        const totalDiscount = Object.values(discounts).reduce((sum, val) => sum + val, 0);
++        if (!customer) return false;
++        
++        return (
++          validProducts.has(item.product) &&
++          validRegions.has(customer.Region) &&
++          validCities.has(customer.city) &&
++          validZones.has(customer.Zone) &&
++          validOrderBookers.has(item.OrderBooker) &&
++          (filterData.Status === "Both" || filterData.Status === String(item.PostStatus))
++        );
++      })
++      .map((item, index) => {
++        const product = productMap.get(item.product);
++        const customer = customerMap.get(item.Client);
++        const cartonNum = Number(item.carton) || 0;
++        const boxInCarton = product?.BoxinCarton || 1;
+         
+         return {
+           id: index + 1,
+-          productCode: product?.code || '',
+-          productName: product?.ProductName || '',
+-          ProductSalesflowRef: product?.salesFlowRef || '',
+-          VendorName: Vendor?.label2 || '',
+-          VendorCode: Vendor?.mastercode || '',
+-          Customer: customer?.ClientName || customer?.DistrbutorName || '',
+-          OrderBooker: orderBookerMap.get(customer?.OrderBooker)?.OrderBookerName || '',
+-          City: cityMap.get(customer?.City)?.CityName || "",
+-          DCnumber : item.DCNumber || '',
+-          OrderNumber : PclData.find((order) => order.dcNumber === item.DCNumber)?.OrderCode || '',
+-          OrderDate : PclData.find((order) => order.dcNumber === item.DCNumber)?.OrderDate || '',
+-          Brandcode: Brand?.mastercode || '',
+-          GRAM: gram,
+-          KG: ((pcsinBox * carton) * gram) / 1000,
+-          BrandName: Brand?.label2 || '',
+-          CategoryName: Category?.label2 || '',
+-          Categorycode: Category?.mastercode || '',
+-          MasterSkuName: MasterSku?.label2 || '',
+-          MasterSkucode: MasterSku?.mastercode || '',
+-          salesInvoice: item.SalesInvoice || '',
+-          salesFlowRef: item.SalesFlowRef || '',
+-          totalBOX: carton,
+-          totalBOX1: item.totalBox,
+-          BOX: item.Box,
+-          SalesInCarton: carton / (product?.BoxinCarton || 1),
+-          SalesInUnit: carton * pcsinBox,
+-          SalesInvoiceDate: item.SalesInvoiceDate,
+-          totalGrossAmount: Number(item.GrossAmount) || 0,
+-          totalGst: Number(item.Gst) || 0,
+-          cityid : customer?.City,
+-          totalAdvanceTax: Number(item.Advancetax) || 0,
+-          ...discounts,
+-          totalDiscount,
+-          totalNetAmount: Number(item.GrossAmount || 0) + Number(item.Gst || 0) + Number(item.Advancetax || 0) - totalDiscount,
++          invoice: item.invoice,
++          productName: product?.productName || "Unknown Product",
++          code: product?.code || "N/A",
++          carton: cartonNum,
++          SalesInCarton: cartonNum / boxInCarton,
++          SalesInUnit: cartonNum * (product?.SalesInCarton || 0),
++          totalNetSaleAmount: item.TotalAmount || 0,
++          date: item.date,
++          GRAM: product?.GRAM || 0,
++          KG: ((Number(product?.PcsinBox || 0) * cartonNum) * (product?.GRAM || 0)) / 1000,
++          client: customer?.name,
++          NTN: customer?.NTN,
++          Ref: item.Ref || '',
++          STN: customer?.STN,
++          OrderBooker: orderBookerMap.get(item.OrderBooker)?.label,
++          Region: regionMap.get(customer?.Region)?.label,
++          Zone: zoneMap.get(customer?.Zone)?.label,
++          City: cityMap.get(customer?.city)?.label,
++          cityid :  customer?.city,
++          Address: customer?.Address,
++          status: item.PostStatus === true ? 'Posted' : 'Pending',
+         };
+-      }).filter(item => item !== null); // Remove any null items
+-let allprocessed = []
+-if(data.loginVendor.OnlyDist == true){
+-  allprocessed = processedData.filter((item)=> item.cityid == data.loginVendor.City )
+-}
+-else {
+-  allprocessed = processedData
+-}
+-       
+-      
+-      setProductWiseData(allprocessed);
+-    } catch (error) {
+-      console.error("Error fetching product-wise sales summary:", error);
+-    } finally {
+-      setIsLoading(false);
++      });
++const allprocessed = processed.filter((item)=> item.cityid == filterData.loginVendor.City )
++    setRows(allprocessed);
++  }, [data, filterData.Status]);
++
++  // Memoized filter and sort with early returns
++  const filteredAndSortedRows = useMemo(() => {
++    if (!rows.length) return [];
++    
++    let filtered = rows;
++    
++    if (filter) {
++      const lowerFilter = filter.toLowerCase();
++      filtered = rows.filter(row => {
++        // Check only essential fields first
++        if (row.invoice?.toString().toLowerCase().includes(lowerFilter)) return true;
++        if (row.productName?.toLowerCase().includes(lowerFilter)) return true;
++        if (row.client?.toLowerCase().includes(lowerFilter)) return true;
++        // Only check other fields if necessary
++        return Object.values(row).some(value =>
++          value && value.toString().toLowerCase().includes(lowerFilter)
++        );
++      });
+     }
+-  }, [startDate, endDate, store]);
+ 
+-  useEffect(() => {
+-    if (lookupsRef.current.skuOptionsMap?.size) {
+-      getData();
++    if (sortConfig.key && filtered.length) {
++      const { key, direction } = sortConfig;
++      const multiplier = direction === 'ascending' ? 1 : -1;
++      
++      filtered = [...filtered].sort((a, b) => {
++        const aVal = a[key];
++        const bVal = b[key];
++        
++        if (typeof aVal === 'number' && typeof bVal === 'number') {
++          return (aVal - bVal) * multiplier;
++        }
++        
++        const aStr = String(aVal || '');
++        const bStr = String(bVal || '');
++        return aStr.localeCompare(bStr) * multiplier;
++      });
+     }
+-  }, [getData, data.SkuOptions]);
+ 
+-  // Memoized totals with reduce optimization
++    return filtered;
++  }, [rows, filter, sortConfig]);
++
++  // Memoized totals calculation
+   const totals = useMemo(() => {
+-    const initialTotals = {
+-      totalProducts: productWiseData.length,
+-      totalBOX: 0,
+-      totalBOX1: 0,
+-      BOX: 0,
+-      totalGrossAmount: 0,
+-      totalGst: 0,
+-      totalAdvanceTax: 0,
+-      diBspass: 0,
+-      rtoffer: 0,
+-      wtoffer: 0,
+-      rpDrive: 0,
+-      wholesaleDeal: 0,
+-      rtwholesale: 0,
+-      subDisTPromotion: 0,
+-      tradeOffer: 0,
+-      hotzoneDrive: 0,
+-      Scheme: 0,
+-      specialDiscount: 0,
+-      totalDiscount: 0,
+-      totalNetAmount: 0,
+-    };
+-
+-    return productWiseData.reduce((acc, product) => {
+-      acc.totalBOX += Number(product.totalBOX);
+-      acc.totalBOX1 += Number(product.totalBOX1);
+-      acc.BOX += Number(product.BOX);
+-      acc.totalGrossAmount += Number(product.totalGrossAmount);
+-      acc.totalGst += Number(product.totalGst);
+-      acc.totalAdvanceTax += Number(product.totalAdvanceTax);
+-      acc.diBspass += Number(product.diBspass);
+-      acc.rtoffer += Number(product.rtoffer);
+-      acc.wtoffer += Number(product.wtoffer);
+-      acc.rpDrive += Number(product.rpDrive);
+-      acc.wholesaleDeal += Number(product.wholesaleDeal);
+-      acc.rtwholesale += Number(product.rtwholesale);
+-      acc.subDisTPromotion += Number(product.subDisTPromotion);
+-      acc.tradeOffer += Number(product.tradeOffer);
+-      acc.hotzoneDrive += Number(product.hotzoneDrive);
+-      acc.Scheme += Number(product.scheme);
+-      acc.specialDiscount += Number(product.specialDiscount);
+-      acc.totalDiscount += Number(product.totalDiscount);
+-      acc.totalNetAmount += Number(product.totalNetAmount);
+-      return acc;
+-    }, initialTotals);
+-  }, [productWiseData]);
+-
+-  // Memoized filtered data for search
+-  const filteredData = useMemo(() => {
+-    if (!filter) return productWiseData;
++    let totalCartons = 0;
++    let totalAmount = 0;
+     
+-    const lowerFilter = filter.toLowerCase();
+-    return productWiseData.filter(item => 
+-      item.productName?.toLowerCase().includes(lowerFilter) ||
+-      item.productCode?.toLowerCase().includes(lowerFilter) ||
+-      item.Customer?.toLowerCase().includes(lowerFilter) ||
+-      item.salesInvoice?.toLowerCase().includes(lowerFilter)
+-    );
+-  }, [productWiseData, filter]);
++    for (let i = 0; i < filteredAndSortedRows.length; i++) {
++      totalCartons += filteredAndSortedRows[i].carton;
++      totalAmount += filteredAndSortedRows[i].totalNetSaleAmount;
++    }
++    
++    return { totalCartons, totalAmount };
++  }, [filteredAndSortedRows]);
++
++  const requestSort = useCallback((key) => {
++    setSortConfig(prev => ({
++      key,
++      direction: prev.key === key && prev.direction === 'ascending' ? 'descending' : 'ascending'
++    }));
++  }, []);
+ 
+   const formatDate = useCallback((dateString) => {
+-    if (!dateString) return "-";
+     const date = new Date(dateString);
+-    return date
+-      .toLocaleDateString("en-GB", {
+-        day: "2-digit",
+-        month: "short",
+-        year: "numeric",
+-      })
+-      .replace(",", "");
++    return date.toLocaleDateString("en-GB", {
++      day: "2-digit",
++      month: "short",
++      year: "numeric",
++    }).replace(",", "");
+   }, []);
+ 
+-  // Optimized export functions
++  // Optimized exports with data limiting for large datasets
+   const exportToExcel = useCallback(() => {
+-    const exportData = filteredData.map(product => ({
+-      "Product Code": product.productCode,
+-      "Product Name": product.productName,
+-      "Product Categorycode": product.Categorycode,
+-      "Product CategoryName": product.CategoryName,
+-      "Product BrandName": product.BrandName,
+-      "invocie Sale Flow Ref": product.salesFlowRef,
+-      "Order Date": product.OrderDate ? formatDate(product.OrderDate) : '',
+-      "DC Number": product.DCNumber || '',
+-      "Order Number": product.OrderNumber || '',
+-      "SalesInvoice Date": product.SalesInvoiceDate,
+-      "Product Sales Flow Ref": product.ProductSalesflowRef,
+-      "Customer": product.Customer,
+-      "City": product.City,
+-      "OrderBooker": product.OrderBooker,
+-      "Sales Invoice": product.salesInvoice,
+-      "BOX": product.totalBOX,
+-      "BOX1": product.BOX,
+-      "totalBOX": product.totalBOX1,
+-      "Sales Carton": product.SalesInCarton,
+-      "Sales Unit": product.SalesInUnit,
+-      "KG": product.KG,
+-      "GRAM": product.GRAM,
+-      "Gross Amount": product.totalGrossAmount,
+-      "GST": product.totalGst,
+-      "Advance Tax": product.totalAdvanceTax,
+-      "diBspass": product.diBspass,
+-      "RT Offer": product.rtoffer,
+-      "WT Offer": product.wtoffer,
+-      "Rp Drive": product.rpDrive,
+-      "Wholesale Deal": product.wholesaleDeal,
+-      "RT Wholesale": product.rtwholesale,
+-      "Sub Dis T Promotion": product.subDisTPromotion,
+-      "Trade Offer": product.tradeOffer,
+-      "Hotzone Drive": product.hotzoneDrive,
+-      "Scheme": product.scheme,
+-      "Special Discount": product.specialDiscount,
+-      "Total Discount": product.totalDiscount,
+-      "Net Amount": product.totalNetAmount
+-    }));
+-
++    const exportData = filteredAndSortedRows.map(({ id, ...rest }) => rest); // Remove id for cleaner export
+     const worksheet = XLSX.utils.json_to_sheet(exportData);
+     const workbook = XLSX.utils.book_new();
+-    XLSX.utils.book_append_sheet(workbook, worksheet, "Product Wise Summary");
+-    XLSX.writeFile(workbook, "Product_Wise_Sale_Summary.xlsx");
+-  }, [filteredData]);
++    XLSX.utils.book_append_sheet(workbook, worksheet, "Sales Report");
++    XLSX.writeFile(workbook, "Sales_Report.xlsx");
++  }, [filteredAndSortedRows]);
+ 
+   const exportToWord = useCallback(async () => {
+-    if (!filteredData.length) return;
++    if (!filteredAndSortedRows.length) return;
+     
+-    const headers = ["#", "Product Code", "Sales Flow Ref", "Product Name", "Sales Invoice", "BOX",
+-      "Gross Amount", "GST", "Advance Tax", "diBspass", "RT Offer",
+-      "WT Offer", "Rp Drive", "Wholesale Deal", "RT Wholesale", "Sub Dis T Promotion",
+-      "Trade Offer", "Hotzone Drive", "Scheme", "Special Discount", "Total Discount", "Net Amount"];
+-
+-    const tableRows = [
++    const headers = Object.keys(filteredAndSortedRows[0]).filter(key => key !== 'id');
++    const tableRows = filteredAndSortedRows.map(row =>
+       new TableRow({
+         children: headers.map(header =>
+-          new TableCell({ children: [new Paragraph(header)] })
++          new TableCell({
++            children: [new Paragraph({ text: String(row[header] || '') })],
++          })
+         ),
+-      }),
+-      ...filteredData.map((product) =>
++      })
++    );
++
++    const table = new Table({
++      rows: [
+         new TableRow({
+-          children: [
+-            new TableCell({ children: [new Paragraph(String(product.id || ""))] }),
+-            new TableCell({ children: [new Paragraph(product.productCode || "")] }),
+-            new TableCell({ children: [new Paragraph(product.ProductSalesflowRef || "")] }),
+-            new TableCell({ children: [new Paragraph(product.productName || "")] }),
+-            new TableCell({ children: [new Paragraph(product.Customer || "")] }),
+-            new TableCell({ children: [new Paragraph(product.salesInvoice || "")] }),
+-            new TableCell({ children: [new Paragraph(product.totalBOX?.toString() || "0")] }),
+-            new TableCell({ children: [new Paragraph(product.totalGrossAmount?.toLocaleString() || "0")] }),
+-            new TableCell({ children: [new Paragraph(product.totalGst?.toLocaleString() || "0")] }),
+-            new TableCell({ children: [new Paragraph(product.totalAdvanceTax?.toLocaleString() || "0")] }),
+-            new TableCell({ children: [new Paragraph(product.diBspass?.toLocaleString() || "0")] }),
+-            new TableCell({ children: [new Paragraph(product.rtoffer?.toLocaleString() || "0")] }),
+-            new TableCell({ children: [new Paragraph(product.wtoffer?.toLocaleString() || "0")] }),
+-            new TableCell({ children: [new Paragraph(product.rpDrive?.toLocaleString() || "0")] }),
+-            new TableCell({ children: [new Paragraph(product.wholesaleDeal?.toLocaleString() || "0")] }),
+-            new TableCell({ children: [new Paragraph(product.rtwholesale?.toLocaleString() || "0")] }),
+-            new TableCell({ children: [new Paragraph(product.subDisTPromotion?.toLocaleString() || "0")] }),
+-            new TableCell({ children: [new Paragraph(product.tradeOffer?.toLocaleString() || "0")] }),
+-            new TableCell({ children: [new Paragraph(product.hotzoneDrive?.toLocaleString() || "0")] }),
+-            new TableCell({ children: [new Paragraph(product.scheme?.toLocaleString() || "0")] }),
+-            new TableCell({ children: [new Paragraph(product.specialDiscount?.toLocaleString() || "0")] }),
+-            new TableCell({ children: [new Paragraph(product.totalDiscount?.toLocaleString() || "0")] }),
+-            new TableCell({ children: [new Paragraph(product.totalNetAmount?.toLocaleString() || "0")] }),
+-          ],
+-        })
+-      ),
+-    ];
++          children: headers.map(header =>
++            new TableCell({
++              children: [new Paragraph({ text: header, bold: true })],
++            })
++          ),
++        }),
++        ...tableRows,
++      ],
++      width: { size: 100, type: WidthType.PERCENTAGE },
++    });
+ 
+     const doc = new Document({
+       sections: [{
++        properties: {},
+         children: [
+-          new Paragraph({ text: "Pearl Dynamics", heading: "Heading1" }),
+-          new Paragraph({ text: "Product Wise Sale Summary Report" }),
+-          new Paragraph({ text: `Period: ${formatDate(startDate)} to ${formatDate(endDate)}` }),
++          new Paragraph({ text: "Pearl Dynamic (pvt) ltd(Private) Limited", heading: "Heading1" }),
++          new Paragraph({ text: "Sales Report" }),
+           new Paragraph({ text: `Generated: ${new Date().toLocaleString()}` }),
+-          new Table({ rows: tableRows, width: { size: 100, type: WidthType.PERCENTAGE } }),
++          new Paragraph({ text: "" }),
++          table,
+         ],
+       }],
+     });
+ 
+     const blob = await Packer.toBlob(doc);
+-    saveAs(blob, "Product_Wise_Sale_Summary.docx");
+-  }, [filteredData, formatDate, startDate, endDate]);
++    saveAs(blob, "Sales_Report.docx");
++  }, [filteredAndSortedRows]);
+ 
+   const exportToPDF = useCallback(() => {
+-    if (!filteredData.length) return;
++    if (!filteredAndSortedRows.length) return;
+     
+     const doc = new jsPDF("landscape");
+-    
+-    doc.setFontSize(16);
+-    doc.text("Product Wise Sale Summary Report", 14, 15);
+-    doc.setFontSize(10);
+-    doc.text(`Period: ${formatDate(startDate)} to ${formatDate(endDate)}`, 14, 22);
+-    doc.text(`Generated: ${new Date().toLocaleString()}`, 14, 28);
+-
+-    const headers = [
+-      "#", "Product Code", "Sales Flow Ref", "Product Name", "Sales Invoice", "BOX",
+-      "Gross Amount", "GST", "Advance Tax", "diBspass", "RT Offer",
+-      "WT Offer", "Rp Drive", "Wholesale Deal", "RT Wholesale", "Sub Dis T Promotion",
+-      "Trade Offer", "Scheme", "Hotzone Drive", "Special Discount", "Total Discount", "Net Amount"
+-    ];
+-
+-    const tableData = filteredData.map(product => [
+-      product.id,
+-      product.productCode || "",
+-      product.ProductSalesflowRef || "",
+-      product.productName || "",
+-      product.salesInvoice || "",
+-      product.totalBOX?.toString() || "0",
+-      { content: product.totalGrossAmount?.toLocaleString() || "0", styles: { halign: 'right' } },
+-      { content: product.totalGst?.toLocaleString() || "0", styles: { halign: 'right' } },
+-      { content: product.totalAdvanceTax?.toLocaleString() || "0", styles: { halign: 'right' } },
+-      { content: product.diBspass?.toLocaleString() || "0", styles: { halign: 'right' } },
+-      { content: product.rtoffer?.toLocaleString() || "0", styles: { halign: 'right' } },
+-      { content: product.wtoffer?.toLocaleString() || "0", styles: { halign: 'right' } },
+-      { content: product.rpDrive?.toLocaleString() || "0", styles: { halign: 'right' } },
+-      { content: product.wholesaleDeal?.toLocaleString() || "0", styles: { halign: 'right' } },
+-      { content: product.rtwholesale?.toLocaleString() || "0", styles: { halign: 'right' } },
+-      { content: product.subDisTPromotion?.toLocaleString() || "0", styles: { halign: 'right' } },
+-      { content: product.tradeOffer?.toLocaleString() || "0", styles: { halign: 'right' } },
+-      { content: product.hotzoneDrive?.toLocaleString() || "0", styles: { halign: 'right' } },
+-      { content: product.specialDiscount?.toLocaleString() || "0", styles: { halign: 'right' } },
+-      { content: product.totalDiscount?.toLocaleString() || "0", styles: { halign: 'right' } },
+-      { content: product.totalNetAmount?.toLocaleString() || "0", styles: { halign: 'right' } }
+-    ]);
+-
+-    tableData.push([
+-      { content: "TOTAL", colSpan: 6, styles: { fontStyle: 'bold', halign: 'center' } },
+-      { content: totals.totalGrossAmount.toLocaleString(), styles: { fontStyle: 'bold', halign: 'right' } },
+-      { content: totals.totalGst.toLocaleString(), styles: { fontStyle: 'bold', halign: 'right' } },
+-      { content: totals.totalAdvanceTax.toLocaleString(), styles: { fontStyle: 'bold', halign: 'right' } },
+-      { content: totals.diBspass.toLocaleString(), styles: { fontStyle: 'bold', halign: 'right' } },
+-      { content: totals.rtoffer.toLocaleString(), styles: { fontStyle: 'bold', halign: 'right' } },
+-      { content: totals.wtoffer.toLocaleString(), styles: { fontStyle: 'bold', halign: 'right' } },
+-      { content: totals.rpDrive.toLocaleString(), styles: { fontStyle: 'bold', halign: 'right' } },
+-      { content: totals.wholesaleDeal.toLocaleString(), styles: { fontStyle: 'bold', halign: 'right' } },
+-      { content: totals.rtwholesale.toLocaleString(), styles: { fontStyle: 'bold', halign: 'right' } },
+-      { content: totals.subDisTPromotion.toLocaleString(), styles: { fontStyle: 'bold', halign: 'right' } },
+-      { content: totals.tradeOffer.toLocaleString(), styles: { fontStyle: 'bold', halign: 'right' } },
+-      { content: totals.hotzoneDrive.toLocaleString(), styles: { fontStyle: 'bold', halign: 'right' } },
+-      { content: totals.specialDiscount.toLocaleString(), styles: { fontStyle: 'bold', halign: 'right' } },
+-      { content: totals.totalDiscount.toLocaleString(), styles: { fontStyle: 'bold', halign: 'right' } },
+-      { content: totals.totalNetAmount.toLocaleString(), styles: { fontStyle: 'bold', halign: 'right', fillColor: [22, 160, 133] } }
+-    ]);
++    const headers = Object.keys(filteredAndSortedRows[0]).filter(key => key !== 'id');
++    const tableData = filteredAndSortedRows.map(row => headers.map(header => row[header]));
++
++    doc.addImage(
++      "https://res.cloudinary.com/dmi26itgk/image/upload/v1755944631/Screenshot_2025-08-23_152337_ajpexh.png",
++      "PNG",
++      250, 8, 50, 20
++    );
++    doc.setFontSize(20);
++    doc.text("Sales Report", 14, 15);
++    doc.setFontSize(12);
++    doc.text(`Generated: ${new Date().toLocaleString()}`, 14, 22);
++    doc.text(`Period: ${startDate} to ${endDate}`, 14, 29);
+ 
+     autoTable(doc, {
+       head: [headers],
+       body: tableData,
+-      startY: 35,
+-      styles: { fontSize: 6, cellPadding: 1, lineColor: [50, 50, 50], lineWidth: 0.1 },
+-      headStyles: { fillColor: [41, 128, 185], textColor: 255, fontStyle: 'bold', fontSize: 6 },
+-      alternateRowStyles: { fillColor: [245, 245, 245] },
+-      columnStyles: {
+-        6: { halign: 'right' }, 7: { halign: 'right' }, 8: { halign: 'right' },
+-        9: { halign: 'right' }, 10: { halign: 'right' }, 11: { halign: 'right' },
+-        12: { halign: 'right' }, 13: { halign: 'right' }, 14: { halign: 'right' },
+-        15: { halign: 'right' }, 16: { halign: 'right' }, 17: { halign: 'right' },
+-        18: { halign: 'right' }, 19: { halign: 'right' }, 20: { halign: 'right' },
+-        21: { halign: 'right' }
+-      },
+-      margin: { top: 35 }
++      startY: 40,
++      theme: "grid",
++      styles: { fontSize: 8, cellPadding: 2 },
++      headStyles: { fillColor: [41, 128, 185], textColor: 255 },
+     });
+ 
+-    const finalY = doc.lastAutoTable.finalY + 10;
+-    doc.setFontSize(8);
+-    doc.setFont(undefined, 'bold');
+-    doc.text("Summary:", 14, finalY);
+-    doc.setFont(undefined, 'normal');
+-    doc.text(`Total Products: ${totals.totalProducts}`, 14, finalY + 5);
+-    doc.text(`Total BOX: ${totals.totalBOX}`, 14, finalY + 10);
+-    doc.text(`Grand Total Amount: ${totals.totalNetAmount.toLocaleString()}`, 14, finalY + 15);
+-    doc.text(`Total Gross Amount: ${totals.totalGrossAmount.toLocaleString()}`, 60, finalY + 5);
+-    doc.text(`Total GST: ${totals.totalGst.toLocaleString()}`, 60, finalY + 15);
+-    doc.text(`Total Advance Tax: ${totals.totalAdvanceTax.toLocaleString()}`, 100, finalY + 5);
+-    doc.text(`Total Discount: ${totals.totalDiscount.toLocaleString()}`, 100, finalY + 10);
+-
+-    doc.save("Product_Wise_Sale_Summary.pdf");
+-  }, [filteredData, totals, formatDate, startDate, endDate]);
++    const pageHeight = doc.internal.pageSize.height;
++    doc.setFontSize(10);
++    doc.text(
++      "Developed by JS International | Website: https://jaffersons.com/ | Contact: 0301-8251291",
++      doc.internal.pageSize.width / 2,
++      pageHeight - 10,
++      { align: "center" }
++    );
++    
++    doc.save("Sales_Report.pdf");
++  }, [filteredAndSortedRows, startDate, endDate]);
+ 
+   const handlePrint = useCallback(() => {
+-    const content = reportRef.current?.innerHTML;
+-    if (!content) return;
++    const printContent = reportRef.current?.innerHTML;
++    if (!printContent) return;
+     
+-    const win = window.open("", "_blank", "width=1400,height=800");
+-    win.document.write(`
++    const printWindow = window.open("", "_blank", "width=1200,height=800");
++    printWindow.document.write(`
+       <html>
+         <head>
+-          <title>Product Wise Sale Summary Report</title>
++          <title>Sales Report</title>
+           <style>
+-            body { font-family: Arial; padding:20px; }
+-            table { border-collapse: collapse; width:100%; font-size:8px; }
+-            th, td { border:1px solid #ccc; padding:3px; text-align:left; }
+-            th { background:#f4f4f4; font-weight:bold; }
+-            .numeric { text-align:right; }
+-            .summary-stats { margin:15px 0; font-weight:bold; }
+-            .product-table { min-width: 1800px; }
+-            .report-actions { display: none; }
++            ${Array.from(document.querySelectorAll("style")).map(s => s.innerHTML).join("")}
++            .print-footer {
++              margin-top: 40px;
++              font-size: 12px;
++              text-align: center;
++              color: #555;
++              border-top: 1px solid #ccc;
++              padding-top: 10px;
++            }
++            .report-controls, .report-actions { display: none; }
+           </style>
+         </head>
+-        <body>${content}</body>
++        <body>
++          ${printContent}
++          <div class="print-footer">
++            Developed by JS International | Website: https://jaffersons.com/ | Contact: 0301-8251291
++          </div>
++        </body>
+       </html>
+     `);
+-    win.document.close();
+-    win.focus();
+-    setTimeout(() => win.print(), 500);
++    printWindow.document.close();
++    printWindow.focus();
++    setTimeout(() => {
++      printWindow.print();
++      printWindow.close();
++    }, 500);
+   }, []);
+ 
+-  // Add search input handler
+-  const handleSearch = useCallback((e) => {
+-    setFilter(e.target.value);
+-  }, []);
++  // Virtual scrolling for large datasets
++  const displayRows = useMemo(() => {
++    // Limit initial render to first 100 rows for better performance
++    return filteredAndSortedRows.slice(0, 500);
++  }, [filteredAndSortedRows]);
+ 
+-  // Display limited rows for better performance (virtual scrolling)
+-  const displayData = useMemo(() => {
+-    return filteredData.slice(0, 500);
+-  }, [filteredData]);
++  if (isLoading) {
++    return (
++      <div className="loader-wrapper">
++        <div className="spinner"></div>
++      </div>
++    );
++  }
+ 
+   return (
+     <div className="sales-report-container" ref={reportRef}>
+-      <ReportPopupHeader title="Sales Dump Data" />
++      <div className="watermark">
++        <div className="watermark-content">
++          <img src="https://res.cloudinary.com/dmi26itgk/image/upload/v1755943603/Adobe_Express_-_file-Photoroom_dayaxd.png" alt="" />
++        </div>
++      </div>
+ 
+       <div className="sales-report-header">
+         <div className="company-info">
+-          <h2 className="company-name">Pearl Dynamics</h2>
+-          <p>Product Wise Sale Summary Report</p>
++          <h2 className="company-name">Pearl Dynamic (pvt) ltd(Private) Limited</h2>
++          <p className="company-address">123 Business Avenue, Suite 456</p>
++          <p className="company-contact">Phone: (555) 123-4567 | Email: info@pmmgmt.com</p>
+         </div>
+         <div className="report-info">
+-          <p>Generated: {new Date().toLocaleString()}</p>
+-          <p>
+-            {productWiseData.length > 0
+-              ? `Period: ${formatDate(startDate)} to ${formatDate(endDate)}`
+-              : "No data"}
++          <h1 className="report-title">Sales Report</h1>
++          <p className="report-date">Generated: {new Date().toLocaleString()}</p>
++          <p className="report-range">
++            {filteredAndSortedRows.length > 0
++              ? `Period: ${filteredAndSortedRows[0].date} to ${filteredAndSortedRows[filteredAndSortedRows.length - 1].date}`
++              : 'No data available'
++            }
+           </p>
+         </div>
+       </div>
+ 
+-      {/* Search Box */}
+-      <div className="search-container">
+-        <input
+-          type="text"
+-          placeholder="Search by Product Name, Code, Customer or Invoice..."
+-          value={filter}
+-          onChange={handleSearch}
+-          className="search-input"
+-        />
+-      </div>
+-
+-      <div className="summary-stats">
+-        <span>Total Products: {totals.totalProducts}</span>
+-        <span>Total BOX: {totals.totalBOX}</span>
+-        <span>Gross Amount: {totals.totalGrossAmount.toLocaleString()}</span>
+-        <span>Total GST: {totals.totalGst.toLocaleString()}</span>
+-        <span>Total Advance Tax: {totals.totalAdvanceTax.toLocaleString()}</span>
+-        <span>Total Discount: {totals.totalDiscount.toLocaleString()}</span>
+-        <span>Net Amount: {totals.totalNetAmount.toLocaleString()}</span>
++      <div className="report-controls">
++        <div className="search-box">
++          <input
++            type="text"
++            placeholder="Search sales data..."
++            value={filter}
++            onChange={(e) => setFilter(e.target.value)}
++            className="search-input"
++          />
++        </div>
++        <div className="summary-stats">
++          <span className="stat-item">
++            Total Sales: <strong>{totals.totalAmount.toLocaleString()}</strong>
++          </span>
++          <span className="stat-item">
++            Total Cartons: <strong>{totals.totalCartons}</strong>
++          </span>
++          <span className="stat-item">
++            Transactions: <strong>{filteredAndSortedRows.length}</strong>
++          </span>
++        </div>
+       </div>
+ 
+       <div className="table-container">
+-        {isLoading ? (
+-          <div className="loader-wrapper">
+-            <div className="spinner"></div>
+-          </div>
+-        ) : (
+-          <div className="sticky-table-wrapper">
+-            <table className="sales-data-table product-table" border={"All"}>
+-              <thead className="sticky-header">
+-                <tr>
+-                  <th>#</th>
+-                  <th>Order Number</th>
+-                  <th>Order Date</th>
+-                  <th>Sales Invoice</th>
+-                  <th>Sales Invoice Date</th>
+-                  <th>Sales FLow Ref</th>
+-                  <th>Vendor Code</th>
+-                  <th>Vendor</th>
+-                  <th>Customer</th>
+-                  <th>City</th>
+-                  <th>OrderBooker</th>
+-                  <th>Category Code</th>
+-                  <th>Category</th>
+-                  <th>Brand Code</th>
+-                  <th>Brand</th>
+-                  <th>Master Sku Code</th>
+-                  <th>Master Sku</th>
+-                  <th>Product Code</th>
+-                  <th>Product Sales flow Ref</th>
+-                  <th>Product Name</th>
+-                  <th>Sales Box</th>
+-                  <th>totalBox</th>
+-                  <th>Box</th>
+-                  <th>Sales Carton</th>
+-                  <th>Sales Unit</th>
+-                  <th>KG</th>
+-                  <th>GRAM</th>
+-                  <th>Gross Amount</th>
+-                  <th>GST</th>
+-                  <th>Advance Tax</th>
+-                  <th>diBspass</th>
+-                  <th>RT Offer</th>
+-                  <th>WT Offer</th>
+-                  <th>Rp Drive</th>
+-                  <th>Wholesale Deal</th>
+-                  <th>RT Wholesale</th>
+-                  <th>Sub Dis T Promotion</th>
+-                  <th>Trade Offer</th>
+-                  <th>Hotzone Drive</th>
+-                  <th>Scheme</th>
+-                  <th>Special Discount</th>
+-                  <th>Total Discount</th>
+-                  <th>Net Amount</th>
++        <table className="sales-data-table">
++          <thead>
++            <tr>
++              <th onClick={() => requestSort('id')}>#</th>
++              <th onClick={() => requestSort('date')}>Date</th>
++              <th onClick={() => requestSort('invoice')}>Invoice</th>
++              <th onClick={() => requestSort('code')}>SKU Code</th>
++              <th onClick={() => requestSort('productName')}>SKU</th>
++              <th onClick={() => requestSort('carton')}>Sale Box</th>
++              <th onClick={() => requestSort('GRAM')}>GRAM</th>
++              <th onClick={() => requestSort('KG')}>KG</th>
++              <th onClick={() => requestSort('totalNetSaleAmount')}>Net Sale Amount</th>
++              <th onClick={() => requestSort('Ref')}>Ref</th>
++              <th onClick={() => requestSort('client')}>Client</th>
++              <th onClick={() => requestSort('Region')}>Region</th>
++              <th onClick={() => requestSort('Zone')}>Zone</th>
++              <th onClick={() => requestSort('City')}>City</th>
++              <th onClick={() => requestSort('NTN')}>NTN</th>
++              <th onClick={() => requestSort('STN')}>STN</th>
++              <th onClick={() => requestSort('Address')}>Address</th>
++              <th onClick={() => requestSort('OrderBooker')}>OrderBooker</th>
++              <th onClick={() => requestSort('status')}>Status</th>
++            </tr>
++          </thead>
++          <tbody>
++            {displayRows.length > 0 ? (
++              displayRows.map((row) => (
++                <tr key={row.id} className={row.status === 'Pending' ? 'row-pending' : ''}>
++                  <td>{row.id}</td>
++                  <td style={{ minWidth: "100px" }}>{formatDate(row.date)}</td>
++                  <td className="invoice-number">{row.invoice}</td>
++                  <td className="sku-code">{row.code}</td>
++                  <td>{row.productName}</td>
++                  <td className="numeric">{row.carton}</td>
++                  <td className="numeric">{row.GRAM}</td>
++                  <td className="numeric">{row.KG}</td>
++                  <td className="numeric currency">{row.totalNetSaleAmount.toLocaleString()}</td>
++                  <td>{row.Ref}</td>
++                  <td>{row.client}</td>
++                  <td>{row.Region}</td>
++                  <td>{row.Zone}</td>
++                  <td>{row.City}</td>
++                  <td>{row.NTN}</td>
++                  <td>{row.STN}</td>
++                  <td>{row.Address}</td>
++                  <td>{row.OrderBooker}</td>
++                  <td>
++                    <span className={`status-badge ${row.status.toLowerCase()}`}>
++                      {row.status}
++                    </span>
++                  </td>
+                 </tr>
+-              </thead>
+-              <tbody>
+-                {displayData.length > 0 ? (
+-                  displayData.map((product) => (
+-                    <tr key={product.id}>
+-                      <td>{product.id}</td>
+-                      <td>{product.OrderNumber}</td>
+-                      <td>{product.OrderDate}</td>
+-                      <td>{product.salesInvoice}</td>
+-                      <td>{product.SalesInvoiceDate}</td>
+-                      <td>{product.salesFlowRef}</td>
+-                      <td>{product.VendorCode}</td>
+-                      <td>{product.VendorName}</td>
+-                      <td>{product.Customer}</td>
+-                      <td>{product.City}</td>
+-                      <td>{product.OrderBooker}</td>
+-                      <td>{product.Categorycode}</td>
+-                      <td>{product.CategoryName}</td>
+-                      <td>{product.Brandcode}</td>
+-                      <td>{product.BrandName}</td>
+-                      <td>{product.MasterSkucode}</td>
+-                      <td>{product.MasterSkuName}</td>
+-                      <td>{product.productCode}</td>
+-                      <td>{product.ProductSalesflowRef}</td>
+-                      <td>{product.productName}</td>
+-                      <td>{product.totalBOX}</td>
+-                      <td>{product.totalBOX1}</td>
+-                      <td>{product.BOX}</td>
+-                      <td>{product.SalesInCarton}</td>
+-                      <td>{product.SalesInUnit}</td>
+-                      <td>{product.KG}</td>
+-                      <td>{product.GRAM}</td>
+-                      <td className="numeric">{product.totalGrossAmount.toLocaleString()}</td>
+-                      <td className="numeric">{product.totalGst.toLocaleString()}</td>
+-                      <td className="numeric">{product.totalAdvanceTax.toLocaleString()}</td>
+-                      <td className="numeric">{product.diBspass.toLocaleString()}</td>
+-                      <td className="numeric">{product.rtoffer.toLocaleString()}</td>
+-                      <td className="numeric">{product.wtoffer.toLocaleString()}</td>
+-                      <td className="numeric">{product.rpDrive.toLocaleString()}</td>
+-                      <td className="numeric">{product.wholesaleDeal.toLocaleString()}</td>
+-                      <td className="numeric">{product.rtwholesale.toLocaleString()}</td>
+-                      <td className="numeric">{product.subDisTPromotion.toLocaleString()}</td>
+-                      <td className="numeric">{product.tradeOffer.toLocaleString()}</td>
+-                      <td className="numeric">{product.hotzoneDrive.toLocaleString()}</td>
+-                      <td className="numeric">{product?.scheme?.toLocaleString()}</td>
+-                      <td className="numeric">{product.specialDiscount.toLocaleString()}</td>
+-                      <td className="numeric">{product.totalDiscount.toLocaleString()}</td>
+-                      <td className="numeric">{product.totalNetAmount.toLocaleString()}</td>
+-                    </tr>
+-                  ))
+-                ) : (
+-                  <tr>
+-                    <td colSpan="41" className="no-data">No records found</td>
+-                  </tr>
+-                )}
+-              </tbody>
+-              {displayData.length > 0 && (
+-                <tfoot>
+-                  <tr className="footer-total">
+-                    <td>Total</td>
+-                    <td></td>
+-                    <td></td>
+-                    <td></td>
+-                    <td></td>
+-                    <td></td>
+-                    <td></td>
+-                    <td></td>
+-                    <td></td>
+-                    <td></td>
+-                    <td></td>
+-                    <td></td>
+-                    <td></td>
+-                    <td></td>
+-                    <td></td>
+-                    <td></td>
+-                    <td></td>
+-                    <td></td>
+-                    <td></td>
+-                    <td></td>
+-                    <td>{totals.totalBOX.toLocaleString()}</td>
+-                    <td className="numeric"></td>
+-                    <td className="numeric"></td>
+-                    <td className="numeric"></td>
+-                    <td className="numeric"></td>
+-                    <td className="numeric">{totals.totalGrossAmount.toLocaleString()}</td>
+-                    <td className="numeric">{totals.totalGst.toLocaleString()}</td>
+-                    <td className="numeric">{totals.totalAdvanceTax.toLocaleString()}</td>
+-                    <td className="numeric">{totals.diBspass.toLocaleString()}</td>
+-                    <td className="numeric">{totals.rtoffer.toLocaleString()}</td>
+-                    <td className="numeric">{totals.wtoffer.toLocaleString()}</td>
+-                    <td className="numeric">{totals.rpDrive.toLocaleString()}</td>
+-                    <td className="numeric">{totals.wholesaleDeal.toLocaleString()}</td>
+-                    <td className="numeric">{totals.rtwholesale.toLocaleString()}</td>
+-                    <td className="numeric">{totals.subDisTPromotion.toLocaleString()}</td>
+-                    <td className="numeric">{totals.tradeOffer.toLocaleString()}</td>
+-                    <td className="numeric">{totals.hotzoneDrive.toLocaleString()}</td>
+-                    <td className="numeric">{totals.Scheme.toLocaleString()}</td>
+-                    <td className="numeric">{totals.specialDiscount.toLocaleString()}</td>
+-                    <td className="numeric">{totals.totalDiscount.toLocaleString()}</td>
+-                    <td className="numeric">{totals.totalNetAmount.toLocaleString()}</td>
+-                  </tr>
+-                </tfoot>
+-              )}
+-            </table>
+-          </div>
+-        )}
++              ))
++            ) : (
++              <tr>
++                <td colSpan="19" className="no-data">
++                  No matching records found
++                </td>
++              </tr>
++            )}
++            <tr>
++              <td colSpan="5" className="footer-total">Totals</td>
++              <td className="numeric footer-total">{totals.totalCartons}</td>
++              <td className="numeric footer-total" colSpan="2"></td>
++              <td className="numeric currency footer-total">{totals.totalAmount.toLocaleString()}</td>
++              <td className="numeric footer-total" colSpan="10"></td>
++            </tr>
++          </tbody>
++        </table>
+       </div>
+ 
+       <div className="report-actions">
+-        <button className="btn btn-word" onClick={exportToWord}>Word</button>
+-        <button className="btn btn-excel" onClick={exportToExcel}>Excel</button>
+-        <button className="btn btn-pdf" onClick={exportToPDF}>PDF</button>
+-        <button className="btn btn-print" onClick={handlePrint}>Print</button>
++        <button className="btn btn-word" onClick={exportToWord}>
++          Download Word
++        </button>
++        <button className="btn btn-excel" onClick={exportToExcel}>
++          Download Excel
++        </button>
++        <button className="btn btn-pdf" onClick={exportToPDF}>
++          Download PDF
++        </button>
++        <button className="btn btn-print" onClick={handlePrint}>
++          Print Report
++        </button>
+       </div>
+ 
+-      <style>{`
+-        @keyframes spin {
+-          0% { transform: rotate(0deg); }
+-          100% { transform: rotate(360deg); }
+-        }
+-        
++  <style>{`
+         .loader-wrapper {
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           height: 200px;
+         }
+-        
+-        .spinner {
++          .spinner {
+           width: 48px;
+           height: 48px;
+           border: 6px solid #ccc;
+@@ -708,7 +496,6 @@ else {
+           border-radius: 50%;
+           animation: spin 1s linear infinite;
+         }
+-        
+         .sales-report-container {
+           font-family: 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', sans-serif;
+           background: #fff;
+@@ -716,9 +503,49 @@ else {
+           box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+           padding: 24px;
+           margin: 20px auto;
+-          max-width: 100%;
++          max-width: 1400px;
+           color: #333;
+           position: relative;
++          overflow: scroll;
++        }
++        
++        .watermark {
++          position: absolute;
++          top: 0;
++          left: 0;
++          right: 0;
++          bottom: 0;
++          display: flex;
++          align-items: center;
++          justify-content: center;
++          pointer-events: none;
++          z-index: 1;
++          opacity: 0.05;
++        }
++        
++        .watermark-content {
++          text-align: center;
++          transform: rotate(-45deg);
++        }
++        
++        .watermark-logo {
++          font-size: 120px;
++          font-weight: bold;
++          color: #2c3e50;
++          line-height: 1;
++        }
++        
++        .watermark-text {
++          font-size: 40px;
++          font-weight: bold;
++          color: #2c3e50;
++          margin-top: 10px;
++        }
++        
++        .watermark-subtext {
++          font-size: 30px;
++          color: #2c3e50;
++          margin-top: 5px;
+         }
+         
+         .sales-report-header {
+@@ -728,6 +555,8 @@ else {
+           margin-bottom: 24px;
+           padding-bottom: 20px;
+           border-bottom: 1px solid #eaeaea;
++          position: relative;
++          z-index: 2;
+         }
+         
+         .company-info {
+@@ -741,18 +570,38 @@ else {
+           margin: 0 0 8px 0;
+         }
+         
++        .company-address, .company-contact {
++          font-size: 12px;
++          color: #7f8c8d;
++          margin: 4px 0;
++        }
++        
+         .report-info {
+           text-align: right;
+         }
+         
+-        .report-info p {
++        .report-title {
++          font-size: 20px;
++          font-weight: 600;
++          color: #3498db;
++          margin: 0 0 8px 0;
++        }
++        
++        .report-date, .report-range {
++          font-size: 12px;
++          color: #7f8c8d;
+           margin: 4px 0;
+-          font-size: 14px;
+-          color: #666;
+         }
+         
+-        .search-container {
+-          margin-bottom: 20px;
++        .report-controls {
++          display: flex;
++          justify-content: space-between;
++          align-items: center;
++          margin-bottom: 16px;
++          flex-wrap: wrap;
++          gap: 16px;
++          position: relative;
++          z-index: 2;
+         }
+         
+         .search-input {
+@@ -760,118 +609,109 @@ else {
+           border: 1px solid #ddd;
+           border-radius: 4px;
+           font-size: 14px;
+-          width: 100%;
+-          max-width: 400px;
++          min-width: 250px;
+         }
+         
+         .summary-stats {
+           display: flex;
+-          gap: 12px;
+-          margin-bottom: 20px;
+-          flex-wrap: wrap;
++          gap: 24px;
+         }
+         
+-        .summary-stats span {
++        .stat-item {
++          font-size: 14px;
++          color: #555;
++        }
++        
++   .table-container {
++  overflow-x: auto;   
++  overflow-y: hidden;
++  border: 1px solid #e0e0e0;
++  border-radius: 6px;
++  margin-bottom: 20px;
++  position: relative;
++  z-index: 2;
++  -webkit-overflow-scrolling: touch; 
++}
++        
++       .sales-data-table {
++  min-width: 1200px;  
++  border-collapse: collapse;
++  font-size: 14px;
++  width: 100%;
++}
++        
++        .sales-data-table th {
+           background: #f8f9fa;
+-          padding: 6px 10px;
+-          border-radius: 6px;
++          padding: 12px 10px;
++          text-align: left;
+           font-weight: 600;
+-          font-size: 11px;
+-          border: 1px solid #e9ecef;
+-        }
+-        
+-        .table-container {
+-          overflow: auto;
+-          border: 1px solid #e0e0e0;
+-          border-radius: 6px;
+-          margin-bottom: 20px;
+-          max-height: 70vh;
+-          position: relative;
++          color: #2c3e50;
++          border-bottom: 2px solid #e0e0e0;
++          cursor: pointer;
++          user-select: none;
++          white-space: nowrap;
+         }
+         
+-        .sticky-table-wrapper {
+-          position: relative;
+-          height: 100%;
++        .sales-data-table th:hover {
++          background: #e9ecef;
+         }
+         
+-        .sales-data-table {
+-          width: 100%;
+-          border-collapse: collapse;
+-          font-size: 10px;
++        .sales-data-table td {
++          padding: 10px;
++          border-bottom: 1px solid #eaeaea;
+         }
+         
+-        .product-table {
+-          min-width: 2200px;
++        .sales-data-table tbody tr:hover {
++          background-color: #f8f9fa;
+         }
+         
+-        .sticky-header {
+-          position: sticky;
+-          top: 0;
+-          z-index: 10;
++        .row-pending {
++          background-color: #fff9e6;
+         }
+         
+-        .sales-data-table th {
+-          background: #2c3e50;
+-          color: white;
+-          padding: 10px 6px;
+-          text-align: left;
+-          font-weight: 600;
+-          border-bottom: 2px solid #1a252f;
+-          white-space: nowrap;
+-          position: sticky;
+-          top: 0;
+-          z-index: 10;
++        .row-pending:hover {
++          background-color: #ffeeb5;
+         }
+         
+-        /* Different z-index for first column if needed */
+-        .sales-data-table th:first-child {
+-          position: sticky;
+-          left: 0;
+-          z-index: 11;
++        .numeric {
++          text-align: right;
+         }
+         
+-        .sales-data-table td {
+-          padding: 8px 6px;
+-          border-bottom: 1px solid #eaeaea;
+-          white-space: nowrap;
++        .currency {
++          font-family: 'Courier New', monospace;
+         }
+         
+-        /* Sticky first column for better UX */
+-        .sales-data-table td:first-child {
+-          position: sticky;
+-          left: 0;
+-          background: white;
+-          z-index: 5;
++        .invoice-number, .sku-code {
++          font-family: 'Courier New', monospace;
+           font-weight: 600;
+         }
+         
+-        .sales-data-table tbody tr:hover td:first-child {
+-          background: #f8f9fa;
++        .status-badge {
++          padding: 4px 8px;
++          border-radius: 12px;
++          font-size: 12px;
++          font-weight: 600;
+         }
+         
+-        .sales-data-table tbody tr:hover {
+-          background-color: #f8f9fa;
++        .status-badge.posted {
++          background: #e7f4e4;
++          color: #2ecc71;
+         }
+         
+-        .numeric {
+-          text-align: right;
+-          font-family: 'Courier New', monospace;
+-          font-weight: 600;
++        .status-badge.pending {
++          background: #fef5e7;
++          color: #f39c12;
+         }
+         
+         .no-data {
+           text-align: center;
++          padding: 30px;
+           color: #95a5a6;
+           font-style: italic;
+-          padding: 20px;
+         }
+         
+         tfoot {
+           border-top: 2px solid #e0e0e0;
+-          position: sticky;
+-          bottom: 0;
+-          background: white;
+-          z-index: 5;
+         }
+         
+         .footer-total {
+@@ -879,25 +719,25 @@ else {
+           background: #f8f9fa;
+         }
+         
+-        .footer-total td {
+-          border-top: 2px solid #e0e0e0;
+-          background: #f8f9fa;
+-        }
+-        
+         .report-actions {
+           display: flex;
+           justify-content: flex-end;
+           gap: 12px;
++          position: relative;
++          z-index: 2;
+         }
+         
+         .btn {
+-          padding: 8px 16px;
++          padding: 10px 20px;
+           border: none;
+           border-radius: 4px;
+-          font-size: 12px;
++          font-size: 14px;
+           font-weight: 600;
+           cursor: pointer;
+           transition: all 0.2s ease;
++          display: flex;
++          align-items: center;
++          justify-content: center;
+         }
+         
+         .btn-word {
+@@ -936,26 +776,6 @@ else {
+           background: #333;
+         }
+         
+-        /* Scrollbar styling */
+-        .table-container::-webkit-scrollbar {
+-          width: 8px;
+-          height: 8px;
+-        }
+-        
+-        .table-container::-webkit-scrollbar-track {
+-          background: #f1f1f1;
+-          border-radius: 4px;
+-        }
+-        
+-        .table-container::-webkit-scrollbar-thumb {
+-          background: #888;
+-          border-radius: 4px;
+-        }
+-        
+-        .table-container::-webkit-scrollbar-thumb:hover {
+-          background: #555;
+-        }
+-        
+         @media (max-width: 1200px) {
+           .sales-report-header {
+             flex-direction: column;
+@@ -968,8 +788,17 @@ else {
+             margin-bottom: 16px;
+           }
+           
++          .report-controls {
++            flex-direction: column;
++            align-items: stretch;
++          }
++          
++          .search-input {
++            min-width: 100%;
++          }
++          
+           .summary-stats {
+-            justify-content: center;
++            justify-content: space-around;
+           }
+           
+           .report-actions {
+@@ -984,28 +813,17 @@ else {
+             padding: 0;
+           }
+           
+-          .report-actions, .search-container {
++          .report-controls, .report-actions {
+             display: none;
+           }
+           
+           .table-container {
+-            overflow: visible;
++            overflow-x: scroll;
+             border: none;
+-            max-height: none;
+-          }
+-          
+-          .sales-data-table {
+-            font-size: 8px;
+-          }
+-          
+-          .sticky-header {
+-            position: static;
+           }
+           
+-          .footer-total {
+-            background: #f0f0f0 !important;
+-            -webkit-print-color-adjust: exact;
+-            print-color-adjust: exact;
++          .watermark {
++            opacity: 0.03;
+           }
+         }
+       `}</style>
