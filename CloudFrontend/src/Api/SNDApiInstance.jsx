@@ -7,10 +7,7 @@ const withSlash = (url) => {
 };
 
 const SnDapi = axios.create({
-  baseURL: withSlash(
-    import.meta.env.VITE_SND_API_URL ||
-      (import.meta.env.DEV ? "http://localhost:3005" : "https://api.pdl1.online")
-  ),
+  baseURL: withSlash(import.meta.env.VITE_SND_API_URL || "https://jsnddemo.jspro4.tech"),
   headers: {
     "Content-Type": "application/json",
   },

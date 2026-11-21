@@ -1,9 +1,7 @@
 import { create } from 'axios';
 import { Platform } from 'react-native';
-import { cloudApiBaseUrl } from './devHost';
 
-const baseURL = cloudApiBaseUrl(3001);
-// const baseURL = `https://pdl1.online/`;
+const baseURL = 'https://jsdemo.jspro4.tech/';
 
 if (__DEV__) {
   console.log(`[Cloud API] ${baseURL} (${Platform.OS})`);

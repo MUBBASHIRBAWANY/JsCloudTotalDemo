@@ -10,7 +10,7 @@ const withSlash = (url) => {
 };
 
 const api = axios.create({
-  baseURL: withSlash(import.meta.env.VITE_CLOUD_API_URL || "https://pdl1.online"),
+  baseURL: withSlash(import.meta.env.VITE_CLOUD_API_URL || "https://jsdemo.jspro4.tech"),
   headers: {
     "Content-Type": "application/json",
   },

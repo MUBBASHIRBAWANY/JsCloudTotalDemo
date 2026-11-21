@@ -2,7 +2,7 @@ import axios from "axios";
 import PriceListModal from "../Modal/PriceListModal.js";
 import SlabModal from "../Modal/SlabModal.js";
 
-const SND_API_BASE = "https://api.pdl1.online/";
+const SND_API_BASE = "https://jsnddemo.jspro4.tech/";
 
 const sndApi = axios.create({
   baseURL: SND_API_BASE,
