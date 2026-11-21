@@ -1,5 +1,5 @@
-import LoanModal from "../modal/LoanModal.js"
-import LoanRepaymentLogModal from "../modal/LoanRepaymentLogModal.js"
+import LoanModal from "../Modal/LoanModal.js"
+import LoanRepaymentLogModal from "../Modal/LoanRepaymentLogModal.js"
 import { hrmsCatch, hrmsFail } from "../utils/hrmsError.js";
 
 

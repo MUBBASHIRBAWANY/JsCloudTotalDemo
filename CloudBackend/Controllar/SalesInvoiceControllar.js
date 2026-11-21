@@ -1,21 +1,21 @@
-import SalesInvoiceModal from "../modal/SalesInvoiceModal.js";
-import TotalProductModal from "../modal/TotalProductModal.js";
-import OpeningInventoryModal from "../modal/OpeningInventoryModal.js"
-import InvoiceOpeningModal from "../modal/OpeningInvoicesModal.js";
-import VoucherModal from "../modal/VoucherModal.js";
-import CutomerModal from "../modal/CutomerModal.js";
-import ProductModal from "../modal/ProductModal.js";
+import SalesInvoiceModal from "../Modal/SalesInvoiceModal.js";
+import TotalProductModal from "../Modal/TotalProductModal.js";
+import OpeningInventoryModal from "../Modal/OpeningInventoryModal.js"
+import InvoiceOpeningModal from "../Modal/OpeningInvoicesModal.js";
+import VoucherModal from "../Modal/VoucherModal.js";
+import CutomerModal from "../Modal/CutomerModal.js";
+import ProductModal from "../Modal/ProductModal.js";
 import { createSystemVoucher } from "./VoucherControllar.js";
 import { OrderBooker } from "../App.js";
-import DistrbutorInvoiceModal from "../modal/DistrbutorInvoiceModal.js";
-import DistrbutorModal from "../modal/DistributerModal.js";
-import OrderDcModal from "../modal/SaleOrderDcModal.js";
-import DistributorSaleOrderModal from "../modal/DistributorSaleOrderModal.js";
-import CustomerChqRecivedModal from "../modal/CustomerChqRecivedModal.js";
-import PaymentRecivedModal from "../modal/PaymentRecivedModal.js";
-import SalesReturnModal from "../modal/SalesReturnModal.js";
-import ClientOpeningBalanceModal from "../modal/ClientOpeningBalanceModal.js";
-import StoreModal from "../modal/StoreModal.js";
+import DistrbutorInvoiceModal from "../Modal/DistrbutorInvoiceModal.js";
+import DistrbutorModal from "../Modal/DistributerModal.js";
+import OrderDcModal from "../Modal/SaleOrderDcModal.js";
+import DistributorSaleOrderModal from "../Modal/DistributorSaleOrderModal.js";
+import CustomerChqRecivedModal from "../Modal/CustomerChqRecivedModal.js";
+import PaymentRecivedModal from "../Modal/PaymentRecivedModal.js";
+import SalesReturnModal from "../Modal/SalesReturnModal.js";
+import ClientOpeningBalanceModal from "../Modal/ClientOpeningBalanceModal.js";
+import StoreModal from "../Modal/StoreModal.js";
 import { checkMonthClose } from "../utils/checkMonthClose.js";
 import {
     collectVoucherPayments,

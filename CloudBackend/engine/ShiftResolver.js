@@ -1,5 +1,5 @@
-import EmployeeShiftHistoryModal from "../modal/EmployeeShiftHistoryModal.js";
-import CompanyPolicyModal from "../modal/CompanyPolicyModal.js";
+import EmployeeShiftHistoryModal from "../Modal/EmployeeShiftHistoryModal.js";
+import CompanyPolicyModal from "../Modal/CompanyPolicyModal.js";
 
 /**
  * Get the active shift for an employee on a specific date.

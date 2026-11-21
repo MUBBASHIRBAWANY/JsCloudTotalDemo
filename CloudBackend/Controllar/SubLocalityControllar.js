@@ -1,4 +1,4 @@
-import SubLocalityModal from "../modal/SubLocalityModal.js";
+import SubLocalityModal from "../Modal/SubLocalityModal.js";
 
 export const CreateSubLocality = async (req, res) => {
     try {

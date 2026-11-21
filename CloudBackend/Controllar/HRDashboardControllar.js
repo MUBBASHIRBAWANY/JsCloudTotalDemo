@@ -1,11 +1,11 @@
-import EmployeeHrModal from "../modal/EmployeeHrModal.js";
-import PayrollModal from "../modal/PayrollModal.js";
-import LeaveApplicationModal from "../modal/LeaveApplicationModal.js";
-import JobPostingModal from "../modal/JobPostingModal.js";
-import ApplicantModal from "../modal/ApplicantModal.js";
-import SeparationRequestModal from "../modal/SeparationRequestModal.js";
-import CertificationModal from "../modal/CertificationModal.js";
-import EmployeeDocumentModal from "../modal/EmployeeDocumentModal.js";
+import EmployeeHrModal from "../Modal/EmployeeHrModal.js";
+import PayrollModal from "../Modal/PayrollModal.js";
+import LeaveApplicationModal from "../Modal/LeaveApplicationModal.js";
+import JobPostingModal from "../Modal/JobPostingModal.js";
+import ApplicantModal from "../Modal/ApplicantModal.js";
+import SeparationRequestModal from "../Modal/SeparationRequestModal.js";
+import CertificationModal from "../Modal/CertificationModal.js";
+import EmployeeDocumentModal from "../Modal/EmployeeDocumentModal.js";
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Helpers

@@ -1,9 +1,9 @@
-import PayrollModal from "../modal/PayrollModal.js";
-import EmployeeHrModal from "../modal/EmployeeHrModal.js";
-import PayrollAccountMapping from "../modal/PayrollAccountMapping.js";
-import VoucherModal from "../modal/VoucherModal.js";
-import PayrollAuditLog from "../modal/PayrollAuditLog.js";
-import CompanyPolicyModal from "../modal/CompanyPolicyModal.js";
+import PayrollModal from "../Modal/PayrollModal.js";
+import EmployeeHrModal from "../Modal/EmployeeHrModal.js";
+import PayrollAccountMapping from "../Modal/PayrollAccountMapping.js";
+import VoucherModal from "../Modal/VoucherModal.js";
+import PayrollAuditLog from "../Modal/PayrollAuditLog.js";
+import CompanyPolicyModal from "../Modal/CompanyPolicyModal.js";
 
 const FIELD_LABELS = {
     salaryExpense: "Salary Expense",

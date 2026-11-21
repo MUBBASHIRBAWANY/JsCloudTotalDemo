@@ -1,11 +1,11 @@
-import LeaveApplicationModal from "../modal/LeaveApplicationModal.js";
-import LeaveAuditModal from "../modal/LeaveAuditModal.js";
-import EmployeeHrModal from "../modal/EmployeeHrModal.js";
-import HolidayCalendarModal from "../modal/HolidayCalendarModal.js";
-import PayrollAdjustmentModal from "../modal/PayrollAdjustmentModal.js";
+import LeaveApplicationModal from "../Modal/LeaveApplicationModal.js";
+import LeaveAuditModal from "../Modal/LeaveAuditModal.js";
+import EmployeeHrModal from "../Modal/EmployeeHrModal.js";
+import HolidayCalendarModal from "../Modal/HolidayCalendarModal.js";
+import PayrollAdjustmentModal from "../Modal/PayrollAdjustmentModal.js";
 import { createNotification } from "./NotificationControllar.js";
-import EmployeeLeaveBalanceModal from "../modal/EmployeeLeaveBalanceModal.js";
-import LeaveTypeModal from "../modal/LeaveTypeModal.js";
+import EmployeeLeaveBalanceModal from "../Modal/EmployeeLeaveBalanceModal.js";
+import LeaveTypeModal from "../Modal/LeaveTypeModal.js";
 import { validateRequired } from "../engine/Validators.js";
 import mongoose from "mongoose";
 import { hrmsCatch } from "../utils/hrmsError.js";

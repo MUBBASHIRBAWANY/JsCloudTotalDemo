@@ -1,4 +1,4 @@
-import DepartmentModal from "../modal/DepartmentModal.js"
+import DepartmentModal from "../Modal/DepartmentModal.js"
 import { hrmsCatch } from "../utils/hrmsError.js";
 
 

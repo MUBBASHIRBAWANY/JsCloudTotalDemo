@@ -1,4 +1,4 @@
-import EarningDeductionCodeModal from "../modal/EarningDeductionCodeModal.js"
+import EarningDeductionCodeModal from "../Modal/EarningDeductionCodeModal.js"
 import { hrmsCatch } from "../utils/hrmsError.js";
 
 

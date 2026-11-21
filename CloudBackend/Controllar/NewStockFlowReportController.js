@@ -1,13 +1,13 @@
 import mongoose from "mongoose";
-import OpeningInventoryModal from "../modal/OpeningInventoryModal.js";
-import OrderDcModal from "../modal/SaleOrderDcModal.js";
-import RcModal from "../modal/RcModal.js";
-import PurchaseInvoiceModal from "../modal/PurchaseInvoiceModal.js";
-import StockAdjustmentModal from "../modal/StockAdjustmentModal.js";
-import SalesReturnModal from "../modal/SalesReturnModal.js";
-import PurchaseReturnModal from "../modal/PurchaseReturnModal.js";
-import ProductModal from "../modal/ProductModal.js";
-import StoreModal from "../modal/StoreModal.js";
+import OpeningInventoryModal from "../Modal/OpeningInventoryModal.js";
+import OrderDcModal from "../Modal/SaleOrderDcModal.js";
+import RcModal from "../Modal/RcModal.js";
+import PurchaseInvoiceModal from "../Modal/PurchaseInvoiceModal.js";
+import StockAdjustmentModal from "../Modal/StockAdjustmentModal.js";
+import SalesReturnModal from "../Modal/SalesReturnModal.js";
+import PurchaseReturnModal from "../Modal/PurchaseReturnModal.js";
+import ProductModal from "../Modal/ProductModal.js";
+import StoreModal from "../Modal/StoreModal.js";
 
 const AGG_OPTS = { allowDiskUse: true };
 const MAX_LINE_QTY = 1e9;

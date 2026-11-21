@@ -1,4 +1,4 @@
-import SlabModal from "../modal/SlabModal.js";
+import SlabModal from "../Modal/SlabModal.js";
 
 /* ──────────────────────────────────────────────
  *  VALIDATION HELPERS

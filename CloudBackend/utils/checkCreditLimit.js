@@ -1,4 +1,4 @@
-import DistrbutorInvoiceModal from "../modal/DistrbutorInvoiceModal.js";
+import DistrbutorInvoiceModal from "../Modal/DistrbutorInvoiceModal.js";
 
 const DAY = 24 * 60 * 60 * 1000;
 

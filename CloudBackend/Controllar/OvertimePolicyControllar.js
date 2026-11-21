@@ -1,5 +1,5 @@
-import OvertimePolicyModal from "../modal/OvertimePolicyModal.js";
-import ShiftModal from "../modal/ShiftModal.js";
+import OvertimePolicyModal from "../Modal/OvertimePolicyModal.js";
+import ShiftModal from "../Modal/ShiftModal.js";
 import { validateRequired } from "../engine/Validators.js";
 import { hrmsCatch } from "../utils/hrmsError.js";
 

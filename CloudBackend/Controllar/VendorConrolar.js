@@ -1,4 +1,4 @@
-import VendorModal from "../modal/VendorModal.js"
+import VendorModal from "../Modal/VendorModal.js"
 
 
 export const createVendor = async (req, res) => {

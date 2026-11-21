@@ -1,8 +1,8 @@
-import CourseModal from "../modal/CourseModal.js";
-import TrainingPlanModal from "../modal/TrainingPlanModal.js";
-import EnrollmentModal from "../modal/EnrollmentModal.js";
-import CertificationModal from "../modal/CertificationModal.js";
-import EmployeeHrModal from "../modal/EmployeeHrModal.js";
+import CourseModal from "../Modal/CourseModal.js";
+import TrainingPlanModal from "../Modal/TrainingPlanModal.js";
+import EnrollmentModal from "../Modal/EnrollmentModal.js";
+import CertificationModal from "../Modal/CertificationModal.js";
+import EmployeeHrModal from "../Modal/EmployeeHrModal.js";
 import { validateRequired } from "../engine/Validators.js";
 import { hrmsCatch } from "../utils/hrmsError.js";
 

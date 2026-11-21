@@ -1,4 +1,4 @@
-import HolidayCalendarModal from "../modal/HolidayCalendarModal.js"
+import HolidayCalendarModal from "../Modal/HolidayCalendarModal.js"
 import { hrmsCatch, hrmsFail } from "../utils/hrmsError.js";
 
 

@@ -1,4 +1,4 @@
-import SavedInvestmentReportModal from "../modal/SavedInvestmentReportModal.js"
+import SavedInvestmentReportModal from "../Modal/SavedInvestmentReportModal.js"
 
 const getTodayDate = () => {
     const d = new Date();

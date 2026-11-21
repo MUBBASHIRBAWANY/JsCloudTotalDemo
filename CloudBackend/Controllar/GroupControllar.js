@@ -1,4 +1,4 @@
-import GroupModal from "../modal/GroupModal.js";
+import GroupModal from "../Modal/GroupModal.js";
 
 export const CreateGroup = async (req, res) => {
     try {

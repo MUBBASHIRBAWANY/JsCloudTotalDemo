@@ -1,4 +1,4 @@
-import DeductionTypeModal from "../modal/DeductionTypeModal.js"
+import DeductionTypeModal from "../Modal/DeductionTypeModal.js"
 import { hrmsCatch } from "../utils/hrmsError.js";
 
 

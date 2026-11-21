@@ -1,4 +1,4 @@
-import OrderBookerpaymentRcvdModal from "../modal/OrderBookerpaymentRcvd.js"
+import OrderBookerpaymentRcvdModal from "../Modal/OrderBookerpaymentRcvd.js"
 
 export const OrderBookerpaymentRcvd = async (req, res) => {
   try {

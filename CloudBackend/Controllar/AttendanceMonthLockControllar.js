@@ -1,4 +1,4 @@
-import AttendanceMonthLockModal from "../modal/AttendanceMonthLockModal.js";
+import AttendanceMonthLockModal from "../Modal/AttendanceMonthLockModal.js";
 import { hrmsCatch, hrmsFail } from "../utils/hrmsError.js";
 
 

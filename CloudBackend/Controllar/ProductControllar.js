@@ -1,4 +1,4 @@
-import ProductModal from "../modal/ProductModal.js"
+import ProductModal from "../Modal/ProductModal.js"
 
 
 export const createProduct = async (req, res)=>{

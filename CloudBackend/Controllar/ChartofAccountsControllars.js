@@ -1,6 +1,6 @@
-import ChartofAccountsModal from "../modal/ChartofAccountsModal.js"
-import VoucherModal from "../modal/VoucherModal.js"
-import AccountOpeningBalanceModal from "../modal/AccountsOpeningModal.js"
+import ChartofAccountsModal from "../Modal/ChartofAccountsModal.js"
+import VoucherModal from "../Modal/VoucherModal.js"
+import AccountOpeningBalanceModal from "../Modal/AccountsOpeningModal.js"
 
 export const CreateChartofAccounts = async (req, res) => {
     try {

@@ -1,13 +1,13 @@
 import jwt from "jsonwebtoken";
-import DitriButorOrderBookerModal from "../modal/DitriButorOrderBookerModal.js";
-import { comparePassword, getAuthontication, hashPassword } from "../modal/userModal.js";
-import VendorModal from "../modal/VendorModal.js"
-import DistrbutorModal from "../modal/DistributerModal.js";
-import DistrbutorInvoiceModal from "../modal/DistrbutorInvoiceModal.js";
-import InvoiceOpeningModal from "../modal/OpeningInvoicesModal.js";
-import PriceListModal from "../modal/PriceListModal.js";
-import ProductModal from "../modal/ProductModal.js";
-import DistributorSaleOrderModal from "../modal/DistributorSaleOrderModal.js";
+import DitriButorOrderBookerModal from "../Modal/DitriButorOrderBookerModal.js";
+import { comparePassword, getAuthontication, hashPassword } from "../Modal/userModal.js";
+import VendorModal from "../Modal/VendorModal.js"
+import DistrbutorModal from "../Modal/DistributerModal.js";
+import DistrbutorInvoiceModal from "../Modal/DistrbutorInvoiceModal.js";
+import InvoiceOpeningModal from "../Modal/OpeningInvoicesModal.js";
+import PriceListModal from "../Modal/PriceListModal.js";
+import ProductModal from "../Modal/ProductModal.js";
+import DistributorSaleOrderModal from "../Modal/DistributorSaleOrderModal.js";
 
 const toNumber = (value) => {
     const n = Number(value);

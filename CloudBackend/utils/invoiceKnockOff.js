@@ -1,11 +1,11 @@
 import mongoose from "mongoose";
-import SalesInvoiceModal from "../modal/SalesInvoiceModal.js";
-import InvoiceOpeningModal from "../modal/OpeningInvoicesModal.js";
-import DistrbutorInvoiceModal from "../modal/DistrbutorInvoiceModal.js";
-import DistrbutorModal from "../modal/DistributerModal.js";
-import VoucherModal from "../modal/VoucherModal.js";
-import ClientOpeningBalanceModal from "../modal/ClientOpeningBalanceModal.js";
-import SalesReturnModal from "../modal/SalesReturnModal.js";
+import SalesInvoiceModal from "../Modal/SalesInvoiceModal.js";
+import InvoiceOpeningModal from "../Modal/OpeningInvoicesModal.js";
+import DistrbutorInvoiceModal from "../Modal/DistrbutorInvoiceModal.js";
+import DistrbutorModal from "../Modal/DistributerModal.js";
+import VoucherModal from "../Modal/VoucherModal.js";
+import ClientOpeningBalanceModal from "../Modal/ClientOpeningBalanceModal.js";
+import SalesReturnModal from "../Modal/SalesReturnModal.js";
 
 const SKIP_REFS = new Set(["", "Advance", "UnRealized", "undefined", "null"]);
 

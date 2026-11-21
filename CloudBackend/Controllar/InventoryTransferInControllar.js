@@ -1,12 +1,12 @@
-import AdministrativeModal from "../modal/AdministrativeModal.js";
-import InventoryTransferOutModal from "../modal/InventoryTransferOutModal.js";
-import OpeningInventoryModal from "../modal/OpeningInventoryModal.js";
-import PurchaseInvoiceModal from "../modal/PurchaseInvoiceModal.js";
-import OrderDcModal from "../modal/SaleOrderDcModal.js";
-import SalesInvoiceModal from "../modal/SalesInvoiceModal.js";
-import TotalProductModal from "../modal/TotalProductModal.js";
-import InventoryTransferInModal from "../modal/TransferInModal.js";
-import VoucherModal from "../modal/VoucherModal.js";
+import AdministrativeModal from "../Modal/AdministrativeModal.js";
+import InventoryTransferOutModal from "../Modal/InventoryTransferOutModal.js";
+import OpeningInventoryModal from "../Modal/OpeningInventoryModal.js";
+import PurchaseInvoiceModal from "../Modal/PurchaseInvoiceModal.js";
+import OrderDcModal from "../Modal/SaleOrderDcModal.js";
+import SalesInvoiceModal from "../Modal/SalesInvoiceModal.js";
+import TotalProductModal from "../Modal/TotalProductModal.js";
+import InventoryTransferInModal from "../Modal/TransferInModal.js";
+import VoucherModal from "../Modal/VoucherModal.js";
 
 export const getAllTransferIn = async (req, res) => {
     const data = await InventoryTransferInModal.find();

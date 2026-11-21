@@ -1,4 +1,4 @@
-import EmployeeEBFAccountModal from "../modal/EmployeeEBFAccountModal.js"
+import EmployeeEBFAccountModal from "../Modal/EmployeeEBFAccountModal.js"
 import { hrmsCatch } from "../utils/hrmsError.js";
 
 

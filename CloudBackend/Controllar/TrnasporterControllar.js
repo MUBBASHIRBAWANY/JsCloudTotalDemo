@@ -1,4 +1,4 @@
-import TransporterModal from "../modal/TransporterModal.js";
+import TransporterModal from "../Modal/TransporterModal.js";
 
 export const CreateTransporter = async (req, res) => {
     try {

@@ -1,21 +1,21 @@
 import e from "express";
-import CustomerChqRecivedModal from "../modal/CustomerChqRecivedModal.js";
-import InvoiceOpeningModal from "../modal/OpeningInvoicesModal.js";
-import SalesInvoiceModal from "../modal/SalesInvoiceModal.js";
-import VoucherModal from "../modal/VoucherModal.js";
-import CutomerModal from "../modal/CutomerModal.js";
+import CustomerChqRecivedModal from "../Modal/CustomerChqRecivedModal.js";
+import InvoiceOpeningModal from "../Modal/OpeningInvoicesModal.js";
+import SalesInvoiceModal from "../Modal/SalesInvoiceModal.js";
+import VoucherModal from "../Modal/VoucherModal.js";
+import CutomerModal from "../Modal/CutomerModal.js";
 import mongoose from "mongoose";
-import ChartofAccountsModel from "../modal/ChartofAccountsModal.js";
-import DistrbutorInvoiceModal from "../modal/DistrbutorInvoiceModal.js";
-import DistrbutorModal from "../modal/DistributerModal.js";
+import ChartofAccountsModel from "../Modal/ChartofAccountsModal.js";
+import DistrbutorInvoiceModal from "../Modal/DistrbutorInvoiceModal.js";
+import DistrbutorModal from "../Modal/DistributerModal.js";
 import { Check } from "../Check.js";
 import { voucher } from "../Vouchers.js";
 import jwt from "jsonwebtoken"; //YE ADD KARO
-import TransporterModal from "../modal/TransporterModal.js";
-import VendorModel from "../modal/VendorModal.js";
-import StoreModal from "../modal/StoreModal.js";
+import TransporterModal from "../Modal/TransporterModal.js";
+import VendorModel from "../Modal/VendorModal.js";
+import StoreModal from "../Modal/StoreModal.js";
 //import { number } from "../JafferSons.voucher NUmber.js";
-import logModal from "../modal/LogModal.js"
+import logModal from "../Modal/LogModal.js"
 import { checkMonthClose } from "../utils/checkMonthClose.js";
 import { knockOffInvoiceLines, reduceClientKnockOffLeftover, matchDistributorAgingToLedger, previewVoucherRealize, realizeVoucherAgainstInvoices, previewStrictDistributorKnockOff, applyStrictDistributorKnockOff, getKnockoffPoolVouchers, loadClientLedger } from "../utils/invoiceKnockOff.js";
 import ChqBookModal from "../Modal/ChqBookModal.js";

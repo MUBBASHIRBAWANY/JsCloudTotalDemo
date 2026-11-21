@@ -1,4 +1,4 @@
-import ApprovalWorkflowModal from "../modal/ApprovalWorkflowModal.js";
+import ApprovalWorkflowModal from "../Modal/ApprovalWorkflowModal.js";
 import { hrmsCatch } from "../utils/hrmsError.js";
 
 

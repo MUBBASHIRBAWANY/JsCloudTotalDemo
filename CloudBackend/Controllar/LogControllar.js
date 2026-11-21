@@ -1,5 +1,5 @@
-import logModal from "../modal/LogModal.js"
-import LogModel from "../modal/LogModel.js"
+import logModal from "../Modal/LogModal.js"
+import LogModel from "../Modal/LogModel.js"
 
 export const CreateLog = async (req, res) => {
     try {

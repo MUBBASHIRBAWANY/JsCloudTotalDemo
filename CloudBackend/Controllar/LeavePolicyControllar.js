@@ -1,4 +1,4 @@
-import LeavePolicyModal from "../modal/LeavePolicyModal.js";
+import LeavePolicyModal from "../Modal/LeavePolicyModal.js";
 import { hrmsCatch } from "../utils/hrmsError.js";
 
 

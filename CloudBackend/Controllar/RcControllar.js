@@ -1,9 +1,9 @@
 
-import TotalProductModal from "../modal/TotalProductModal.js";
-import VendorModel from "../modal/VendorModal.js";
-import ProductModal from "../modal/ProductModal.js";
+import TotalProductModal from "../Modal/TotalProductModal.js";
+import VendorModel from "../Modal/VendorModal.js";
+import ProductModal from "../Modal/ProductModal.js";
 import mongoose from "mongoose";
-import RcModal from "../modal/RcModal.js";
+import RcModal from "../Modal/RcModal.js";
 import { addStock, reduceStock, recalculateAvgRate, StockError } from "../Midelware/stockMiddleware.js";
 
 const httpError = (statusCode, message, extra) => {

@@ -1,4 +1,4 @@
-import NotificationModal from "../modal/NotificationModal.js";
+import NotificationModal from "../Modal/NotificationModal.js";
 import { hrmsCatch } from "../utils/hrmsError.js";
 
 

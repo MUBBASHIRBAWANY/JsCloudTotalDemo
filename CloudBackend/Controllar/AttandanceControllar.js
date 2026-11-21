@@ -1,8 +1,8 @@
 import fs from "fs";
 import path from "path";
 import { v2 as cloudinary } from "cloudinary";
-import AttandanceModal from "../modal/AttandanceModal.js"
-import DitriButorOrderBookerModal from "../modal/DitriButorOrderBookerModal.js"
+import AttandanceModal from "../Modal/AttandanceModal.js"
+import DitriButorOrderBookerModal from "../Modal/DitriButorOrderBookerModal.js"
 import mongoose from "mongoose"
 
 const text = (value) => (value == null ? "" : String(value).trim());

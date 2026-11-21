@@ -1,6 +1,6 @@
-import AttendanceCorrectionModal from "../modal/AttendanceCorrectionModal.js";
-import AttendanceHrModal from "../modal/AttendanceHrModal.js";
-import EmployeeHrModal from "../modal/EmployeeHrModal.js";
+import AttendanceCorrectionModal from "../Modal/AttendanceCorrectionModal.js";
+import AttendanceHrModal from "../Modal/AttendanceHrModal.js";
+import EmployeeHrModal from "../Modal/EmployeeHrModal.js";
 import { createNotification } from "./NotificationControllar.js";
 import { hrmsCatch, hrmsFail } from "../utils/hrmsError.js";
 

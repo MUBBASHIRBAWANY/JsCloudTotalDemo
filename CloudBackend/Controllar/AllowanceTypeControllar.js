@@ -1,4 +1,4 @@
-import AllowanceTypeModal from "../modal/AllowanceTypeModal.js"
+import AllowanceTypeModal from "../Modal/AllowanceTypeModal.js"
 import { hrmsCatch } from "../utils/hrmsError.js";
 
 

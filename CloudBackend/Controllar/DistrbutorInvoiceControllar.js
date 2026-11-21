@@ -1,14 +1,14 @@
-import DistrbutorInvoiceModal from "../modal/DistrbutorInvoiceModal.js"
-import VoucherModal from "../modal/VoucherModal.js";
-import OrderDcModal from "../modal/SaleOrderDcModal.js";
-import AdministrativeModal from "../modal/AdministrativeModal.js";
+import DistrbutorInvoiceModal from "../Modal/DistrbutorInvoiceModal.js"
+import VoucherModal from "../Modal/VoucherModal.js";
+import OrderDcModal from "../Modal/SaleOrderDcModal.js";
+import AdministrativeModal from "../Modal/AdministrativeModal.js";
 import { Transporter } from "../App.js";
-import InvoiceOpeningModal from "../modal/OpeningInvoicesModal.js";
+import InvoiceOpeningModal from "../Modal/OpeningInvoicesModal.js";
 import { voucher } from "../Vouchers.js";
-import DistrbutorModal from "../modal/DistributerModal.js";
+import DistrbutorModal from "../Modal/DistributerModal.js";
 import { Check } from "../Check.js";
-import DistributorSaleOrderModal from "../modal/DistributorSaleOrderModal.js";
-import TotalProductModal from "../modal/TotalProductModal.js";
+import DistributorSaleOrderModal from "../Modal/DistributorSaleOrderModal.js";
+import TotalProductModal from "../Modal/TotalProductModal.js";
 import { checkMonthClose } from "../utils/checkMonthClose.js";
 
 

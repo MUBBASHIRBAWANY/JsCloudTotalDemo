@@ -1,10 +1,10 @@
 import mongoose from "mongoose";
-import DistributorSaleOrderModal from "../modal/DistributorSaleOrderModal.js";
-import OrderDcModal from "../modal/SaleOrderDcModal.js";
-import ProductModal from "../modal/ProductModal.js";
-import DistrbutorModal from "../modal/DistributerModal.js";
-import CityModal from "../modal/CityModal.js";
-import StoreModal from "../modal/StoreModal.js";
+import DistributorSaleOrderModal from "../Modal/DistributorSaleOrderModal.js";
+import OrderDcModal from "../Modal/SaleOrderDcModal.js";
+import ProductModal from "../Modal/ProductModal.js";
+import DistrbutorModal from "../Modal/DistributerModal.js";
+import CityModal from "../Modal/CityModal.js";
+import StoreModal from "../Modal/StoreModal.js";
 
 const num = (value) => {
     const parsed = Number(value);

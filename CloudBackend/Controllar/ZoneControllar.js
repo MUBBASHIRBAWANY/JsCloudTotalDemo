@@ -1,4 +1,4 @@
-import ZoneModal from "../modal/ZoneModal.js";
+import ZoneModal from "../Modal/ZoneModal.js";
 
 export const CreateZone = async (req, res) => {
     try {

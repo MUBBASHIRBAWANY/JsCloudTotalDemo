@@ -1,4 +1,4 @@
-import ClientOpeningBalanceModal from "../modal/ClientOpeningBalanceModal.js";
+import ClientOpeningBalanceModal from "../Modal/ClientOpeningBalanceModal.js";
 
 
 export const CreateClientOpeningBalance = async (req , res) =>{

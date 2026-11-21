@@ -1,4 +1,4 @@
-import OpeningInventoryModal from "../modal/OpeningInventoryModal.js";
+import OpeningInventoryModal from "../Modal/OpeningInventoryModal.js";
 import { getActiveFinancialYear, validateFinancialYear } from "../utils/checkFinancialYear.js";
 
 /**

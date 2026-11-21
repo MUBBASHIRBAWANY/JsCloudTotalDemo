@@ -1,4 +1,4 @@
-import TotalProductModal from "../modal/TotalProductModal.js";
+import TotalProductModal from "../Modal/TotalProductModal.js";
 
 /**
  * ============================================================

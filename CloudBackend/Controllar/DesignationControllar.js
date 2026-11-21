@@ -1,4 +1,4 @@
-import DesignationModal from "../modal/DesignationModal.js"
+import DesignationModal from "../Modal/DesignationModal.js"
 import { hrmsCatch } from "../utils/hrmsError.js";
 
 

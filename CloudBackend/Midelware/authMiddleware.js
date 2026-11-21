@@ -1,5 +1,5 @@
 import jwt from "jsonwebtoken";
-import userModel from "../modal/userModal.js";
+import userModel from "../Modal/userModal.js";
 
 const JWT_SECRET = "peral-Dynamic";
 

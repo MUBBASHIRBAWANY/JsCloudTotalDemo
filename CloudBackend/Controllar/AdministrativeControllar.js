@@ -1,4 +1,4 @@
-import AdministrativeModal from "../modal/AdministrativeModal.js"
+import AdministrativeModal from "../Modal/AdministrativeModal.js"
 
 export const updateAdministrative = async (req,res) =>{
     const {id} = req.params

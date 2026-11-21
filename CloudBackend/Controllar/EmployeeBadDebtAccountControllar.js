@@ -1,4 +1,4 @@
-import EmployeeBadDebtAccountModal from "../modal/EmployeeBadDebtAccountModal.js"
+import EmployeeBadDebtAccountModal from "../Modal/EmployeeBadDebtAccountModal.js"
 import { hrmsCatch } from "../utils/hrmsError.js";
 
 

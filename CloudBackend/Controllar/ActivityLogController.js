@@ -1,4 +1,4 @@
-import logModal from "../modal/LogModal";
+import logModal from "../Modal/LogModal.js";
 
 export const GetAllLog = async (req, res) => {
     try {

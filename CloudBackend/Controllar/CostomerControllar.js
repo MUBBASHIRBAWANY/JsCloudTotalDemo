@@ -1,9 +1,9 @@
 // import { duplicate } from "../DuplicatCode.js"
 import mongoose from "mongoose"
-import CustomerChqRecivedModal from "../modal/CustomerChqRecivedModal.js"
-import CutomerModal from "../modal/CutomerModal.js"
-import SalesInvoiceModal from "../modal/SalesInvoiceModal.js"
-import VoucherModal from "../modal/VoucherModal.js"
+import CustomerChqRecivedModal from "../Modal/CustomerChqRecivedModal.js"
+import CutomerModal from "../Modal/CutomerModal.js"
+import SalesInvoiceModal from "../Modal/SalesInvoiceModal.js"
+import VoucherModal from "../Modal/VoucherModal.js"
 
 
 export const creatCutomer = async (req, res) => {

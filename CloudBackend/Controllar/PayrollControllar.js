@@ -1,6 +1,6 @@
-import PayrollModal from "../modal/PayrollModal.js"
-import EmployeeHrModal from "../modal/EmployeeHrModal.js"
-import PayrollAuditLog from "../modal/PayrollAuditLog.js"
+import PayrollModal from "../Modal/PayrollModal.js"
+import EmployeeHrModal from "../Modal/EmployeeHrModal.js"
+import PayrollAuditLog from "../Modal/PayrollAuditLog.js"
 import { calculateMonthlyPayroll } from "../engine/PayrollEngine.js"
 import { closePayroll, bulkClosePayroll } from "../engine/PayrollClosingEngine.js"
 import { hrmsCatch, hrmsFail } from "../utils/hrmsError.js";

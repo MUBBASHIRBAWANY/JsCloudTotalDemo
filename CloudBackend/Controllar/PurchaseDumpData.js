@@ -1,5 +1,5 @@
-import PurchaseInvoiceModal from "../modal/PurchaseInvoiceModal.js";
-import RcModal from "../modal/RcModal.js";
+import PurchaseInvoiceModal from "../Modal/PurchaseInvoiceModal.js";
+import RcModal from "../Modal/RcModal.js";
 
 
 export const allPurchaseDumpData = async (req, res) => {

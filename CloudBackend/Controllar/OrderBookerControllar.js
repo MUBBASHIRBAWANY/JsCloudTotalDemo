@@ -1,5 +1,5 @@
-import OrderBookerModal from "../modal/OrderBookerModal.js";
-import VendorModal from "../modal/VendorModal.js"
+import OrderBookerModal from "../Modal/OrderBookerModal.js";
+import VendorModal from "../Modal/VendorModal.js"
 export const CreateOrderBooker = async (req, res) => {
     try {
         const salesFlowRef = await OrderBookerModal.find({ salesFlowRef: req.body.salesFlowRef })

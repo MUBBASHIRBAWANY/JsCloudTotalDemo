@@ -1,5 +1,5 @@
-import CutomerModal from "../modal/CutomerModal.js";
-import LocalityModal from "../modal/LocalityModal.js";
+import CutomerModal from "../Modal/CutomerModal.js";
+import LocalityModal from "../Modal/LocalityModal.js";
 
 export const CreateLocality = async (req, res) => {
     try {

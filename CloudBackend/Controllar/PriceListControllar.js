@@ -1,5 +1,5 @@
-import PriceListModal from "../modal/PriceListModal.js"
-import ShceemModal from "../modal/ScheemModal.js";
+import PriceListModal from "../Modal/PriceListModal.js"
+import ShceemModal from "../Modal/ScheemModal.js";
 
 export const CreatePriceList = async (req, res) => {
 

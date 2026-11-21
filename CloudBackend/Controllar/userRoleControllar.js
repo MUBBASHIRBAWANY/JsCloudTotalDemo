@@ -1,4 +1,4 @@
-import userRoleModel from "../modal/userRoleModal.js";
+import userRoleModel from "../Modal/userRoleModal.js";
 
 
 const UserRoles = userRoleModel

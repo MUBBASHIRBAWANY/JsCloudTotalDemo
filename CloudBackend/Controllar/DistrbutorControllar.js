@@ -1,5 +1,5 @@
-import DistrbutorModal from "../modal/DistributerModal.js"
-import { hashPassword } from "../modal/userModal.js";
+import DistrbutorModal from "../Modal/DistributerModal.js"
+import { hashPassword } from "../Modal/userModal.js";
 
 export const CreateDistrbutor = async (req, res) => {
 

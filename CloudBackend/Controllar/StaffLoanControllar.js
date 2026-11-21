@@ -1,8 +1,8 @@
-import StaffLoan from "../modal/StaffLoanModal.js";
-import ApprovalWorkflowModal from "../modal/ApprovalWorkflowModal.js";
+import StaffLoan from "../Modal/StaffLoanModal.js";
+import ApprovalWorkflowModal from "../Modal/ApprovalWorkflowModal.js";
 import { logApprovalAction } from "./ApprovalHistoryControllar.js";
-import EBFBalanceModal from "../modal/EBFBalanceModal.js";
-import VoucherModal from "../modal/VoucherModal.js";
+import EBFBalanceModal from "../Modal/EBFBalanceModal.js";
+import VoucherModal from "../Modal/VoucherModal.js";
 import { hrmsCatch, hrmsFail } from "../utils/hrmsError.js";
 
 

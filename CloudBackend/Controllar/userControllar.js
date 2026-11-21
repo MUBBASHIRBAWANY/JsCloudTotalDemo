@@ -1,5 +1,5 @@
 import express from "express";
-import userModel, { comparePassword, dropLegacyFirstnameUniqueIndex, getAuthontication, hashPassword } from "../modal/userModal.js";
+import userModel, { comparePassword, dropLegacyFirstnameUniqueIndex, getAuthontication, hashPassword } from "../Modal/userModal.js";
 import jwt from "jsonwebtoken";
 import { ensureUserPermissions } from "../utils/userPermissions.js";
 import console from "console";

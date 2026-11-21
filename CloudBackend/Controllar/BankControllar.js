@@ -1,4 +1,4 @@
-import BankModal from "../modal/BankModal.js"
+import BankModal from "../Modal/BankModal.js"
 import { hrmsCatch } from "../utils/hrmsError.js";
 
 

@@ -1,4 +1,4 @@
-import ReasonModal from "../modal/ReasonModal.js"
+import ReasonModal from "../Modal/ReasonModal.js"
 import { hrmsCatch } from "../utils/hrmsError.js";
 
 

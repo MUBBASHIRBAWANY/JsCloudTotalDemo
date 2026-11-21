@@ -1,8 +1,8 @@
-import SalaryAdvance from "../modal/SalaryAdvanceModal.js";
-import SalaryAdvanceRecovery from "../modal/SalaryAdvanceRecoveryModal.js";
-import ApprovalWorkflowModal from "../modal/ApprovalWorkflowModal.js";
+import SalaryAdvance from "../Modal/SalaryAdvanceModal.js";
+import SalaryAdvanceRecovery from "../Modal/SalaryAdvanceRecoveryModal.js";
+import ApprovalWorkflowModal from "../Modal/ApprovalWorkflowModal.js";
 import { logApprovalAction } from "./ApprovalHistoryControllar.js";
-import VoucherModal from "../modal/VoucherModal.js";
+import VoucherModal from "../Modal/VoucherModal.js";
 import { hrmsCatch, hrmsFail } from "../utils/hrmsError.js";
 
 

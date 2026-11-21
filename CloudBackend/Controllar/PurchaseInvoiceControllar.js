@@ -1,11 +1,11 @@
-import PurchaseInvoiceModal from "../modal/PurchaseInvoiceModal.js"
-import TotalProductModal from "../modal/TotalProductModal.js";
-import { CounterModel } from '../modal/CounterModel .js';
-import VendorModel from "../modal/VendorModal.js";
-import ProductModal from "../modal/ProductModal.js";
+import PurchaseInvoiceModal from "../Modal/PurchaseInvoiceModal.js"
+import TotalProductModal from "../Modal/TotalProductModal.js";
+import { CounterModel } from '../Modal/CounterModel .js';
+import VendorModel from "../Modal/VendorModal.js";
+import ProductModal from "../Modal/ProductModal.js";
 import mongoose from "mongoose";
-import RcModal from "../modal/RcModal.js";
-import logModal from '../modal/LogModal.js';
+import RcModal from "../Modal/RcModal.js";
+import logModal from '../Modal/LogModal.js';
 import { Check } from "../Check.js";
 import { checkMonthClose } from "../utils/checkMonthClose.js";
 export const createPurchaseInvoice = async (req, res) => {

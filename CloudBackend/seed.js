@@ -29,13 +29,13 @@ async function connect() {
 
 // ─── Import Models ──────────────────────────────────────────────────────────
 
-import CompanyPolicyModal from './modal/CompanyPolicyModal.js';
-import HolidayCalendarModal from './modal/HolidayCalendarModal.js';
-import EmployeeHrModal from './modal/EmployeeHrModal.js';
-import AttendanceHrModal from './modal/AttendanceHrModal.js';
-import AllowanceTypeModal from './modal/AllowanceTypeModal.js';
-import DeductionTypeModal from './modal/DeductionTypeModal.js';
-import LeaveApplicationModal from './modal/LeaveApplicationModal.js';
+import CompanyPolicyModal from './Modal/CompanyPolicyModal.js';
+import HolidayCalendarModal from './Modal/HolidayCalendarModal.js';
+import EmployeeHrModal from './Modal/EmployeeHrModal.js';
+import AttendanceHrModal from './Modal/AttendanceHrModal.js';
+import AllowanceTypeModal from './Modal/AllowanceTypeModal.js';
+import DeductionTypeModal from './Modal/DeductionTypeModal.js';
+import LeaveApplicationModal from './Modal/LeaveApplicationModal.js';
 
 // ─── 1. Company Policy ──────────────────────────────────────────────────────
 

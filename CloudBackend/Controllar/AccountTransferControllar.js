@@ -1,6 +1,6 @@
-import AccountTransferModal from "../modal/AccountTransferModal.js";
-import ChartofAccountsModal from "../modal/ChartofAccountsModal.js";
-import VoucherModal from "../modal/VoucherModal.js";
+import AccountTransferModal from "../Modal/AccountTransferModal.js";
+import ChartofAccountsModal from "../Modal/ChartofAccountsModal.js";
+import VoucherModal from "../Modal/VoucherModal.js";
 
 export const createAccountTransfer = async (req, res) => {
     try {

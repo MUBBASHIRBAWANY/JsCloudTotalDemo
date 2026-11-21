@@ -1,7 +1,7 @@
-import AttendanceHrModal from "../modal/AttendanceHrModal.js";
-import LoanModal from "../modal/LoanModal.js";
-import PayrollModal from "../modal/PayrollModal.js";
-import EmployeeHrModal from "../modal/EmployeeHrModal.js";
+import AttendanceHrModal from "../Modal/AttendanceHrModal.js";
+import LoanModal from "../Modal/LoanModal.js";
+import PayrollModal from "../Modal/PayrollModal.js";
+import EmployeeHrModal from "../Modal/EmployeeHrModal.js";
 import { hrmsCatch, hrmsBody } from "../utils/hrmsError.js";
 
 

@@ -1,4 +1,4 @@
-import locationModal from "../modal/LocationModal.js"
+import locationModal from "../Modal/LocationModal.js"
 
 export const Createlocation = async (req, res) => {
     try {

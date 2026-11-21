@@ -1,4 +1,4 @@
-import InvoiceOpeningModal from "../modal/OpeningInvoicesModal.js";
+import InvoiceOpeningModal from "../Modal/OpeningInvoicesModal.js";
 
 
 export const CreateOpeningInvoice = async (req,res) => {

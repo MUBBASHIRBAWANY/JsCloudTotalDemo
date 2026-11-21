@@ -1,5 +1,5 @@
-import EBFOpeningModal from "../modal/EBFOpeningModal.js";
-import EmployeeEBFAccountModal from "../modal/EmployeeEBFAccountModal.js";
+import EBFOpeningModal from "../Modal/EBFOpeningModal.js";
+import EmployeeEBFAccountModal from "../Modal/EmployeeEBFAccountModal.js";
 import { hrmsCatch, hrmsFail } from "../utils/hrmsError.js";
 
 

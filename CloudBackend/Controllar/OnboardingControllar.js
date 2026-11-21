@@ -1,4 +1,4 @@
-import OnboardingChecklistModal from "../modal/OnboardingChecklistModal.js";
+import OnboardingChecklistModal from "../Modal/OnboardingChecklistModal.js";
 import { hrmsCatch } from "../utils/hrmsError.js";
 
 

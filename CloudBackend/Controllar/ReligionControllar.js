@@ -1,4 +1,4 @@
-import ReligionModal from "../modal/ReligionModal.js"
+import ReligionModal from "../Modal/ReligionModal.js"
 import { hrmsCatch } from "../utils/hrmsError.js";
 
 

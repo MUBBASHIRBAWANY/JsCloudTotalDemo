@@ -1,11 +1,11 @@
 import mongoose from "mongoose";
-import SeparationRequestModal from "../modal/SeparationRequestModal.js";
-import ClearanceChecklistModal from "../modal/ClearanceChecklistModal.js";
-import EmployeeHrModal from "../modal/EmployeeHrModal.js";
-import LoanModal from "../modal/LoanModal.js";
-import PayrollAdjustmentModal from "../modal/PayrollAdjustmentModal.js";
-import CompanyPolicyModal from "../modal/CompanyPolicyModal.js";
-import HrRetryLogModal from "../modal/HrRetryLogModal.js";
+import SeparationRequestModal from "../Modal/SeparationRequestModal.js";
+import ClearanceChecklistModal from "../Modal/ClearanceChecklistModal.js";
+import EmployeeHrModal from "../Modal/EmployeeHrModal.js";
+import LoanModal from "../Modal/LoanModal.js";
+import PayrollAdjustmentModal from "../Modal/PayrollAdjustmentModal.js";
+import CompanyPolicyModal from "../Modal/CompanyPolicyModal.js";
+import HrRetryLogModal from "../Modal/HrRetryLogModal.js";
 import { computeSettlement } from "../engine/SettlementEngine.js";
 import { validateRequired } from "../engine/Validators.js";
 import { hrmsCatch } from "../utils/hrmsError.js";

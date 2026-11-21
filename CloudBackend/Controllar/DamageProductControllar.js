@@ -1,4 +1,4 @@
-import DamageProductModal from '../modal/DamageProductModal.js'
+import DamageProductModal from '../Modal/DamageProductModal.js'
 
 
 

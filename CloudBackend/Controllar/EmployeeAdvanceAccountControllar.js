@@ -1,4 +1,4 @@
-import EmployeeAdvanceAccountModal from "../modal/EmployeeAdvanceAccountModal.js"
+import EmployeeAdvanceAccountModal from "../Modal/EmployeeAdvanceAccountModal.js"
 import { hrmsCatch } from "../utils/hrmsError.js";
 
 

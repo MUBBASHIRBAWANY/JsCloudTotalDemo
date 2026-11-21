@@ -1,4 +1,4 @@
-import RegionModal from "../modal/RegionModal.js";
+import RegionModal from "../Modal/RegionModal.js";
 
 export const CreateRegion = async (req, res) => {
     try {

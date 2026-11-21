@@ -1,4 +1,4 @@
-import MasterSKuModal from "../modal/MasterSku.js";
+import MasterSKuModal from "../Modal/MasterSku.js";
 
 export const CreateMasterSKu = async (req, res) => {
     try {

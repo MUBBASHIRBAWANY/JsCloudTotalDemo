@@ -1,5 +1,5 @@
 import { v2 as cloudinary } from "cloudinary";
-import PhysicalVsSystemStockModal from "../modal/PhysicalVsSystemStockModal.js";
+import PhysicalVsSystemStockModal from "../Modal/PhysicalVsSystemStockModal.js";
 
 const text = (value) => (value == null ? "" : String(value).trim());
 

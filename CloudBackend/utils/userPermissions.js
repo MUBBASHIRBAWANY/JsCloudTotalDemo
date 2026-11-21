@@ -1,7 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import userRoleModel from "../modal/userRoleModal.js";
+import userRoleModel from "../Modal/userRoleModal.js";
 import { PERMISSIONS } from "./permission.js"
 
 const APP_SECTIONS = ["Administrative", "Setup", "Distributor", "Transactions", "Reports"];

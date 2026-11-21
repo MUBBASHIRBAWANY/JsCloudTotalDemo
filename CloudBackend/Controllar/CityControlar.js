@@ -1,4 +1,4 @@
-import CityModal from "../modal/CityModal.js";
+import CityModal from "../Modal/CityModal.js";
 
 export const CreateCity = async (req, res) => {
     try {

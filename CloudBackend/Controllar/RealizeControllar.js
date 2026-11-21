@@ -1,4 +1,4 @@
-import SalesInvoiceModal from "../modal/SalesInvoiceModal.js";
+import SalesInvoiceModal from "../Modal/SalesInvoiceModal.js";
 
 export const CreditRealize = async (req, res) => {
     try {

@@ -1,9 +1,9 @@
 import mongoose from "mongoose";
-import DistrbutorModal from "../modal/DistributerModal.js";
-import DistributorSaleOrderModal from "../modal/DistributorSaleOrderModal.js";
-import OrderBookerModal from "../modal/DitriButorOrderBookerModal.js";
-import ProductModal from "../modal/ProductModal.js";
-import PurchaseInvoiceModal from "../modal/PurchaseInvoiceModal.js";
+import DistrbutorModal from "../Modal/DistributerModal.js";
+import DistributorSaleOrderModal from "../Modal/DistributorSaleOrderModal.js";
+import OrderBookerModal from "../Modal/DitriButorOrderBookerModal.js";
+import ProductModal from "../Modal/ProductModal.js";
+import PurchaseInvoiceModal from "../Modal/PurchaseInvoiceModal.js";
 
 const CLOSED = new Set(["reject", "rejected", "cancel", "cancelled", "canceled"]);
 

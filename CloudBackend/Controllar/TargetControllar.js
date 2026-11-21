@@ -1,6 +1,6 @@
-import TargetModal from "../modal/TargetModal.js";
-import DistributorSaleOrderModal from "../modal/DistributorSaleOrderModal.js";
-import OrderDcModal from "../modal/SaleOrderDcModal.js";
+import TargetModal from "../Modal/TargetModal.js";
+import DistributorSaleOrderModal from "../Modal/DistributorSaleOrderModal.js";
+import OrderDcModal from "../Modal/SaleOrderDcModal.js";
 export const createTarget = async (req, res) => {
     try {
         const { Month, OrderBooker } = req.body

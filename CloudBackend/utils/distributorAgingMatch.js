@@ -281,7 +281,7 @@ const clientMatchValues = async (clientId) => {
 // Writes distributor invoice balances. A positive ledger clears knockoff.
 // A negative ledger puts the credit balance into knockoff.
 export const applyDistributorAgingMatch = async ({ clientId, aging, ledger, startDate, endDate, store } = {}) => {
-    const { default: DistrbutorInvoiceModal } = await import("../modal/DistrbutorInvoiceModal.js");
+    const { default: DistrbutorInvoiceModal } = await import("../Modal/DistrbutorInvoiceModal.js");
     const agingStart = startDate && String(startDate) < "2020-01-01" ? String(startDate) : "2020-01-01";
     const storeArray = String(store || "").split(",").map((id) => id.trim()).filter(Boolean);
     const query = {
@@ -348,7 +348,7 @@ export const applyDistributorAgingMatch = async ({ clientId, aging, ledger, star
 // A positive ledger closes every invoice, then opens from the newest until the
 // open amount equals the ledger. The ledger balance does not move.
 export const applyRebuildOpenFromBottom = async ({ clientId, ledger, startDate, endDate, store } = {}) => {
-    const { default: DistrbutorInvoiceModal } = await import("../modal/DistrbutorInvoiceModal.js");
+    const { default: DistrbutorInvoiceModal } = await import("../Modal/DistrbutorInvoiceModal.js");
     const agingStart = startDate && String(startDate) < "2020-01-01" ? String(startDate) : "2020-01-01";
     const storeArray = String(store || "").split(",").map((id) => id.trim()).filter(Boolean);
     const query = {
@@ -423,7 +423,7 @@ const voucherDateOf = (endDate) => {
 
 // Balanced voucher: credit shows in knockoff, the matching debit keeps the ledger still.
 const upsertAgingKnockoff = async (clientId, amount, endDate) => {
-    const { default: VoucherModal } = await import("../modal/VoucherModal.js");
+    const { default: VoucherModal } = await import("../Modal/VoucherModal.js");
     const ref = agingKnockoffRef(clientId);
     const wanted = round2(Math.max(0, amount));
     const existing = await VoucherModal.findOne({ Ref: ref });
@@ -496,7 +496,7 @@ const sameClientId = (lineClient, clientId) => String(lineClient || "").trim() =
 // Credit and Debit are left unchanged.
 const clearClientKnockoff = async (clientId, storeArray = []) => {
     const { getKnockoffPoolVouchers } = await import("./invoiceKnockOff.js");
-    const { default: VoucherModal } = await import("../modal/VoucherModal.js");
+    const { default: VoucherModal } = await import("../Modal/VoucherModal.js");
     const pool = await getKnockoffPoolVouchers(clientId);
     const wanted = [];
     for (const voucher of pool || []) {

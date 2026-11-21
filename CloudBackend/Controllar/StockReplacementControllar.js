@@ -1,7 +1,7 @@
-import DamageProductModal from "../modal/DamageProductModal.js";
-import StockReplacementModal from "../modal/StockReplacementModal.js";
-import TotalProductModal from "../modal/TotalProductModal.js";
-import VoucherModal from "../modal/VoucherModal.js";
+import DamageProductModal from "../Modal/DamageProductModal.js";
+import StockReplacementModal from "../Modal/StockReplacementModal.js";
+import TotalProductModal from "../Modal/TotalProductModal.js";
+import VoucherModal from "../Modal/VoucherModal.js";
 
 export const createStockReplacement = async (req, res) => {
   const { ReplacementDate, Customer, SalesFlowRef, ReplacementData, Store, Location } = req.body;

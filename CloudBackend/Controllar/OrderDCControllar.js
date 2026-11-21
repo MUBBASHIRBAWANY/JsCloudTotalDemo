@@ -1,10 +1,10 @@
-import AdministrativeModal from "../modal/AdministrativeModal.js";
-import DistributorSaleOrderModal from "../modal/DistributorSaleOrderModal.js";
-import OrderDcModal from "../modal/SaleOrderDcModal.js";
-import TotalProductModal from "../modal/TotalProductModal.js";
-import VoucherModal from "../modal/VoucherModal.js";
-import CutomerModal from "../modal/CutomerModal.js";
-import PriceListModal from "../modal/PriceListModal.js";
+import AdministrativeModal from "../Modal/AdministrativeModal.js";
+import DistributorSaleOrderModal from "../Modal/DistributorSaleOrderModal.js";
+import OrderDcModal from "../Modal/SaleOrderDcModal.js";
+import TotalProductModal from "../Modal/TotalProductModal.js";
+import VoucherModal from "../Modal/VoucherModal.js";
+import CutomerModal from "../Modal/CutomerModal.js";
+import PriceListModal from "../Modal/PriceListModal.js";
 import mongoose from "mongoose";
 
 // export const createDc = async (req, res) => {

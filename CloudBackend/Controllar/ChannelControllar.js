@@ -1,4 +1,4 @@
-import ChannelModal from "../modal/ChannelModal.js";
+import ChannelModal from "../Modal/ChannelModal.js";
 export const CreateChannel = async (req, res) => {
     try {
         const data = await ChannelModal.create(req.body)

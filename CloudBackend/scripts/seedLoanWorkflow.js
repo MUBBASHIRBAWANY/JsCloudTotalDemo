@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 import dotenv from "dotenv";
-import ApprovalWorkflowModal from "../modal/ApprovalWorkflowModal.js";
+import ApprovalWorkflowModal from "../Modal/ApprovalWorkflowModal.js";
 
 dotenv.config();
 

@@ -1,5 +1,5 @@
-import StockAdjustmentModal from "../modal/StockAdjustmentModal.js";
-import TotalProductModal from "../modal/TotalProductModal.js";
+import StockAdjustmentModal from "../Modal/StockAdjustmentModal.js";
+import TotalProductModal from "../Modal/TotalProductModal.js";
 import { addStock, reduceStock, recalculateAvgRate, StockError } from "../Midelware/stockMiddleware.js";
 
 // Create Stock Adjustment

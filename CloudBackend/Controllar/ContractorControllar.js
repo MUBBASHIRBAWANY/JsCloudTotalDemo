@@ -1,4 +1,4 @@
-import ContractorModal from "../modal/ContractorModal.js"
+import ContractorModal from "../Modal/ContractorModal.js"
 import { hrmsCatch } from "../utils/hrmsError.js";
 
 

@@ -1,11 +1,11 @@
-import PurchaseInvoiceModal from "../modal/PurchaseInvoiceModal.js";
-import SalesInvoiceModal from "../modal/SalesInvoiceModal.js";
-import VoucherModal from "../modal/VoucherModal.js";
-import AdministrativeModal from "../modal/AdministrativeModal.js";
-import OrderDcModal from "../modal/SaleOrderDcModal.js";
-import OpeningInventoryModal from "../modal/OpeningInventoryModal.js";
-import ProductModal from "../modal/ProductModal.js";
-import SalesReturnModal from "../modal/SalesReturnModal.js";
+import PurchaseInvoiceModal from "../Modal/PurchaseInvoiceModal.js";
+import SalesInvoiceModal from "../Modal/SalesInvoiceModal.js";
+import VoucherModal from "../Modal/VoucherModal.js";
+import AdministrativeModal from "../Modal/AdministrativeModal.js";
+import OrderDcModal from "../Modal/SaleOrderDcModal.js";
+import OpeningInventoryModal from "../Modal/OpeningInventoryModal.js";
+import ProductModal from "../Modal/ProductModal.js";
+import SalesReturnModal from "../Modal/SalesReturnModal.js";
 
 const buildRateKey = (product, store) => `${String(product)}_${String(store)}`;
 

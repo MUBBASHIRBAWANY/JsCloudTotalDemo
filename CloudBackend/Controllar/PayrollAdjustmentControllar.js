@@ -1,4 +1,4 @@
-import PayrollAdjustmentModal from "../modal/PayrollAdjustmentModal.js"
+import PayrollAdjustmentModal from "../Modal/PayrollAdjustmentModal.js"
 import { hrmsCatch } from "../utils/hrmsError.js";
 
 

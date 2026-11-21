@@ -1,13 +1,13 @@
-import DamageProductModal from "../modal/DamageProductModal.js";
-import OpeningInventoryModal from "../modal/OpeningInventoryModal.js"
-import TotalProductModal from "../modal/TotalProductModal.js"
-import AccountOpeningBalanceModal from "../modal/AccountsOpeningModal.js";
-import VendorOpeningModal from "../modal/VendorOpeningModal.js";
-import ClientOpeningBalanceModal from "../modal/ClientOpeningBalanceModal.js";
-import TransporterOpeningBalanceModal from "../modal/TransportesOpeningModal.js";
-import VoucherModal from "../modal/VoucherModal.js";
-import AdministrativeModal from "../modal/AdministrativeModal.js";
-import ChartofAccountsModal from "../modal/ChartofAccountsModal.js";
+import DamageProductModal from "../Modal/DamageProductModal.js";
+import OpeningInventoryModal from "../Modal/OpeningInventoryModal.js"
+import TotalProductModal from "../Modal/TotalProductModal.js"
+import AccountOpeningBalanceModal from "../Modal/AccountsOpeningModal.js";
+import VendorOpeningModal from "../Modal/VendorOpeningModal.js";
+import ClientOpeningBalanceModal from "../Modal/ClientOpeningBalanceModal.js";
+import TransporterOpeningBalanceModal from "../Modal/TransportesOpeningModal.js";
+import VoucherModal from "../Modal/VoucherModal.js";
+import AdministrativeModal from "../Modal/AdministrativeModal.js";
+import ChartofAccountsModal from "../Modal/ChartofAccountsModal.js";
 
 const pickStoreId = (storeLower, storeUpper) => {
     const lower = storeLower != null && storeLower !== "" ? String(storeLower) : "";

@@ -1,7 +1,7 @@
-import DamageProductModal from "../modal/DamageProductModal.js";
-import SalesReturnModal from "../modal/SalesReturnModal.js";
-import TotalProductModal from "../modal/TotalProductModal.js";
-import VoucherModal from "../modal/VoucherModal.js";
+import DamageProductModal from "../Modal/DamageProductModal.js";
+import SalesReturnModal from "../Modal/SalesReturnModal.js";
+import TotalProductModal from "../Modal/TotalProductModal.js";
+import VoucherModal from "../Modal/VoucherModal.js";
 
 // Create Sales Return
 export const createSalesReturn = async (req, res) => {

@@ -1,4 +1,4 @@
-import AdvanceDiscountPolicyModal from "../modal/AdvanceDiscountPolicyModal.js";
+import AdvanceDiscountPolicyModal from "../Modal/AdvanceDiscountPolicyModal.js";
 
 export const getAllAdvanceDiscountPolicy = async (req, res) => {
   try {

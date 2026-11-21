@@ -1,6 +1,6 @@
-import EmployeeLeaveBalanceModal from "../modal/EmployeeLeaveBalanceModal.js";
-import LeavePolicyModal from "../modal/LeavePolicyModal.js";
-import LeaveTypeModal from "../modal/LeaveTypeModal.js";
+import EmployeeLeaveBalanceModal from "../Modal/EmployeeLeaveBalanceModal.js";
+import LeavePolicyModal from "../Modal/LeavePolicyModal.js";
+import LeaveTypeModal from "../Modal/LeaveTypeModal.js";
 import { hrmsCatch, hrmsFail } from "../utils/hrmsError.js";
 
 
@@ -77,7 +77,7 @@ export const bulkAllocateForAll = async (req, res) => {
         }
 
         // Import EmployeeHrModal dynamically to avoid circular deps
-        const { default: EmployeeHrModal } = await import("../modal/EmployeeHrModal.js");
+        const { default: EmployeeHrModal } = await import("../Modal/EmployeeHrModal.js");
         const employees = await EmployeeHrModal.find({ status: "active" });
 
         let allocated = 0;

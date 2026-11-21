@@ -1,10 +1,10 @@
 import mongoose from "mongoose";
-import AppraisalCycleModal from "../modal/AppraisalCycleModal.js";
-import KPIModal from "../modal/KPIModal.js";
-import FeedbackModal from "../modal/FeedbackModal.js";
-import SalaryIncrementProposalModal from "../modal/SalaryIncrementProposalModal.js";
-import EmployeeHrModal from "../modal/EmployeeHrModal.js";
-import SalaryHistoryModal from "../modal/SalaryHistoryModal.js";
+import AppraisalCycleModal from "../Modal/AppraisalCycleModal.js";
+import KPIModal from "../Modal/KPIModal.js";
+import FeedbackModal from "../Modal/FeedbackModal.js";
+import SalaryIncrementProposalModal from "../Modal/SalaryIncrementProposalModal.js";
+import EmployeeHrModal from "../Modal/EmployeeHrModal.js";
+import SalaryHistoryModal from "../Modal/SalaryHistoryModal.js";
 import { validateRequired } from "../engine/Validators.js";
 import { hrmsCatch } from "../utils/hrmsError.js";
 

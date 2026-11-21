@@ -23,8 +23,8 @@ async function connect() {
     console.log('Connected to MongoDB');
 }
 
-import EmployeeHrModal from './modal/EmployeeHrModal.js';
-import AttendanceHrModal from './modal/AttendanceHrModal.js';
+import EmployeeHrModal from './Modal/EmployeeHrModal.js';
+import AttendanceHrModal from './Modal/AttendanceHrModal.js';
 import { calculateMonthlyPayroll } from './engine/PayrollEngine.js';
 
 // ─── Test Cases ─────────────────────────────────────────────────────────────

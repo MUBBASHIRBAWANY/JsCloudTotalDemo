@@ -1,4 +1,4 @@
-import ApprovalHistoryModal from "../modal/ApprovalHistoryModal.js";
+import ApprovalHistoryModal from "../Modal/ApprovalHistoryModal.js";
 import { hrmsCatch } from "../utils/hrmsError.js";
 
 

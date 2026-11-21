@@ -1,4 +1,4 @@
-import TransporterOpeningBalanceModal from "../modal/TransportesOpeningModal.js";
+import TransporterOpeningBalanceModal from "../Modal/TransportesOpeningModal.js";
 
 export const createTransporterOpening = async (req, res) => {
     try {

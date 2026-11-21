@@ -1,4 +1,4 @@
-import CompanyPolicyModal from "../modal/CompanyPolicyModal.js"
+import CompanyPolicyModal from "../Modal/CompanyPolicyModal.js"
 import { hrmsCatch } from "../utils/hrmsError.js";
 
 

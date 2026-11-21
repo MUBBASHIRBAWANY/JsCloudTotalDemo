@@ -1,4 +1,4 @@
-import BrandModal from "../modal/BrandModal.js";
+import BrandModal from "../Modal/BrandModal.js";
 
 export const CreateBrand = async (req, res) => {
     try {

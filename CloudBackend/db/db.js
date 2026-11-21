@@ -1,6 +1,6 @@
 import mongoose from 'mongoose'
 import dotenv from 'dotenv'
-import { dropLegacyFirstnameUniqueIndex } from '../modal/userModal.js'
+import { dropLegacyFirstnameUniqueIndex } from '../Modal/userModal.js'
 dotenv.config()
 const URL = process.env.URL
 

@@ -6,7 +6,7 @@ import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 dotenv.config();
 
-import AttendanceHrModal from '../modal/AttendanceHrModal.js';
+import AttendanceHrModal from '../Modal/AttendanceHrModal.js';
 
 const STATUS_MAP = {
     "present": "present",

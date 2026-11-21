@@ -1,4 +1,4 @@
-import SalaryHistoryModal from "../modal/SalaryHistoryModal.js"
+import SalaryHistoryModal from "../Modal/SalaryHistoryModal.js"
 import { hrmsCatch } from "../utils/hrmsError.js";
 
 

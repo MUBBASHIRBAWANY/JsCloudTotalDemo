@@ -1,7 +1,7 @@
-import AttendanceHrModal from "../modal/AttendanceHrModal.js";
-import EmployeeHrModal from "../modal/EmployeeHrModal.js";
-import EmployeeLeaveBalanceModal from "../modal/EmployeeLeaveBalanceModal.js";
-import LeaveApplicationModal from "../modal/LeaveApplicationModal.js";
+import AttendanceHrModal from "../Modal/AttendanceHrModal.js";
+import EmployeeHrModal from "../Modal/EmployeeHrModal.js";
+import EmployeeLeaveBalanceModal from "../Modal/EmployeeLeaveBalanceModal.js";
+import LeaveApplicationModal from "../Modal/LeaveApplicationModal.js";
 import { hrmsCatch, hrmsFail } from "../utils/hrmsError.js";
 
 

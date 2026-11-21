@@ -1,5 +1,5 @@
-import EmployeeDocumentModal from "../modal/EmployeeDocumentModal.js";
-import EmployeeHrModal from "../modal/EmployeeHrModal.js";
+import EmployeeDocumentModal from "../Modal/EmployeeDocumentModal.js";
+import EmployeeHrModal from "../Modal/EmployeeHrModal.js";
 import { validateRequired } from "../engine/Validators.js";
 import { hrmsCatch } from "../utils/hrmsError.js";
 

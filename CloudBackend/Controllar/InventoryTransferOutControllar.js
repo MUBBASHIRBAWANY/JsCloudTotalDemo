@@ -1,6 +1,6 @@
-import InventoryTransferOutModal from "../modal/InventoryTransferOutModal.js";
-import TotalProductModal from "../modal/TotalProductModal.js";
-import InventoryTransferInModal from "../modal/TransferInModal.js";
+import InventoryTransferOutModal from "../Modal/InventoryTransferOutModal.js";
+import TotalProductModal from "../Modal/TotalProductModal.js";
+import InventoryTransferInModal from "../Modal/TransferInModal.js";
 
 export const createTransferOut = async (req, res) => {
     const {

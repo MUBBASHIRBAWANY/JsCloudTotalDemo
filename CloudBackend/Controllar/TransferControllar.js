@@ -1,5 +1,5 @@
-import TransferHistoryModal from "../modal/TransferHistoryModal.js"
-import EmployeeHrModal from "../modal/EmployeeHrModal.js"
+import TransferHistoryModal from "../Modal/TransferHistoryModal.js"
+import EmployeeHrModal from "../Modal/EmployeeHrModal.js"
 import { hrmsCatch, hrmsFail } from "../utils/hrmsError.js";
 
 

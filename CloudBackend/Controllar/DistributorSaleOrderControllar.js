@@ -1,7 +1,7 @@
 import { v2 as cloudinary } from "cloudinary";
-import DistrbutorModal from "../modal/DistributerModal.js"
-import DistributorSaleOrderModal from "../modal/DistributorSaleOrderModal.js";
-import DitriButorOrderBookerModal from "../modal/DitriButorOrderBookerModal.js";
+import DistrbutorModal from "../Modal/DistributerModal.js"
+import DistributorSaleOrderModal from "../Modal/DistributorSaleOrderModal.js";
+import DitriButorOrderBookerModal from "../Modal/DitriButorOrderBookerModal.js";
 import mongoose from "mongoose";
 import { buildDistributorDaySummary, buildDistributorDayTrend } from "../utils/distributorDaySummary.js";
 import { checkCreditLimit } from "../utils/creditLimit.js";

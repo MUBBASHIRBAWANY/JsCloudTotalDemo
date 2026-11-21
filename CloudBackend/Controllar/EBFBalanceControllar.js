@@ -1,5 +1,5 @@
-import EBFBalanceModal from "../modal/EBFBalanceModal.js";
-import EBFTransactionModal from "../modal/EBFTransactionModal.js";
+import EBFBalanceModal from "../Modal/EBFBalanceModal.js";
+import EBFTransactionModal from "../Modal/EBFTransactionModal.js";
 import { hrmsCatch } from "../utils/hrmsError.js";
 
 

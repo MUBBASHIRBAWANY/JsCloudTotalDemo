@@ -1,4 +1,4 @@
-import AccountOpeningBalanceModal from "../modal/AccountsOpeningModal.js";
+import AccountOpeningBalanceModal from "../Modal/AccountsOpeningModal.js";
 
 export const createAccountOpening = async (req, res) => {
     try {

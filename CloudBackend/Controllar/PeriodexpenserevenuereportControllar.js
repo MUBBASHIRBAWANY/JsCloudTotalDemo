@@ -6,9 +6,9 @@
  * No per-line dump to the client.
  */
 import mongoose from "mongoose";
-import VoucherModal from "../modal/VoucherModal.js";
-import ChartOfAccountsModal from "../modal/ChartofAccountsModal.js";
-import StoreModal from "../modal/StoreModal.js";
+import VoucherModal from "../Modal/VoucherModal.js";
+import ChartOfAccountsModal from "../Modal/ChartofAccountsModal.js";
+import StoreModal from "../Modal/StoreModal.js";
 
 const DEPT_PARENT_CODES = ["50101", "50201", "50301"];
 

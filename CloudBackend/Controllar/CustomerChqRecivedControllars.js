@@ -1,11 +1,11 @@
 import mongoose from "mongoose";
-import AdministrativeModal from "../modal/AdministrativeModal.js";
-import CustomerChqRecivedModal from "../modal/CustomerChqRecivedModal.js";
-import CutomerModal from "../modal/CutomerModal.js";
-import logModal from "../modal/LogModal.js";
-import InvoiceOpeningModal from "../modal/OpeningInvoicesModal.js";
-import SalesInvoiceModal from "../modal/SalesInvoiceModal.js";
-import VoucherModal from "../modal/VoucherModal.js";
+import AdministrativeModal from "../Modal/AdministrativeModal.js";
+import CustomerChqRecivedModal from "../Modal/CustomerChqRecivedModal.js";
+import CutomerModal from "../Modal/CutomerModal.js";
+import logModal from "../Modal/LogModal.js";
+import InvoiceOpeningModal from "../Modal/OpeningInvoicesModal.js";
+import SalesInvoiceModal from "../Modal/SalesInvoiceModal.js";
+import VoucherModal from "../Modal/VoucherModal.js";
 import { checkMonthClose } from "../utils/checkMonthClose.js";
 
 

@@ -6,7 +6,7 @@ import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 dotenv.config();
 
-import LeaveTypeModal from '../modal/LeaveTypeModal.js';
+import LeaveTypeModal from '../Modal/LeaveTypeModal.js';
 
 const DEFAULT_LEAVE_TYPES = [
     { name: "Casual Leave", code: "CL", isPaid: true, color: "#3B82F6", description: "Short-term personal leave" },

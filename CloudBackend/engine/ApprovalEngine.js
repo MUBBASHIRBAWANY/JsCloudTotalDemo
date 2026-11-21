@@ -1,5 +1,5 @@
-import ApprovalWorkflowModal from "../modal/ApprovalWorkflowModal.js";
-import EmployeeHrModal from "../modal/EmployeeHrModal.js";
+import ApprovalWorkflowModal from "../Modal/ApprovalWorkflowModal.js";
+import EmployeeHrModal from "../Modal/EmployeeHrModal.js";
 
 /**
  * Get the approval workflow for a module.

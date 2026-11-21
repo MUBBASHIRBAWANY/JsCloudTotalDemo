@@ -1,6 +1,6 @@
-import ApplicantModal from "../modal/ApplicantModal.js";
-import JobPostingModal from "../modal/JobPostingModal.js";
-import OnboardingChecklistModal from "../modal/OnboardingChecklistModal.js";
+import ApplicantModal from "../Modal/ApplicantModal.js";
+import JobPostingModal from "../Modal/JobPostingModal.js";
+import OnboardingChecklistModal from "../Modal/OnboardingChecklistModal.js";
 import { validateRequired } from "../engine/Validators.js";
 import { hrmsCatch } from "../utils/hrmsError.js";
 

@@ -1,4 +1,4 @@
-import MonthlyTransactionModal from "../modal/MonthlyTransactionModal.js"
+import MonthlyTransactionModal from "../Modal/MonthlyTransactionModal.js"
 import { hrmsCatch, hrmsFail } from "../utils/hrmsError.js";
 
 

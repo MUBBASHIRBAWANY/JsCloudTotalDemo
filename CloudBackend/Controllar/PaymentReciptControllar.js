@@ -1,11 +1,11 @@
-import AdministrativeModal from "../modal/AdministrativeModal.js";
-import DistrbutorInvoiceModal from "../modal/DistrbutorInvoiceModal.js";
-import InvoiceOpeningModal from "../modal/OpeningInvoicesModal.js";
-import PaymentRecivedModal from "../modal/PaymentRecivedModal.js";
-import SalesInvoiceModal from "../modal/SalesInvoiceModal.js";
-import VoucherModal from "../modal/VoucherModal.js";
+import AdministrativeModal from "../Modal/AdministrativeModal.js";
+import DistrbutorInvoiceModal from "../Modal/DistrbutorInvoiceModal.js";
+import InvoiceOpeningModal from "../Modal/OpeningInvoicesModal.js";
+import PaymentRecivedModal from "../Modal/PaymentRecivedModal.js";
+import SalesInvoiceModal from "../Modal/SalesInvoiceModal.js";
+import VoucherModal from "../Modal/VoucherModal.js";
 import jwt from "jsonwebtoken"; //ADD KARO
-import logModal from "../modal/LogModal.js"
+import logModal from "../Modal/LogModal.js"
 import { checkMonthClose } from "../utils/checkMonthClose.js";
 import { assertKnockOffWithinRemaining, knockOffInvoiceLines, replaceKnockOffInvoiceLines } from "../utils/invoiceKnockOff.js";
 import mongoose from "mongoose";

@@ -1,6 +1,6 @@
-import DitriButorZSMModal from "../modal/DitriButorZsmModal.js";
-import { comparePassword, getAuthontication, hashPassword } from "../modal/userModal.js";
-import VendorModal from "../modal/VendorModal.js"
+import DitriButorZSMModal from "../Modal/DitriButorZsmModal.js";
+import { comparePassword, getAuthontication, hashPassword } from "../Modal/userModal.js";
+import VendorModal from "../Modal/VendorModal.js"
 export const CreateDitriButorZSM = async (req, res) => {
     try {
         const {ZSMID , ZSMPassword} =req.body

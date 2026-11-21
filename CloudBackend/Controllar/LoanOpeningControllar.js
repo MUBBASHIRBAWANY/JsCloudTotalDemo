@@ -1,5 +1,5 @@
-    import LoanOpeningModal from "../modal/LoanOpeningModal.js";
-    import EmployeeLoanAccountModal from "../modal/EmployeeLoanAccountModal.js";
+    import LoanOpeningModal from "../Modal/LoanOpeningModal.js";
+    import EmployeeLoanAccountModal from "../Modal/EmployeeLoanAccountModal.js";
     import { hrmsCatch, hrmsFail } from "../utils/hrmsError.js";
 
 

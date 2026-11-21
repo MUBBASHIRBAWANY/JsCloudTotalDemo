@@ -1,9 +1,9 @@
-import InventoryTransferOutModal from "../modal/InventoryTransferOutModal.js"
-import OpeningInventoryModal from "../modal/OpeningInventoryModal.js"
-import PurchaseInvoiceModal from "../modal/PurchaseInvoiceModal.js"
-import SalesInvoiceModal from "../modal/SalesInvoiceModal.js"
-import StoreModal from "../modal/StoreModal.js"
-import InventoryTransferInModal from "../modal/TransferInModal.js"
+import InventoryTransferOutModal from "../Modal/InventoryTransferOutModal.js"
+import OpeningInventoryModal from "../Modal/OpeningInventoryModal.js"
+import PurchaseInvoiceModal from "../Modal/PurchaseInvoiceModal.js"
+import SalesInvoiceModal from "../Modal/SalesInvoiceModal.js"
+import StoreModal from "../Modal/StoreModal.js"
+import InventoryTransferInModal from "../Modal/TransferInModal.js"
 
 export const CreateStore = async (req, res) => {
     try {

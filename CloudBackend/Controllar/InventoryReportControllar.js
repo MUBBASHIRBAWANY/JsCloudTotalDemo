@@ -1,14 +1,14 @@
-import OpeningInventoryModal from "../modal/OpeningInventoryModal.js";
-import PurchaseInvoiceModal from "../modal/PurchaseInvoiceModal.js";
-import SalesInvoiceModal from "../modal/SalesInvoiceModal.js";
-import InventoryTransferOutModal from "../modal/InventoryTransferOutModal.js";
-import InventoryTransferInModal from "../modal/TransferInModal.js";
-import SalesReturnModal from "../modal/SalesReturnModal.js"
-import PurchaseReturnModal from "../modal/PurchaseReturnModal.js";
-import StockReplacementModal from "../modal/StockReplacementModal.js";
-import OrderDcModal from "../modal/SaleOrderDcModal.js";
-import RcModal from "../modal/RcModal.js";
-import StockAdjustmentModal from "../modal/StockAdjustmentModal.js";
+import OpeningInventoryModal from "../Modal/OpeningInventoryModal.js";
+import PurchaseInvoiceModal from "../Modal/PurchaseInvoiceModal.js";
+import SalesInvoiceModal from "../Modal/SalesInvoiceModal.js";
+import InventoryTransferOutModal from "../Modal/InventoryTransferOutModal.js";
+import InventoryTransferInModal from "../Modal/TransferInModal.js";
+import SalesReturnModal from "../Modal/SalesReturnModal.js"
+import PurchaseReturnModal from "../Modal/PurchaseReturnModal.js";
+import StockReplacementModal from "../Modal/StockReplacementModal.js";
+import OrderDcModal from "../Modal/SaleOrderDcModal.js";
+import RcModal from "../Modal/RcModal.js";
+import StockAdjustmentModal from "../Modal/StockAdjustmentModal.js";
 
 // The report popups only consume per-product aggregates of these rows (they
 // key by product/productFrom and sum the numeric fields), so collapsing the

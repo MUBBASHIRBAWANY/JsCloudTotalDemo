@@ -1,4 +1,4 @@
-import ChqBookModal from "../modal/ChqBookModal.js";
+import ChqBookModal from "../Modal/ChqBookModal.js";
 
 export const createChqBook = async (req, res) => {
     const { Bank, Prefix, CheuquesStart, CheuquesEnd, Status } = req.body;

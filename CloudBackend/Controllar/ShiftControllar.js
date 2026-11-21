@@ -1,7 +1,7 @@
-import ShiftModal from "../modal/ShiftModal.js";
-import EmployeeShiftAssignmentModal from "../modal/EmployeeShiftAssignmentModal.js";
-import EmployeeShiftHistoryModal from "../modal/EmployeeShiftHistoryModal.js";
-import EmployeeHrModal from "../modal/EmployeeHrModal.js";
+import ShiftModal from "../Modal/ShiftModal.js";
+import EmployeeShiftAssignmentModal from "../Modal/EmployeeShiftAssignmentModal.js";
+import EmployeeShiftHistoryModal from "../Modal/EmployeeShiftHistoryModal.js";
+import EmployeeHrModal from "../Modal/EmployeeHrModal.js";
 import { validateRequired } from "../engine/Validators.js";
 import { hrmsCatch } from "../utils/hrmsError.js";
 

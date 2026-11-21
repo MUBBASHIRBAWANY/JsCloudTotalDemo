@@ -1,5 +1,5 @@
-import PayrollModal from "../modal/PayrollModal.js"
-import EmployeeHrModal from "../modal/EmployeeHrModal.js"
+import PayrollModal from "../Modal/PayrollModal.js"
+import EmployeeHrModal from "../Modal/EmployeeHrModal.js"
 import { hrmsCatch, hrmsFail } from "../utils/hrmsError.js";
 
 

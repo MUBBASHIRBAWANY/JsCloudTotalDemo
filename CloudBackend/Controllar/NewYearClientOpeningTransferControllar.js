@@ -1,8 +1,8 @@
-import NewYearClientOpeningTransferModal from "../modal/NewYearClientOpeningTransferModal.js";
-import SalesInvoiceModal from "../modal/SalesInvoiceModal.js";
-import DistrbutorInvoiceModal from "../modal/DistrbutorInvoiceModal.js";
-import CutomerModal from "../modal/CutomerModal.js";
-import VoucherModal from "../modal/VoucherModal.js";
+import NewYearClientOpeningTransferModal from "../Modal/NewYearClientOpeningTransferModal.js";
+import SalesInvoiceModal from "../Modal/SalesInvoiceModal.js";
+import DistrbutorInvoiceModal from "../Modal/DistrbutorInvoiceModal.js";
+import CutomerModal from "../Modal/CutomerModal.js";
+import VoucherModal from "../Modal/VoucherModal.js";
 
 export const generateNewYearOpeningTransfer = async (req, res) => {
     try {

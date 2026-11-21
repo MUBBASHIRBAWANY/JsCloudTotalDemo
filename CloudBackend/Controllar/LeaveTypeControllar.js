@@ -1,4 +1,4 @@
-import LeaveTypeModal from "../modal/LeaveTypeModal.js";
+import LeaveTypeModal from "../Modal/LeaveTypeModal.js";
 import { hrmsCatch } from "../utils/hrmsError.js";
 
 

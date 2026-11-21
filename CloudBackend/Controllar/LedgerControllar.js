@@ -1,4 +1,4 @@
-import LedgerEntryModal from "../modal/LedgerEntryModal.js";
+import LedgerEntryModal from "../Modal/LedgerEntryModal.js";
 import { hrmsCatch, hrmsFail } from "../utils/hrmsError.js";
 
 

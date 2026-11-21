@@ -1,4 +1,4 @@
-import PayrollMonthModal from "../modal/PayrollMonthModal.js"
+import PayrollMonthModal from "../Modal/PayrollMonthModal.js"
 import { hrmsCatch, hrmsFail } from "../utils/hrmsError.js";
 
 

@@ -1,15 +1,15 @@
-import EmployeeHrModal from "../modal/EmployeeHrModal.js";
-import SalaryHistoryModal from "../modal/SalaryHistoryModal.js";
-import CompanyPolicyModal from "../modal/CompanyPolicyModal.js";
+import EmployeeHrModal from "../Modal/EmployeeHrModal.js";
+import SalaryHistoryModal from "../Modal/SalaryHistoryModal.js";
+import CompanyPolicyModal from "../Modal/CompanyPolicyModal.js";
 
 import { hrmsCatch, hrmsFail } from "../utils/hrmsError.js";
 
-import EmployeeEBFAccountModal from "../modal/EmployeeEBFAccountModal.js";
-import EmployeeBadDebtAccountModal from "../modal/EmployeeBadDebtAccountModal.js";
-import EmployeeLoanAccountModal from "../modal/EmployeeLoanAccountModal.js";
-import EmployeeAdvanceAccountModal from "../modal/EmployeeAdvanceAccountModal.js";
+import EmployeeEBFAccountModal from "../Modal/EmployeeEBFAccountModal.js";
+import EmployeeBadDebtAccountModal from "../Modal/EmployeeBadDebtAccountModal.js";
+import EmployeeLoanAccountModal from "../Modal/EmployeeLoanAccountModal.js";
+import EmployeeAdvanceAccountModal from "../Modal/EmployeeAdvanceAccountModal.js";
 
-import AdministrativeModal from "../modal/AdministrativeModal.js";
+import AdministrativeModal from "../Modal/AdministrativeModal.js";
 
 
 // ======================================================

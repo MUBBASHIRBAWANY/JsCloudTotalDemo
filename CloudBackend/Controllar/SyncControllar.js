@@ -1,6 +1,6 @@
 import axios from "axios";
-import PriceListModal from "../modal/PriceListModal.js";
-import SlabModal from "../modal/SlabModal.js";
+import PriceListModal from "../Modal/PriceListModal.js";
+import SlabModal from "../Modal/SlabModal.js";
 
 const SND_API_BASE = "https://api.pdl1.online/";
 

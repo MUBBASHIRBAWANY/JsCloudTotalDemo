@@ -1,4 +1,4 @@
-import SubChannelModal from "../modal/SubChannelModal.js";
+import SubChannelModal from "../Modal/SubChannelModal.js";
 export const CreateSubChannel = async (req, res) => {
     try {
         const data = await SubChannelModal.create(req.body)

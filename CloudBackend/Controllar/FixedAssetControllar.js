@@ -1,9 +1,9 @@
-import FixedAssetModal from "../modal/FixedAssetModal.js";
-import ChartofAccountsModal from "../modal/ChartofAccountsModal.js";
+import FixedAssetModal from "../Modal/FixedAssetModal.js";
+import ChartofAccountsModal from "../Modal/ChartofAccountsModal.js";
 import jwt from "jsonwebtoken";
-import logModal from "../modal/LogModal.js";
+import logModal from "../Modal/LogModal.js";
 import { checkMonthClose } from "../utils/checkMonthClose.js";
-import VoucherModal from "../modal/VoucherModal.js";
+import VoucherModal from "../Modal/VoucherModal.js";
 
 export const createFixedAsset = async (req, res) => {
     try {

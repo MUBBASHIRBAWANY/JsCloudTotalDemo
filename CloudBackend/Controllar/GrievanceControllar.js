@@ -1,7 +1,7 @@
-import GrievanceModal from "../modal/GrievanceModal.js";
-import DisciplinaryActionModal from "../modal/DisciplinaryActionModal.js";
-import SeparationRequestModal from "../modal/SeparationRequestModal.js";
-import EmployeeHrModal from "../modal/EmployeeHrModal.js";
+import GrievanceModal from "../Modal/GrievanceModal.js";
+import DisciplinaryActionModal from "../Modal/DisciplinaryActionModal.js";
+import SeparationRequestModal from "../Modal/SeparationRequestModal.js";
+import EmployeeHrModal from "../Modal/EmployeeHrModal.js";
 import { validateRequired } from "../engine/Validators.js";
 import { hrmsCatch } from "../utils/hrmsError.js";
 

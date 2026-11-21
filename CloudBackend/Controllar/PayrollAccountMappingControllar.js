@@ -1,4 +1,4 @@
-import PayrollAccountMapping from "../modal/PayrollAccountMapping.js";
+import PayrollAccountMapping from "../Modal/PayrollAccountMapping.js";
 import { hrmsCatch } from "../utils/hrmsError.js";
 
 
